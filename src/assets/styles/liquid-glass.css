@@ -338,14 +338,6 @@ body {
     background-color: var(--glass-control);
 }
 
-.v-application .v-btn:hover::before {
-    opacity: 0 !important;
-}
-
-.v-application .v-btn:hover {
-    background-color: var(--glass-control-hover) !important;
-}
-
 .v-application .v-btn:active {
     transform: scale(0.97);
 }
@@ -430,8 +422,7 @@ body {
 /* Data-heavy surfaces stay readable while retaining the material language. */
 .v-application .v-data-table,
 .v-application .v-data-table__wrapper,
-.v-application .v-list,
-.v-application .v-sheet:not(.liquid-glass-panel):not(.liquid-glass-topbar):not(.liquid-glass-sidebar) {
+.v-application .v-list {
     color: var(--glass-ink) !important;
     background: transparent !important;
 }
@@ -539,12 +530,13 @@ body {
 }
 
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-    .liquid-glass-topbar,
-    .liquid-glass-sidebar,
-    .liquid-glass-panel,
+    .liquid-glass-topbar.v-app-bar,
+    .liquid-glass-sidebar.v-navigation-drawer,
+    .liquid-glass-panel.v-card,
     .v-menu__content,
     .v-dialog > .v-card,
-    .v-snack__wrapper {
+    .v-snack__wrapper,
+    .v-tooltip__content {
         background: var(--glass-surface-solid) !important;
     }
 }
