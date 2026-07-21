@@ -7,6 +7,7 @@
         :temporary="boolNaviTemp"
         clipped
         app
+        class="liquid-glass-sidebar"
         :style="sidebarCssVars">
         <template #img>
             <v-img :src="sidebarBackground" height="100%" />

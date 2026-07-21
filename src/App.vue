@@ -1,10 +1,10 @@
 <template>
-    <v-app :style="cssVars">
+    <v-app class="liquid-glass-app" :style="cssVars">
         <template v-if="socketIsConnected && guiIsReady">
             <the-sidebar />
             <the-topbar />
-            <v-main id="content" :style="mainStyle">
-                <v-container id="page-container" fluid :class="containerClasses">
+            <v-main id="content" class="liquid-glass-content" :style="mainStyle">
+                <v-container id="page-container" fluid :class="['liquid-glass-page', containerClasses]">
                     <router-view />
                 </v-container>
             </v-main>
@@ -403,6 +403,7 @@ export default class App extends Mixins(BaseMixin, ThemeMixin) {
 @import './assets/styles/sidebar.css';
 @import './assets/styles/utils.css';
 @import './assets/styles/updateManager.css';
+@import './assets/styles/liquid-glass.css';
 
 :root {
     --app-height: 100%;

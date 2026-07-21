@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <v-row v-if="isMobile">
-            <v-col>
+    <div class="liquid-glass-dashboard">
+        <v-row v-if="isMobile" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--mobile">
+            <v-col class="liquid-glass-column liquid-glass-column--primary">
                 <status-panel />
                 <template v-for="component in mobileLayout">
                     <component
@@ -11,8 +11,8 @@
                 </template>
             </v-col>
         </v-row>
-        <v-row v-else-if="isTablet">
-            <v-col class="col-6">
+        <v-row v-else-if="isTablet" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--tablet">
+            <v-col class="col-6 liquid-glass-column liquid-glass-column--primary">
                 <status-panel />
                 <template v-for="component in tabletLayout1">
                     <component
@@ -21,7 +21,7 @@
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
             </v-col>
-            <v-col class="col-6">
+            <v-col class="col-6 liquid-glass-column liquid-glass-column--secondary">
                 <template v-for="component in tabletLayout2">
                     <component
                         :is="extractPanelName(component.name)"
@@ -30,8 +30,8 @@
                 </template>
             </v-col>
         </v-row>
-        <v-row v-else-if="isDesktop">
-            <v-col class="col-5">
+        <v-row v-else-if="isDesktop" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--desktop">
+            <v-col class="col-5 liquid-glass-column liquid-glass-column--primary">
                 <status-panel />
                 <template v-for="component in desktopLayout1">
                     <component
@@ -40,7 +40,7 @@
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
             </v-col>
-            <v-col class="col-7">
+            <v-col class="col-7 liquid-glass-column liquid-glass-column--secondary">
                 <template v-for="component in desktopLayout2">
                     <component
                         :is="extractPanelName(component.name)"
@@ -49,8 +49,8 @@
                 </template>
             </v-col>
         </v-row>
-        <v-row v-else-if="isWidescreen">
-            <v-col class="col-3">
+        <v-row v-else-if="isWidescreen" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--widescreen">
+            <v-col class="col-3 liquid-glass-column liquid-glass-column--primary">
                 <status-panel />
                 <template v-for="component in widescreenLayout1">
                     <component
@@ -59,7 +59,7 @@
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
             </v-col>
-            <v-col class="col-5">
+            <v-col class="col-5 liquid-glass-column liquid-glass-column--secondary">
                 <template v-for="component in widescreenLayout2">
                     <component
                         :is="extractPanelName(component.name)"
@@ -67,7 +67,7 @@
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
             </v-col>
-            <v-col class="col-4">
+            <v-col class="col-4 liquid-glass-column liquid-glass-column--tertiary">
                 <template v-for="component in widescreenLayout3">
                     <component
                         :is="extractPanelName(component.name)"
