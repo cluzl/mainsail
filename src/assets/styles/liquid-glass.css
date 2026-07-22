@@ -126,8 +126,6 @@ body {
     border: 1px solid var(--glass-stroke) !important;
     background: var(--glass-surface) !important;
     box-shadow: var(--glass-shadow) !important;
-    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%) !important;
-    backdrop-filter: blur(var(--glass-blur)) saturate(180%) !important;
 }
 
 .liquid-glass-topbar::after,
@@ -463,13 +461,6 @@ body {
     border-radius: 20px !important;
     color: var(--glass-ink) !important;
     background: var(--glass-surface-strong) !important;
-}
-
-.v-overlay__scrim {
-    background: var(--glass-scrim) !important;
-    opacity: 1 !important;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
 }
 
 /* Webcam, chart and console are content windows embedded in glass. */
