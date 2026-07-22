@@ -543,6 +543,14 @@ body,
         display: none;
     }
 
+    .liquid-glass-topbar.v-app-bar {
+        background: var(--apple-topbar) !important;
+    }
+
+    .liquid-glass-sidebar.v-navigation-drawer {
+        background: var(--apple-sidebar) !important;
+    }
+
     *,
     *::before,
     *::after {

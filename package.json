@@ -15,7 +15,7 @@
         "format:check": "npm run format:base -- --check",
         "lint": "eslint src",
         "lint:fix": "npm run lint -- --fix",
-        "build.zip": "cd ./dist && zip -r mainsail.zip ./ -x '**.DS_Store' ./ && cd ..",
+        "build.zip": "cd ./dist && cp ../THIRD_PARTY_NOTICES.md . && zip -r mainsail.zip ./ -x '**.DS_Store' ./ && cd ..",
         "i18n-extract": "vue-i18n-extract --vueFiles './src/**/{*.?(js|ts|vue),.i18nignore}' --languageFiles './src/locales/*.json'",
         "preview": "vite preview",
         "start": "vite build && vite preview",
