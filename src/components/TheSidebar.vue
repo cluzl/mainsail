@@ -89,8 +89,7 @@ export default class TheSidebar extends Mixins(NavigationMixin, BaseMixin, Theme
         if (!this.boolNaviTemp) return {}
 
         return {
-            top: '72px !important',
-            'padding-bottom': '72px',
+            top: `${topbarHeight}px !important`,
         }
     }
 
