@@ -9,6 +9,7 @@
         app
         class="liquid-glass-sidebar"
         :style="sidebarCssVars">
+        <liquid-glass-react-surface :radius="0" />
         <template #img>
             <v-img :src="sidebarBackground" height="100%" />
         </template>
@@ -52,9 +53,11 @@ import MainsailLogo from '@/components/ui/MainsailLogo.vue'
 import SidebarItem from '@/components/ui/SidebarItem.vue'
 import NavigationMixin from '@/components/mixins/navigation'
 import ThemeMixin from '@/components/mixins/theme'
+import LiquidGlassReactSurface from '@/components/ui/LiquidGlassReactSurface.vue'
 
 @Component({
     components: {
+        LiquidGlassReactSurface,
         SidebarItem,
         TheSelectPrinterDialog,
         AboutDialog,

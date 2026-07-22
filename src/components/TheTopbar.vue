@@ -1,6 +1,7 @@
 <template>
     <div>
         <v-app-bar app :height="topbarHeight" class="topbar liquid-glass-topbar pa-0" clipped-left>
+            <liquid-glass-react-surface :radius="0" />
             <v-app-bar-nav-icon tile @click.stop="naviDrawer = !naviDrawer" />
             <router-link to="/">
                 <inline-svg v-if="sidebarLogo && isSvgLogo" :src="sidebarLogo" :class="logoClasses" />
@@ -91,6 +92,7 @@ import { mdiAlertOctagonOutline, mdiContentSave, mdiFileUpload, mdiClose, mdiClo
 import EmergencyStopDialog from '@/components/dialogs/EmergencyStopDialog.vue'
 import InlineSvg from 'vue-inline-svg'
 import ThemeMixin from '@/components/mixins/theme'
+import LiquidGlassReactSurface from '@/components/ui/LiquidGlassReactSurface.vue'
 
 type uploadSnackbar = {
     status: boolean
@@ -103,6 +105,7 @@ type uploadSnackbar = {
 
 @Component({
     components: {
+        LiquidGlassReactSurface,
         EmergencyStopDialog,
         InlineSvg,
         Panel,
