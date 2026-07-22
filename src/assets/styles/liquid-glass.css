@@ -281,6 +281,62 @@ body,
     padding: 12px !important;
 }
 
+.operator-dashboard {
+    display: grid;
+    gap: 28px;
+}
+
+.operator-dashboard__hero {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(480px, 1.35fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.operator-dashboard__hero--single {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.operator-dashboard__hero > *,
+.operator-dashboard__grid > * {
+    min-width: 0;
+}
+
+.operator-dashboard__hero .liquid-glass-panel,
+.operator-dashboard__grid .liquid-glass-panel {
+    margin-bottom: 0 !important;
+}
+
+.operator-dashboard__section {
+    display: grid;
+    gap: 14px;
+}
+
+.operator-dashboard__grid {
+    display: grid;
+    gap: 24px;
+    align-items: start;
+}
+
+.operator-dashboard__grid--controls {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+}
+
+.operator-dashboard__grid--utilities {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+}
+
+.operator-dashboard__camera .webcam-wrapper,
+.operator-dashboard__camera .v-responsive {
+    min-height: 360px;
+}
+
+.operator-dashboard__camera .v-image__image,
+.operator-dashboard__camera video,
+.operator-dashboard__camera canvas {
+    object-fit: cover;
+}
+
 /* Controls */
 .v-application .v-btn {
     border-radius: var(--apple-control-radius) !important;
@@ -496,6 +552,16 @@ body,
     background-clip: padding-box;
 }
 
+@media (max-width: 1439px) {
+    .operator-dashboard__hero {
+        grid-template-columns: minmax(280px, 0.9fr) minmax(400px, 1.1fr);
+    }
+
+    .operator-dashboard__grid--controls {
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+    }
+}
+
 @media (max-width: 959px) {
     .liquid-glass-sidebar.v-navigation-drawer {
         top: 48px !important;
@@ -503,6 +569,17 @@ body,
         left: 0 !important;
         height: calc(var(--app-height) - 48px) !important;
         max-height: none;
+    }
+
+    .operator-dashboard__hero,
+    .operator-dashboard__grid--controls,
+    .operator-dashboard__grid--utilities {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .operator-dashboard__camera .webcam-wrapper,
+    .operator-dashboard__camera .v-responsive {
+        min-height: 280px;
     }
 
     .liquid-glass-dashboard-grid {

@@ -1,81 +1,36 @@
 <template>
-    <div class="liquid-glass-dashboard">
-        <v-row v-if="isMobile" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--mobile">
-            <v-col class="liquid-glass-column liquid-glass-column--primary">
-                <status-panel />
-                <template v-for="component in mobileLayout">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-mobileLayout-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
-        <v-row v-else-if="isTablet" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--tablet">
-            <v-col class="col-6 liquid-glass-column liquid-glass-column--primary">
-                <status-panel />
-                <template v-for="component in tabletLayout1">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-tabletLayout1-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-6 liquid-glass-column liquid-glass-column--secondary">
-                <template v-for="component in tabletLayout2">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-tabletLayout2-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
-        <v-row v-else-if="isDesktop" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--desktop">
-            <v-col class="col-5 liquid-glass-column liquid-glass-column--primary">
-                <status-panel />
-                <template v-for="component in desktopLayout1">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout1-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-7 liquid-glass-column liquid-glass-column--secondary">
-                <template v-for="component in desktopLayout2">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout2-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
-        <v-row v-else-if="isWidescreen" class="liquid-glass-dashboard-grid liquid-glass-dashboard-grid--widescreen">
-            <v-col class="col-3 liquid-glass-column liquid-glass-column--primary">
-                <status-panel />
-                <template v-for="component in widescreenLayout1">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout1-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-5 liquid-glass-column liquid-glass-column--secondary">
-                <template v-for="component in widescreenLayout2">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout2-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-4 liquid-glass-column liquid-glass-column--tertiary">
-                <template v-for="component in widescreenLayout3">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout3-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
+    <div class="operator-dashboard">
+        <section
+            class="operator-dashboard__hero"
+            :class="{ 'operator-dashboard__hero--single': !arrangedPanels.webcam }">
+            <status-panel class="operator-dashboard__status" />
+            <component
+                :is="extractPanelName(arrangedPanels.webcam.name)"
+                v-if="arrangedPanels.webcam"
+                :key="'dashboard-hero-' + arrangedPanels.webcam.name"
+                class="operator-dashboard__camera"
+                :panel-id="extractPanelId(arrangedPanels.webcam.name)" />
+        </section>
+
+        <section v-if="arrangedPanels.controls.length" class="operator-dashboard__section">
+            <div class="operator-dashboard__grid operator-dashboard__grid--controls">
+                <component
+                    :is="extractPanelName(component.name)"
+                    v-for="component in arrangedPanels.controls"
+                    :key="'dashboard-control-' + component.name"
+                    :panel-id="extractPanelId(component.name)" />
+            </div>
+        </section>
+
+        <section v-if="arrangedPanels.utilities.length" class="operator-dashboard__section">
+            <div class="operator-dashboard__grid operator-dashboard__grid--utilities">
+                <component
+                    :is="extractPanelName(component.name)"
+                    v-for="component in arrangedPanels.utilities"
+                    :key="'dashboard-utility-' + component.name"
+                    :panel-id="extractPanelId(component.name)" />
+            </div>
+        </section>
     </div>
 </template>
 
@@ -99,6 +54,7 @@ import StatusPanel from '@/components/panels/StatusPanel.vue'
 import ToolheadControlPanel from '@/components/panels/ToolheadControlPanel.vue'
 import TemperaturePanel from '@/components/panels/TemperaturePanel.vue'
 import WebcamPanel from '@/components/panels/WebcamPanel.vue'
+import { arrangeDashboardPanels } from '@/pages/dashboard-layout'
 
 @Component({
     components: {
@@ -121,36 +77,28 @@ import WebcamPanel from '@/components/panels/WebcamPanel.vue'
     },
 })
 export default class PageDashboard extends Mixins(DashboardMixin) {
-    get mobileLayout() {
-        return this.$store.getters['gui/getPanels']('mobile', 0, true)
+    get configuredPanels() {
+        if (this.isMobile) return this.$store.getters['gui/getPanels']('mobile', 0, true)
+        if (this.isTablet)
+            return [
+                ...this.$store.getters['gui/getPanels']('tablet', 1, true),
+                ...this.$store.getters['gui/getPanels']('tablet', 2, true),
+            ]
+        if (this.isDesktop)
+            return [
+                ...this.$store.getters['gui/getPanels']('desktop', 1, true),
+                ...this.$store.getters['gui/getPanels']('desktop', 2, true),
+            ]
+
+        return [
+            ...this.$store.getters['gui/getPanels']('widescreen', 1, true),
+            ...this.$store.getters['gui/getPanels']('widescreen', 2, true),
+            ...this.$store.getters['gui/getPanels']('widescreen', 3, true),
+        ]
     }
 
-    get tabletLayout1() {
-        return this.$store.getters['gui/getPanels']('tablet', 1, true)
-    }
-
-    get tabletLayout2() {
-        return this.$store.getters['gui/getPanels']('tablet', 2, true)
-    }
-
-    get desktopLayout1() {
-        return this.$store.getters['gui/getPanels']('desktop', 1, true)
-    }
-
-    get desktopLayout2() {
-        return this.$store.getters['gui/getPanels']('desktop', 2, true)
-    }
-
-    get widescreenLayout1() {
-        return this.$store.getters['gui/getPanels']('widescreen', 1, true)
-    }
-
-    get widescreenLayout2() {
-        return this.$store.getters['gui/getPanels']('widescreen', 2, true)
-    }
-
-    get widescreenLayout3() {
-        return this.$store.getters['gui/getPanels']('widescreen', 3, true)
+    get arrangedPanels() {
+        return arrangeDashboardPanels(this.configuredPanels)
     }
 
     extractPanelName(name: string) {
