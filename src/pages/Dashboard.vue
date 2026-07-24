@@ -1,81 +1,41 @@
 <template>
-    <div>
-        <v-row v-if="isMobile">
-            <v-col>
-                <status-panel />
-                <template v-for="component in mobileLayout">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-mobileLayout-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
-        <v-row v-else-if="isTablet">
-            <v-col class="col-6">
-                <status-panel />
-                <template v-for="component in tabletLayout1">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-tabletLayout1-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-6">
-                <template v-for="component in tabletLayout2">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-tabletLayout2-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
-        <v-row v-else-if="isDesktop">
-            <v-col class="col-5">
-                <status-panel />
-                <template v-for="component in desktopLayout1">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout1-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-7">
-                <template v-for="component in desktopLayout2">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout2-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
-        <v-row v-else-if="isWidescreen">
-            <v-col class="col-3">
-                <status-panel />
-                <template v-for="component in widescreenLayout1">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout1-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-5">
-                <template v-for="component in widescreenLayout2">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout2-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-            <v-col class="col-4">
-                <template v-for="component in widescreenLayout3">
-                    <component
-                        :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout3-' + component.name"
-                        :panel-id="extractPanelId(component.name)"></component>
-                </template>
-            </v-col>
-        </v-row>
+    <div class="forge-dashboard">
+        <section class="forge-hero">
+            <div class="forge-status"><status-panel /></div>
+            <div v-if="arrangedPanels.webcam" class="forge-camera">
+                <component
+                    :is="extractPanelName(arrangedPanels.webcam.name)"
+                    :panel-id="extractPanelId(arrangedPanels.webcam.name)" />
+            </div>
+        </section>
+
+        <section v-if="arrangedPanels.controls.length" class="forge-section">
+            <header class="forge-section-title">
+                <span>CONTROL DECK</span>
+                <small>LIVE MACHINE INPUTS</small>
+            </header>
+            <div class="forge-panel-grid forge-controls">
+                <component
+                    :is="extractPanelName(component.name)"
+                    v-for="component in arrangedPanels.controls"
+                    :key="'forge-control-' + component.name"
+                    :panel-id="extractPanelId(component.name)" />
+            </div>
+        </section>
+
+        <section v-if="arrangedPanels.utilities.length" class="forge-section">
+            <header class="forge-section-title">
+                <span>SYSTEMS</span>
+                <small>SECONDARY OPERATIONS</small>
+            </header>
+            <div class="forge-panel-grid forge-utilities">
+                <component
+                    :is="extractPanelName(component.name)"
+                    v-for="component in arrangedPanels.utilities"
+                    :key="'forge-utility-' + component.name"
+                    :panel-id="extractPanelId(component.name)" />
+            </div>
+        </section>
     </div>
 </template>
 
@@ -99,6 +59,7 @@ import StatusPanel from '@/components/panels/StatusPanel.vue'
 import ToolheadControlPanel from '@/components/panels/ToolheadControlPanel.vue'
 import TemperaturePanel from '@/components/panels/TemperaturePanel.vue'
 import WebcamPanel from '@/components/panels/WebcamPanel.vue'
+import { arrangeDashboardPanels, DashboardPanel } from '@/plugins/forgeDashboard'
 
 @Component({
     components: {
@@ -121,36 +82,30 @@ import WebcamPanel from '@/components/panels/WebcamPanel.vue'
     },
 })
 export default class PageDashboard extends Mixins(DashboardMixin) {
-    get mobileLayout() {
-        return this.$store.getters['gui/getPanels']('mobile', 0, true)
+    get viewportPanels(): DashboardPanel[] {
+        if (this.isMobile) return this.$store.getters['gui/getPanels']('mobile', 0, true)
+        if (this.isTablet) {
+            return [
+                ...this.$store.getters['gui/getPanels']('tablet', 1, true),
+                ...this.$store.getters['gui/getPanels']('tablet', 2, true),
+            ]
+        }
+        if (this.isDesktop) {
+            return [
+                ...this.$store.getters['gui/getPanels']('desktop', 1, true),
+                ...this.$store.getters['gui/getPanels']('desktop', 2, true),
+            ]
+        }
+
+        return [
+            ...this.$store.getters['gui/getPanels']('widescreen', 1, true),
+            ...this.$store.getters['gui/getPanels']('widescreen', 2, true),
+            ...this.$store.getters['gui/getPanels']('widescreen', 3, true),
+        ]
     }
 
-    get tabletLayout1() {
-        return this.$store.getters['gui/getPanels']('tablet', 1, true)
-    }
-
-    get tabletLayout2() {
-        return this.$store.getters['gui/getPanels']('tablet', 2, true)
-    }
-
-    get desktopLayout1() {
-        return this.$store.getters['gui/getPanels']('desktop', 1, true)
-    }
-
-    get desktopLayout2() {
-        return this.$store.getters['gui/getPanels']('desktop', 2, true)
-    }
-
-    get widescreenLayout1() {
-        return this.$store.getters['gui/getPanels']('widescreen', 1, true)
-    }
-
-    get widescreenLayout2() {
-        return this.$store.getters['gui/getPanels']('widescreen', 2, true)
-    }
-
-    get widescreenLayout3() {
-        return this.$store.getters['gui/getPanels']('widescreen', 3, true)
+    get arrangedPanels() {
+        return arrangeDashboardPanels(this.viewportPanels)
     }
 
     extractPanelName(name: string) {

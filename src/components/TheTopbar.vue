@@ -2,12 +2,16 @@
     <div>
         <v-app-bar app elevate-on-scroll :height="topbarHeight" class="topbar pa-0" clipped-left>
             <v-app-bar-nav-icon tile @click.stop="naviDrawer = !naviDrawer" />
-            <router-link to="/">
-                <inline-svg v-if="sidebarLogo && isSvgLogo" :src="sidebarLogo" :class="logoClasses" />
-                <img v-else-if="sidebarLogo" :src="sidebarLogo" :class="logoClasses" alt="Logo" />
-                <mainsail-logo v-else :color="logoColor" :class="logoClasses" router to="/" :ripple="false" />
+            <router-link to="/" class="forge-wordmark" aria-label="FORGE operations dashboard">
+                <strong>
+                    F
+                    <span>/</span>
+                </strong>
             </router-link>
-            <v-toolbar-title class="text-no-wrap ml-0 pl-2 mr-2">{{ printerName }}</v-toolbar-title>
+            <v-toolbar-title class="forge-printer-name text-no-wrap ml-0 pl-2 mr-2">
+                <span>RATRIG / 03</span>
+                <small>{{ printerName }} · 500³ PRODUCTION CELL</small>
+            </v-toolbar-title>
             <printer-selector v-if="countPrinters" />
             <v-spacer />
             <input
@@ -84,7 +88,6 @@ import TheTopCornerMenu from '@/components/TheTopCornerMenu.vue'
 import TheSettingsMenu from '@/components/TheSettingsMenu.vue'
 import Panel from '@/components/ui/Panel.vue'
 import PrinterSelector from '@/components/ui/PrinterSelector.vue'
-import MainsailLogo from '@/components/ui/MainsailLogo.vue'
 import TheNotificationMenu from '@/components/notifications/TheNotificationMenu.vue'
 import { topbarHeight } from '@/store/variables'
 import { mdiAlertOctagonOutline, mdiContentSave, mdiFileUpload, mdiClose, mdiCloseThick } from '@mdi/js'
@@ -109,7 +112,6 @@ type uploadSnackbar = {
         TheSettingsMenu,
         TheTopCornerMenu,
         PrinterSelector,
-        MainsailLogo,
         TheNotificationMenu,
     },
 })
