@@ -404,6 +404,7 @@ export default class App extends Mixins(BaseMixin, ThemeMixin) {
 @import './assets/styles/utils.css';
 @import './assets/styles/updateManager.css';
 @import './assets/styles/forge.css';
+@import './assets/styles/forge-native.css';
 
 :root {
     --app-height: 100%;
