@@ -23,6 +23,13 @@ export function clampTarget(value: number, min: number, max: number): number | n
     return value
 }
 
+// Mainsail's slider semantics: the 0..1 handle spans 0..max_power, and any
+// non-zero request under off_below is snapped to 0 (the fan/pin cannot sustain it).
+export function clampOutput(value: number, offBelow: number, maxPower: number): number {
+    const scaled = Math.min(Math.max(value, 0), 1) * (maxPower > 0 ? maxPower : 1)
+    return scaled > 0 && scaled < offBelow ? 0 : scaled
+}
+
 // Mirrors MiscellaneousSlider.sendCmd. `value` is 0..1.
 // Non-pwm output_pin is binary — anything above 0 is full on, never a fraction.
 export function buildOutputCommand(type: string, name: string, value: number, scale: number, pwm: boolean): string {

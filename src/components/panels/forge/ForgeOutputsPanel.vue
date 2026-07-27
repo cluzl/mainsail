@@ -19,16 +19,26 @@
                     min="0"
                     max="100"
                     step="1"
-                    :value="Math.round(item.value * 100)"
+                    :disabled="sliderLocked(item.name)"
+                    :value="Math.round((item.value / item.maxPower) * 100)"
                     :aria-label="'Set ' + item.name"
                     @change="setValue(item, Number($event.target.value) / 100)" />
-                <div v-else-if="item.controllable" class="forge-step-select">
-                    <button class="forge-mini" :class="{ active: item.value > 0 }" @click="setValue(item, 1)">ON</button>
+                <button
+                    v-if="item.controllable && item.pwm && sliderLocked(item.name)"
+                    class="forge-mini"
+                    :aria-label="'Unlock ' + item.name + ' slider'"
+                    @click="$set(unlocked, item.name, true)">
+                    UNLOCK
+                </button>
+                <div v-if="item.controllable && !item.pwm" class="forge-step-select">
+                    <button class="forge-mini" :class="{ active: item.value > 0 }" @click="setValue(item, 1)">
+                        ON
+                    </button>
                     <button class="forge-mini" :class="{ active: item.value === 0 }" @click="setValue(item, 0)">
                         OFF
                     </button>
                 </div>
-                <div v-else class="forge-output-static">
+                <div v-if="!item.controllable" class="forge-output-static">
                     <div class="forge-bar"><i :style="{ width: item.value * 100 + '%' }"></i></div>
                 </div>
             </div>
@@ -40,7 +50,7 @@
 import Component from 'vue-class-component'
 import { Mixins } from 'vue-property-decorator'
 import ForgePanelMixin from '@/components/mixins/forgePanel'
-import { buildOutputCommand } from '@/plugins/forgeFormat'
+import { buildOutputCommand, clampOutput } from '@/plugins/forgeFormat'
 
 type MiscItem = {
     name: string
@@ -50,10 +60,22 @@ type MiscItem = {
     pwm: boolean
     scale: number
     rpm: number | null
+    offBelow: number
+    maxPower: number
 }
 
 @Component
 export default class ForgeOutputsPanel extends Mixins(ForgePanelMixin) {
+    unlocked: Record<string, boolean> = {}
+
+    get lockSliders(): boolean {
+        return this.$store.state.gui.uiSettings.lockSlidersOnTouchDevices ?? false
+    }
+
+    sliderLocked(name: string): boolean {
+        return this.lockSliders && this.isTouchDevice && !this.unlocked[name]
+    }
+
     get items(): MiscItem[] {
         return (this.$store.getters['printer/getMiscellaneous'] ?? []).map((m: Record<string, unknown>) => ({
             name: m.name as string,
@@ -63,6 +85,8 @@ export default class ForgeOutputsPanel extends Mixins(ForgePanelMixin) {
             pwm: (m.pwm as boolean) ?? false,
             scale: (m.scale as number) ?? 1,
             rpm: (m.rpm as number) ?? null,
+            offBelow: (m.off_below as number) ?? 0,
+            maxPower: (m.max_power as number) ?? 1,
         }))
     }
 
@@ -70,9 +94,10 @@ export default class ForgeOutputsPanel extends Mixins(ForgePanelMixin) {
         return name.replace(/_/g, ' ')
     }
 
-    // value is 0..1
+    // value is 0..1 of the slider; Mainsail scales it by max_power and snaps below off_below.
     setValue(item: MiscItem, value: number): void {
-        this.forgeSend(buildOutputCommand(item.type, item.name, value, item.scale, item.pwm))
+        const scaled = clampOutput(value, item.offBelow, item.maxPower)
+        this.forgeSend(buildOutputCommand(item.type, item.name, scaled, item.scale, item.pwm))
     }
 }
 </script>

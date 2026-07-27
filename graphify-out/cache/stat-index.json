@@ -1,0 +1,3282 @@
+{
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.docker/00-remove-ipv6-if-unavailable.sh": {
+        "size": 392,
+        "mtime_ns": 1784909821515932624,
+        "word_count": 54
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/CODE_OF_CONDUCT.md": {
+        "size": 1427,
+        "mtime_ns": 1784909821516427208,
+        "word_count": 187
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/DEVELOPER_CERTIFICATE_OF_ORIGIN.md": {
+        "size": 1364,
+        "mtime_ns": 1784909821516599541,
+        "word_count": 229
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/FUNDING.yml": {
+        "size": 584,
+        "mtime_ns": 1784909821517527833,
+        "word_count": 80
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/ISSUE_TEMPLATE/bug_report.yml": {
+        "size": 2855,
+        "mtime_ns": 1784909821517660499,
+        "word_count": 343
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/ISSUE_TEMPLATE/config.yml": {
+        "size": 194,
+        "mtime_ns": 1784909821517743333,
+        "word_count": 23
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/ISSUE_TEMPLATE/feature_request.yml": {
+        "size": 1354,
+        "mtime_ns": 1784909821517806041,
+        "word_count": 163
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/PULL_REQUEST_TEMPLATE.md": {
+        "size": 3148,
+        "mtime_ns": 1784909821517895999,
+        "word_count": 408
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/AGENTS.md": {
+        "size": 1371,
+        "mtime_ns": 1784909821519353708,
+        "word_count": 155
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/dependabot.yml": {
+        "size": 603,
+        "mtime_ns": 1784909821518085749,
+        "word_count": 69
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/label-actions.yml": {
+        "size": 855,
+        "mtime_ns": 1784909821518135999,
+        "word_count": 105
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/scripts/compare-bundle-sizes.sh": {
+        "size": 4840,
+        "mtime_ns": 1784909821518231249,
+        "word_count": 601
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/vouch-pr-unvouched.md": {
+        "size": 736,
+        "mtime_ns": 1784909821518312083,
+        "word_count": 77
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/ci.yml": {
+        "size": 1416,
+        "mtime_ns": 1784909821518441416,
+        "word_count": 140
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/label-actions.yml": {
+        "size": 210,
+        "mtime_ns": 1784909821518524458,
+        "word_count": 21
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/pr-checks.yml": {
+        "size": 4222,
+        "mtime_ns": 1784909821518578541,
+        "word_count": 356
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/pr-comment.yml": {
+        "size": 2618,
+        "mtime_ns": 1784909821518662291,
+        "word_count": 197
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/pr-title.yml": {
+        "size": 642,
+        "mtime_ns": 1784909821518718333,
+        "word_count": 47
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/publish_docker.yml": {
+        "size": 2479,
+        "mtime_ns": 1784909821518801958,
+        "word_count": 205
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/release.yml": {
+        "size": 4506,
+        "mtime_ns": 1784909821518861999,
+        "word_count": 395
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/stale.yml": {
+        "size": 1859,
+        "mtime_ns": 1784909821518917249,
+        "word_count": 225
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/vouch-check-pr.yml": {
+        "size": 1792,
+        "mtime_ns": 1784909821518994999,
+        "word_count": 172
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/.github/workflows/vouch-manage-by-issue.yml": {
+        "size": 1535,
+        "mtime_ns": 1784909821519049541,
+        "word_count": 138
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/CHANGELOG.md": {
+        "size": 150507,
+        "mtime_ns": 1784909821519662666,
+        "word_count": 13559
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/CONTRIBUTING.md": {
+        "size": 7167,
+        "mtime_ns": 1784909821519802916,
+        "word_count": 1013
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/README.md": {
+        "size": 7566,
+        "mtime_ns": 1784909821520185291,
+        "word_count": 640
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/agent_docs/ARCHITECTURE.md": {
+        "size": 2342,
+        "mtime_ns": 1784909821520283999,
+        "word_count": 241
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/agent_docs/CODE_REVIEW.md": {
+        "size": 1126,
+        "mtime_ns": 1784909821520345124,
+        "word_count": 189
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/agent_docs/CODE_STYLE.md": {
+        "size": 1477,
+        "mtime_ns": 1784909821520399708,
+        "word_count": 199
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/agent_docs/CONTRIBUTING.md": {
+        "size": 662,
+        "mtime_ns": 1784909821520721791,
+        "word_count": 92
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/agent_docs/UI_I18N.md": {
+        "size": 882,
+        "mtime_ns": 1784909821520777583,
+        "word_count": 92
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/agent_docs/VUE_TYPESCRIPT.md": {
+        "size": 1153,
+        "mtime_ns": 1784909821520837166,
+        "word_count": 137
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/agent_docs/examples/VueComponentExample.vue": {
+        "size": 1946,
+        "mtime_ns": 1784909821521054791,
+        "word_count": 232
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/cypress.config.ts": {
+        "size": 280,
+        "mtime_ns": 1784909821521239249,
+        "word_count": 26
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/cypress/e2e/dashboard.cy.ts": {
+        "size": 180,
+        "mtime_ns": 1784909821521355708,
+        "word_count": 18
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/cypress/fixtures/example.json": {
+        "size": 161,
+        "mtime_ns": 1784909821521435708,
+        "word_count": 23
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/cypress/plugins/index.js": {
+        "size": 664,
+        "mtime_ns": 1784909821521524208,
+        "word_count": 93
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/cypress/support/commands.js": {
+        "size": 838,
+        "mtime_ns": 1784909821522109541,
+        "word_count": 118
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/cypress/support/e2e.js": {
+        "size": 670,
+        "mtime_ns": 1784909821522175874,
+        "word_count": 85
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/cypress/tsconfig.json": {
+        "size": 169,
+        "mtime_ns": 1784909821522230666,
+        "word_count": 13
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/eslint.config.mjs": {
+        "size": 1530,
+        "mtime_ns": 1784909821522283124,
+        "word_count": 125
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/index.html": {
+        "size": 1585,
+        "mtime_ns": 1784909821522374833,
+        "word_count": 108
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/package.json": {
+        "size": 4768,
+        "mtime_ns": 1784909821523257583,
+        "word_count": 339
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/config.json": {
+        "size": 200,
+        "mtime_ns": 1784909821523344833,
+        "word_count": 18
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/apple-touch-icon-180x180.png": {
+        "size": 6452,
+        "mtime_ns": 1784909821524013916,
+        "word_count": 255
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/favicon-16x16.png": {
+        "size": 332,
+        "mtime_ns": 1784909821524063083,
+        "word_count": 23
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/favicon-32x32.png": {
+        "size": 618,
+        "mtime_ns": 1784909821524115416,
+        "word_count": 25
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/icon-192-maskable.png": {
+        "size": 7339,
+        "mtime_ns": 1784909821524188333,
+        "word_count": 276
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/icon-192.png": {
+        "size": 7847,
+        "mtime_ns": 1784909821524260583,
+        "word_count": 284
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/icon-512-maskable.png": {
+        "size": 30015,
+        "mtime_ns": 1784909821524389791,
+        "word_count": 1182
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/icon-512.png": {
+        "size": 35611,
+        "mtime_ns": 1784909821524532041,
+        "word_count": 1182
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/mstile-150x150.png": {
+        "size": 2377,
+        "mtime_ns": 1784909821524590541,
+        "word_count": 97
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/icons/safari-pinned-tab.svg": {
+        "size": 2654,
+        "mtime_ns": 1784909821524650166,
+        "word_count": 341
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/klipper.svg": {
+        "size": 5187,
+        "mtime_ns": 1784909821524710208,
+        "word_count": 292
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/logo.svg": {
+        "size": 438,
+        "mtime_ns": 1784909821524766583,
+        "word_count": 35
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/sidebar-background-light.svg": {
+        "size": 5364,
+        "mtime_ns": 1784909821524828916,
+        "word_count": 341
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/sidebar-background.svg": {
+        "size": 2669,
+        "mtime_ns": 1784909821524918874,
+        "word_count": 174
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarBackground-vzbot.png": {
+        "size": 384096,
+        "mtime_ns": 1784909821525390333,
+        "word_count": 13928
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-btt.svg": {
+        "size": 4808,
+        "mtime_ns": 1784909821525467416,
+        "word_count": 300
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-klipper.svg": {
+        "size": 5315,
+        "mtime_ns": 1784909821525532749,
+        "word_count": 308
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-ldo.svg": {
+        "size": 1238,
+        "mtime_ns": 1784909821525588833,
+        "word_count": 52
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-multec.svg": {
+        "size": 794,
+        "mtime_ns": 1784909821525663374,
+        "word_count": 26
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-prusa.svg": {
+        "size": 8606,
+        "mtime_ns": 1784909821525715208,
+        "word_count": 466
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-voron.svg": {
+        "size": 856,
+        "mtime_ns": 1784909821525776624,
+        "word_count": 34
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-vzbot.svg": {
+        "size": 1395,
+        "mtime_ns": 1784909821525822874,
+        "word_count": 67
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/public/img/themes/sidebarLogo-yumi.svg": {
+        "size": 2067,
+        "mtime_ns": 1784909821525956583,
+        "word_count": 53
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/remote/config.json": {
+        "size": 149,
+        "mtime_ns": 1784909821526693624,
+        "word_count": 14
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/App.vue": {
+        "size": 14413,
+        "mtime_ns": 1784911890923775916,
+        "word_count": 1147
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheConnectingDialog.vue": {
+        "size": 3769,
+        "mtime_ns": 1784909821527465374,
+        "word_count": 264
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheEditor.vue": {
+        "size": 18881,
+        "mtime_ns": 1784909821527555666,
+        "word_count": 1273
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheFullscreenUpload.vue": {
+        "size": 4477,
+        "mtime_ns": 1784909821527618416,
+        "word_count": 351
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheSelectPrinterDialog.vue": {
+        "size": 21785,
+        "mtime_ns": 1784909821527690124,
+        "word_count": 1119
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheServiceWorker.vue": {
+        "size": 1804,
+        "mtime_ns": 1784909821527747499,
+        "word_count": 131
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheSettingsMenu.vue": {
+        "size": 9261,
+        "mtime_ns": 1784909821527812708,
+        "word_count": 546
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheSidebar.vue": {
+        "size": 4503,
+        "mtime_ns": 1784909821527867833,
+        "word_count": 314
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheTimelapseRenderingSnackbar.vue": {
+        "size": 1594,
+        "mtime_ns": 1784909821527927249,
+        "word_count": 124
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheTopCornerMenu.vue": {
+        "size": 11878,
+        "mtime_ns": 1784909821528096499,
+        "word_count": 718
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheTopbar.vue": {
+        "size": 12269,
+        "mtime_ns": 1784910297256033999,
+        "word_count": 817
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheUpdateDialog.vue": {
+        "size": 6999,
+        "mtime_ns": 1784909821528235333,
+        "word_count": 455
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/TheUploadSnackbar.vue": {
+        "size": 2308,
+        "mtime_ns": 1784909821528288874,
+        "word_count": 191
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/charts/HeightmapChart.vue": {
+        "size": 13462,
+        "mtime_ns": 1784909821528391749,
+        "word_count": 1220
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/charts/HistoryAllPrintStatusChart.vue": {
+        "size": 3645,
+        "mtime_ns": 1784909821528447499,
+        "word_count": 276
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/charts/HistoryAllPrintStatusTable.vue": {
+        "size": 973,
+        "mtime_ns": 1784909821528498083,
+        "word_count": 69
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/charts/HistoryAllPrintStatusTableItem.vue": {
+        "size": 1131,
+        "mtime_ns": 1784909821528550291,
+        "word_count": 105
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/charts/HistoryFilamentUsage.vue": {
+        "size": 5812,
+        "mtime_ns": 1784909821528606124,
+        "word_count": 473
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/charts/HistoryPrinttimeAvg.vue": {
+        "size": 4822,
+        "mtime_ns": 1784909821528668499,
+        "word_count": 379
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/charts/TempChart.vue": {
+        "size": 12883,
+        "mtime_ns": 1784909821528735541,
+        "word_count": 1033
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/console/CommandHelpModal.vue": {
+        "size": 3786,
+        "mtime_ns": 1784909821528934458,
+        "word_count": 247
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/console/CommandHelpModalEntry.vue": {
+        "size": 1257,
+        "mtime_ns": 1784909821528997166,
+        "word_count": 112
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/console/ConsoleTable.vue": {
+        "size": 1126,
+        "mtime_ns": 1784909821529056708,
+        "word_count": 100
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/console/ConsoleTableEntry.vue": {
+        "size": 2590,
+        "mtime_ns": 1784909821529111291,
+        "word_count": 214
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AboutDialog.vue": {
+        "size": 1768,
+        "mtime_ns": 1784909821529195708,
+        "word_count": 141
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AddBatchToQueueDialog.vue": {
+        "size": 4062,
+        "mtime_ns": 1784909821529250291,
+        "word_count": 281
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AfcSettingsDialog.vue": {
+        "size": 2130,
+        "mtime_ns": 1784909821529315333,
+        "word_count": 151
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AfcSettingsDialogExtruder.vue": {
+        "size": 7155,
+        "mtime_ns": 1784909821529371374,
+        "word_count": 406
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AfcSettingsDialogHub.vue": {
+        "size": 2370,
+        "mtime_ns": 1784909821529424166,
+        "word_count": 182
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AfcSettingsDialogLane.vue": {
+        "size": 2835,
+        "mtime_ns": 1784909821529481249,
+        "word_count": 197
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AfcUnitLaneFilamentDialog.vue": {
+        "size": 4302,
+        "mtime_ns": 1784909821529531749,
+        "word_count": 308
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AfcUnitLaneInfiniteDialog.vue": {
+        "size": 3026,
+        "mtime_ns": 1784909821529584958,
+        "word_count": 230
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/AfcUnitLaneMappingToolDialog.vue": {
+        "size": 2650,
+        "mtime_ns": 1784909821529652249,
+        "word_count": 186
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/ConfirmationDialog.vue": {
+        "size": 1976,
+        "mtime_ns": 1784909821529706666,
+        "word_count": 178
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialog.vue": {
+        "size": 3841,
+        "mtime_ns": 1784909821529760583,
+        "word_count": 240
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogCan.vue": {
+        "size": 3194,
+        "mtime_ns": 1784909821529815333,
+        "word_count": 206
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogCanDevice.vue": {
+        "size": 1025,
+        "mtime_ns": 1784909821529874166,
+        "word_count": 79
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogSerial.vue": {
+        "size": 2193,
+        "mtime_ns": 1784909821529938333,
+        "word_count": 164
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogSerialDevice.vue": {
+        "size": 1789,
+        "mtime_ns": 1784909821529988958,
+        "word_count": 113
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogUsb.vue": {
+        "size": 2029,
+        "mtime_ns": 1784909821530037583,
+        "word_count": 159
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogUsbDevice.vue": {
+        "size": 1817,
+        "mtime_ns": 1784909821530097916,
+        "word_count": 154
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogVideo.vue": {
+        "size": 2936,
+        "mtime_ns": 1784909821530152583,
+        "word_count": 209
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogVideoDeviceLibcamera.vue": {
+        "size": 2440,
+        "mtime_ns": 1784909821530210916,
+        "word_count": 166
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/DevicesDialogVideoDeviceV4l2.vue": {
+        "size": 3463,
+        "mtime_ns": 1784909821530257624,
+        "word_count": 214
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/EmergencyStopDialog.vue": {
+        "size": 1634,
+        "mtime_ns": 1784909821530308749,
+        "word_count": 113
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/GcodefilesCreateDirectoryDialog.vue": {
+        "size": 2771,
+        "mtime_ns": 1784909821530370333,
+        "word_count": 196
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/GcodefilesDuplicateFileDialog.vue": {
+        "size": 2842,
+        "mtime_ns": 1784909821530432041,
+        "word_count": 213
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/GcodefilesRenameDirectoryDialog.vue": {
+        "size": 2976,
+        "mtime_ns": 1784909821530483374,
+        "word_count": 210
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/GcodefilesRenameFileDialog.vue": {
+        "size": 2924,
+        "mtime_ns": 1784909821530527499,
+        "word_count": 220
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HeightmapCalibrateMeshDialog.vue": {
+        "size": 2744,
+        "mtime_ns": 1784909821530591291,
+        "word_count": 194
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HeightmapRenameProfileDialog.vue": {
+        "size": 3259,
+        "mtime_ns": 1784909821530640874,
+        "word_count": 236
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HistoryListPanelAddMaintenance.vue": {
+        "size": 8965,
+        "mtime_ns": 1784909821530710541,
+        "word_count": 478
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HistoryListPanelDetailMaintenance.vue": {
+        "size": 4802,
+        "mtime_ns": 1784909821530767166,
+        "word_count": 314
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HistoryListPanelDetailMaintenanceHistoryEntry.vue": {
+        "size": 5543,
+        "mtime_ns": 1784909821530832416,
+        "word_count": 547
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HistoryListPanelDetailsDialog.vue": {
+        "size": 7643,
+        "mtime_ns": 1784909821530893333,
+        "word_count": 497
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HistoryListPanelEditMaintenance.vue": {
+        "size": 9592,
+        "mtime_ns": 1784909821530947541,
+        "word_count": 509
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HistoryListPanelNoteDialog.vue": {
+        "size": 2695,
+        "mtime_ns": 1784909821531001416,
+        "word_count": 213
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/HistoryListPanelPerformMaintenance.vue": {
+        "size": 2639,
+        "mtime_ns": 1784909821531062333,
+        "word_count": 184
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/JobqueueEntryChangeCountDialog.vue": {
+        "size": 3303,
+        "mtime_ns": 1784909821531127333,
+        "word_count": 225
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MacroPromptButton.vue": {
+        "size": 928,
+        "mtime_ns": 1784909821531190708,
+        "word_count": 90
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MacroPromptButtonGroup.vue": {
+        "size": 738,
+        "mtime_ns": 1784909821531253416,
+        "word_count": 70
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MacroPromptFooterButton.vue": {
+        "size": 964,
+        "mtime_ns": 1784909821531305458,
+        "word_count": 94
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MacroPromptText.vue": {
+        "size": 569,
+        "mtime_ns": 1784909821531360666,
+        "word_count": 55
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MiscellaneousLightNeopixelDialog.vue": {
+        "size": 13022,
+        "mtime_ns": 1784909821531444291,
+        "word_count": 905
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MiscellaneousLightNeopixelDialogPreset.vue": {
+        "size": 1422,
+        "mtime_ns": 1784909821531500041,
+        "word_count": 156
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuEditGateMapDialog.vue": {
+        "size": 4380,
+        "mtime_ns": 1784909821531570166,
+        "word_count": 286
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuEditGateMapDialogGateDetails.vue": {
+        "size": 17848,
+        "mtime_ns": 1784909821531761249,
+        "word_count": 1152
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuEditTtgMapDialog.vue": {
+        "size": 7355,
+        "mtime_ns": 1784909821531824791,
+        "word_count": 489
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuEditTtgMapDialogDetails.vue": {
+        "size": 8920,
+        "mtime_ns": 1784909821531893499,
+        "word_count": 655
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuEditTtgMapDialogDetailsRow.vue": {
+        "size": 2437,
+        "mtime_ns": 1784909821531958916,
+        "word_count": 208
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuEditTtgMapDialogTool.vue": {
+        "size": 2997,
+        "mtime_ns": 1784909821532022291,
+        "word_count": 235
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuMaintenanceDialog.vue": {
+        "size": 1787,
+        "mtime_ns": 1784909821532086791,
+        "word_count": 125
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuMaintenanceDialogActions.vue": {
+        "size": 3922,
+        "mtime_ns": 1784909821532145333,
+        "word_count": 198
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuMaintenanceDialogConfig.vue": {
+        "size": 1546,
+        "mtime_ns": 1784909821532198541,
+        "word_count": 100
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuMaintenanceDialogLeds.vue": {
+        "size": 4640,
+        "mtime_ns": 1784909821532265874,
+        "word_count": 333
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuMaintenanceDialogUnit.vue": {
+        "size": 4360,
+        "mtime_ns": 1784909821532319791,
+        "word_count": 266
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/MmuRecoverStateDialog.vue": {
+        "size": 7845,
+        "mtime_ns": 1784909821532382499,
+        "word_count": 500
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/SpoolmanChangeSpoolDialog.vue": {
+        "size": 9394,
+        "mtime_ns": 1784909821532522666,
+        "word_count": 609
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/SpoolmanChangeSpoolDialogRow.vue": {
+        "size": 5144,
+        "mtime_ns": 1784909821532590333,
+        "word_count": 438
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/StartPrintDialog.vue": {
+        "size": 3834,
+        "mtime_ns": 1784909821532652374,
+        "word_count": 271
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/StartPrintDialogAfc.vue": {
+        "size": 1110,
+        "mtime_ns": 1784909821532701208,
+        "word_count": 98
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/StartPrintDialogAfcTool.vue": {
+        "size": 5099,
+        "mtime_ns": 1784909821532766208,
+        "word_count": 373
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/StartPrintDialogMmu.vue": {
+        "size": 1378,
+        "mtime_ns": 1784909821532824499,
+        "word_count": 117
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/StartPrintDialogSpoolman.vue": {
+        "size": 3337,
+        "mtime_ns": 1784909821532890999,
+        "word_count": 257
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/StartPrintDialogThumbnail.vue": {
+        "size": 2342,
+        "mtime_ns": 1784909821532952749,
+        "word_count": 185
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/StartPrintDialogTimelapse.vue": {
+        "size": 816,
+        "mtime_ns": 1784909821533012124,
+        "word_count": 61
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/TheBedScrewsDialog.vue": {
+        "size": 6066,
+        "mtime_ns": 1784909821533071499,
+        "word_count": 388
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/TheMacroPrompt.vue": {
+        "size": 8163,
+        "mtime_ns": 1784909821533141041,
+        "word_count": 688
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/TheManualProbeDialog.vue": {
+        "size": 7988,
+        "mtime_ns": 1784909821533206333,
+        "word_count": 517
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/TheScrewsTiltAdjustDialog.vue": {
+        "size": 4140,
+        "mtime_ns": 1784909821533271541,
+        "word_count": 277
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/TheScrewsTiltAdjustDialogEntry.vue": {
+        "size": 2151,
+        "mtime_ns": 1784909821533339791,
+        "word_count": 215
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/dialogs/TimelapseRenderingsettingsDialog.vue": {
+        "size": 5387,
+        "mtime_ns": 1784909821533417916,
+        "word_count": 224
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/gcodeviewer/CodeStream.vue": {
+        "size": 2305,
+        "mtime_ns": 1784909821533522333,
+        "word_count": 189
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/gcodeviewer/Viewer.vue": {
+        "size": 42650,
+        "mtime_ns": 1784909821533641666,
+        "word_count": 2679
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/CheckboxList.vue": {
+        "size": 2146,
+        "mtime_ns": 1784909821533740166,
+        "word_count": 157
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/Codemirror.vue": {
+        "size": 5399,
+        "mtime_ns": 1784909821533805416,
+        "word_count": 446
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/CodemirrorAsync.ts": {
+        "size": 217,
+        "mtime_ns": 1784909821533859499,
+        "word_count": 28
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/ColorPicker.vue": {
+        "size": 1644,
+        "mtime_ns": 1784909821533922583,
+        "word_count": 146
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/ConsoleTextarea.vue": {
+        "size": 4869,
+        "mtime_ns": 1784909821533980166,
+        "word_count": 380
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/FilamentSensor.vue": {
+        "size": 2740,
+        "mtime_ns": 1784909821534046666,
+        "word_count": 241
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/LedEffectButton.vue": {
+        "size": 1423,
+        "mtime_ns": 1784909821534105958,
+        "word_count": 130
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/MacroButton.vue": {
+        "size": 8904,
+        "mtime_ns": 1784909821534176124,
+        "word_count": 566
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/MiscellaneousSlider.vue": {
+        "size": 11910,
+        "mtime_ns": 1784909821534253416,
+        "word_count": 1050
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/MoveToInput.vue": {
+        "size": 1536,
+        "mtime_ns": 1784909821534314291,
+        "word_count": 140
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/NumberInput.vue": {
+        "size": 6192,
+        "mtime_ns": 1784909821534382458,
+        "word_count": 586
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/TemperatureInput.vue": {
+        "size": 4938,
+        "mtime_ns": 1784909821534443791,
+        "word_count": 429
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/TextfieldWithCopy.vue": {
+        "size": 1520,
+        "mtime_ns": 1784909821534516333,
+        "word_count": 134
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/inputs/ToolSlider.vue": {
+        "size": 10323,
+        "mtime_ns": 1784909821534599041,
+        "word_count": 912
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/afc.ts": {
+        "size": 4800,
+        "mtime_ns": 1784909821534697666,
+        "word_count": 450
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/base.ts": {
+        "size": 9226,
+        "mtime_ns": 1784909821534764041,
+        "word_count": 824
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/bedmesh.ts": {
+        "size": 1423,
+        "mtime_ns": 1784909821534827666,
+        "word_count": 161
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/console.ts": {
+        "size": 2089,
+        "mtime_ns": 1784909821534882958,
+        "word_count": 189
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/control.ts": {
+        "size": 6098,
+        "mtime_ns": 1784909821534946583,
+        "word_count": 514
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/dashboard.ts": {
+        "size": 2570,
+        "mtime_ns": 1784909821535001541,
+        "word_count": 189
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/extruder.ts": {
+        "size": 1453,
+        "mtime_ns": 1784909821535063249,
+        "word_count": 108
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/forgePanel.ts": {
+        "size": 1627,
+        "mtime_ns": 1784911386684814249,
+        "word_count": 156
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/gcodefiles.ts": {
+        "size": 8862,
+        "mtime_ns": 1784909821535125124,
+        "word_count": 591
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/history.ts": {
+        "size": 2047,
+        "mtime_ns": 1784909821535197041,
+        "word_count": 175
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/historyStats.ts": {
+        "size": 4545,
+        "mtime_ns": 1784909821535255374,
+        "word_count": 345
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/miscellaneous.ts": {
+        "size": 694,
+        "mtime_ns": 1784909821535315666,
+        "word_count": 67
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/mmu.ts": {
+        "size": 11833,
+        "mtime_ns": 1784909821535376708,
+        "word_count": 1180
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/navigation.ts": {
+        "size": 5744,
+        "mtime_ns": 1784909821535442749,
+        "word_count": 441
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/responsive.ts": {
+        "size": 1326,
+        "mtime_ns": 1784909821535501791,
+        "word_count": 127
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/services.ts": {
+        "size": 514,
+        "mtime_ns": 1784909821535561208,
+        "word_count": 49
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/settingsGeneralDatabase.ts": {
+        "size": 5552,
+        "mtime_ns": 1784909821535617374,
+        "word_count": 386
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/theme.ts": {
+        "size": 2932,
+        "mtime_ns": 1784909821535675666,
+        "word_count": 267
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/timelapse.ts": {
+        "size": 2507,
+        "mtime_ns": 1784909821535733583,
+        "word_count": 202
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/webcam.ts": {
+        "size": 3292,
+        "mtime_ns": 1784909821535795291,
+        "word_count": 312
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/mixins/zoffset.ts": {
+        "size": 2064,
+        "mtime_ns": 1784909821535848874,
+        "word_count": 197
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/notifications/NotificationMenuEntry.vue": {
+        "size": 7160,
+        "mtime_ns": 1784909821535940833,
+        "word_count": 485
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/notifications/TheNotificationMenu.vue": {
+        "size": 4185,
+        "mtime_ns": 1784909821535996791,
+        "word_count": 277
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcFilamentReel.vue": {
+        "size": 3304,
+        "mtime_ns": 1784909821536230416,
+        "word_count": 243
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelButtons.vue": {
+        "size": 6093,
+        "mtime_ns": 1784909821536295499,
+        "word_count": 445
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelBypass.vue": {
+        "size": 507,
+        "mtime_ns": 1784909821536351083,
+        "word_count": 48
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelExtruder.vue": {
+        "size": 5862,
+        "mtime_ns": 1784909821536407208,
+        "word_count": 434
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelMessage.vue": {
+        "size": 1632,
+        "mtime_ns": 1784909821536460874,
+        "word_count": 147
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelSettings.vue": {
+        "size": 3068,
+        "mtime_ns": 1784909821536521541,
+        "word_count": 195
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelSettingsExtruder.vue": {
+        "size": 1610,
+        "mtime_ns": 1784909821536579999,
+        "word_count": 129
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelSettingsUnit.vue": {
+        "size": 1672,
+        "mtime_ns": 1784909821536632541,
+        "word_count": 142
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelUnit.vue": {
+        "size": 2528,
+        "mtime_ns": 1784909821536868791,
+        "word_count": 220
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelUnitHub.vue": {
+        "size": 1429,
+        "mtime_ns": 1784909821536930916,
+        "word_count": 120
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelUnitLane.vue": {
+        "size": 1685,
+        "mtime_ns": 1784909821536996999,
+        "word_count": 142
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelUnitLaneActions.vue": {
+        "size": 4314,
+        "mtime_ns": 1784909821537057499,
+        "word_count": 290
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelUnitLaneBody.vue": {
+        "size": 8347,
+        "mtime_ns": 1784909821537238666,
+        "word_count": 625
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelUnitLaneEmpty.vue": {
+        "size": 1837,
+        "mtime_ns": 1784909821537314708,
+        "word_count": 151
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Afc/AfcPanelUnitLaneHeader.vue": {
+        "size": 988,
+        "mtime_ns": 1784909821537377541,
+        "word_count": 101
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/AfcPanel.vue": {
+        "size": 1282,
+        "mtime_ns": 1784909821537428041,
+        "word_count": 92
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/EstimatedExtrusionOutput.vue": {
+        "size": 2802,
+        "mtime_ns": 1784909821537521041,
+        "word_count": 216
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/ExtruderControlPanelControl.vue": {
+        "size": 15795,
+        "mtime_ns": 1784909821537603416,
+        "word_count": 833
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/ExtruderControlPanelTools.vue": {
+        "size": 1896,
+        "mtime_ns": 1784909821537652791,
+        "word_count": 173
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/ExtruderControlPanelToolsItem.vue": {
+        "size": 3096,
+        "mtime_ns": 1784909821537708208,
+        "word_count": 297
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/ExtruderPanelSettings.vue": {
+        "size": 3689,
+        "mtime_ns": 1784909821537761083,
+        "word_count": 217
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/ExtruderPressureAdvanceSettings.vue": {
+        "size": 2685,
+        "mtime_ns": 1784909821537818666,
+        "word_count": 177
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/ExtruderStepperPressureAdvanceSettings.vue": {
+        "size": 1622,
+        "mtime_ns": 1784909821537873333,
+        "word_count": 126
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/ExtrusionFactorSettings.vue": {
+        "size": 833,
+        "mtime_ns": 1784909821537925166,
+        "word_count": 53
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/FirmwareRetractionSettings.vue": {
+        "size": 6325,
+        "mtime_ns": 1784909821537983041,
+        "word_count": 289
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Extruder/PressureAdvanceSettings.vue": {
+        "size": 3453,
+        "mtime_ns": 1784909821538039749,
+        "word_count": 226
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ExtruderControlPanel.vue": {
+        "size": 9603,
+        "mtime_ns": 1784909821538098624,
+        "word_count": 568
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/FarmPrinterPanel.vue": {
+        "size": 11174,
+        "mtime_ns": 1784909821538156374,
+        "word_count": 713
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelHeader.vue": {
+        "size": 7235,
+        "mtime_ns": 1784909821538247749,
+        "word_count": 464
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelHeaderPathSize.vue": {
+        "size": 1914,
+        "mtime_ns": 1784909821538304999,
+        "word_count": 141
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelHeaderSettings.vue": {
+        "size": 3610,
+        "mtime_ns": 1784909821538365583,
+        "word_count": 218
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTable.vue": {
+        "size": 4281,
+        "mtime_ns": 1784909821538421666,
+        "word_count": 299
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowBack.vue": {
+        "size": 1999,
+        "mtime_ns": 1784909821538477041,
+        "word_count": 164
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowDirectory.vue": {
+        "size": 5250,
+        "mtime_ns": 1784909821538536124,
+        "word_count": 402
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowFile.vue": {
+        "size": 12202,
+        "mtime_ns": 1784909821538603624,
+        "word_count": 738
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowFileMetadata.vue": {
+        "size": 1560,
+        "mtime_ns": 1784909821538657124,
+        "word_count": 152
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowFileMetadataFilamentStrings.vue": {
+        "size": 703,
+        "mtime_ns": 1784909821538711874,
+        "word_count": 72
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowFileMetadataFilaments.vue": {
+        "size": 2173,
+        "mtime_ns": 1784909821538772624,
+        "word_count": 172
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowFileMetadataFilamentsBadge.vue": {
+        "size": 1309,
+        "mtime_ns": 1784909821538829249,
+        "word_count": 118
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesPanelTableRowFileMetadataSlicer.vue": {
+        "size": 611,
+        "mtime_ns": 1784909821538885624,
+        "word_count": 55
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Gcodefiles/GcodefilesThumbnail.vue": {
+        "size": 4379,
+        "mtime_ns": 1784909821538935916,
+        "word_count": 317
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/GcodefilesPanel.vue": {
+        "size": 1056,
+        "mtime_ns": 1784909821538988666,
+        "word_count": 69
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Heightmap/HeightmapChartPanel.vue": {
+        "size": 8486,
+        "mtime_ns": 1784909821539080249,
+        "word_count": 478
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Heightmap/HeightmapCurrentProfilePanel.vue": {
+        "size": 4243,
+        "mtime_ns": 1784909821539134166,
+        "word_count": 329
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Heightmap/HeightmapProfilesPanel.vue": {
+        "size": 1270,
+        "mtime_ns": 1784909821539182416,
+        "word_count": 88
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Heightmap/HeightmapProfilesPanelRow.vue": {
+        "size": 5179,
+        "mtime_ns": 1784909821539240916,
+        "word_count": 390
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/History/HistoryListEntryJob.vue": {
+        "size": 13387,
+        "mtime_ns": 1784909821539337791,
+        "word_count": 940
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/History/HistoryListEntryMaintenance.vue": {
+        "size": 6825,
+        "mtime_ns": 1784909821539395874,
+        "word_count": 603
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/History/HistoryListPanelExportCsv.vue": {
+        "size": 4894,
+        "mtime_ns": 1784909821539455499,
+        "word_count": 421
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/HistoryListPanel.vue": {
+        "size": 28231,
+        "mtime_ns": 1784909821539543916,
+        "word_count": 1774
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/HistoryStatisticsPanel.vue": {
+        "size": 11521,
+        "mtime_ns": 1784909821539612291,
+        "word_count": 774
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/JobqueuePanel.vue": {
+        "size": 3696,
+        "mtime_ns": 1784909821539666749,
+        "word_count": 246
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/KlippyStatePanel.vue": {
+        "size": 6765,
+        "mtime_ns": 1784909821539729708,
+        "word_count": 452
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/LedEffectsPanel.vue": {
+        "size": 2606,
+        "mtime_ns": 1784909821539785749,
+        "word_count": 164
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/ConfigFilesPanel.vue": {
+        "size": 47600,
+        "mtime_ns": 1784909821539921124,
+        "word_count": 2768
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/EndstopPanel.vue": {
+        "size": 2860,
+        "mtime_ns": 1784909821539977416,
+        "word_count": 232
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/EndstopPanelItem.vue": {
+        "size": 1300,
+        "mtime_ns": 1784909821540026208,
+        "word_count": 119
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/LogfilesPanel.vue": {
+        "size": 2184,
+        "mtime_ns": 1784909821540078708,
+        "word_count": 121
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/LogfilesPanel/LogfilesPanelGenericLog.vue": {
+        "size": 1807,
+        "mtime_ns": 1784909821540163041,
+        "word_count": 175
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/LogfilesPanel/LogfilesPanelRolloverDialog.vue": {
+        "size": 3224,
+        "mtime_ns": 1784909821540220041,
+        "word_count": 204
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/SystemPanel.vue": {
+        "size": 2074,
+        "mtime_ns": 1784909821540282416,
+        "word_count": 170
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/SystemPanelHost.vue": {
+        "size": 12428,
+        "mtime_ns": 1784909821540346249,
+        "word_count": 627
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/SystemPanelMcu.vue": {
+        "size": 6761,
+        "mtime_ns": 1784909821540407041,
+        "word_count": 319
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel.vue": {
+        "size": 5270,
+        "mtime_ns": 1784909821540471791,
+        "word_count": 341
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/Entry.vue": {
+        "size": 13338,
+        "mtime_ns": 1784909821540567458,
+        "word_count": 923
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/EntryAll.vue": {
+        "size": 1446,
+        "mtime_ns": 1784909821540623541,
+        "word_count": 100
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/EntrySystem.vue": {
+        "size": 2824,
+        "mtime_ns": 1784909821540674749,
+        "word_count": 214
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/GitCommitsList.vue": {
+        "size": 6082,
+        "mtime_ns": 1784909821540734041,
+        "word_count": 398
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/GitCommitsListDay.vue": {
+        "size": 1791,
+        "mtime_ns": 1784909821540785374,
+        "word_count": 119
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/GitCommitsListDayCommit.vue": {
+        "size": 3798,
+        "mtime_ns": 1784909821540839333,
+        "word_count": 310
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/SystemPackagesList.vue": {
+        "size": 1825,
+        "mtime_ns": 1784909821540899749,
+        "word_count": 125
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/UpdateHint.vue": {
+        "size": 2577,
+        "mtime_ns": 1784909821540960333,
+        "word_count": 154
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/UpdateHintAlert.vue": {
+        "size": 3506,
+        "mtime_ns": 1784909821541018041,
+        "word_count": 261
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Machine/UpdatePanel/UpdateHintAll.vue": {
+        "size": 3831,
+        "mtime_ns": 1784909821541074124,
+        "word_count": 242
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/MachineSettingsPanel.vue": {
+        "size": 7552,
+        "mtime_ns": 1784909821541131916,
+        "word_count": 388
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/MacrogroupPanel.vue": {
+        "size": 3005,
+        "mtime_ns": 1784909821541186958,
+        "word_count": 228
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/MacrosPanel.vue": {
+        "size": 1502,
+        "mtime_ns": 1784909821541241749,
+        "word_count": 110
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/MinSettingsPanel.vue": {
+        "size": 2493,
+        "mtime_ns": 1784909821541296208,
+        "word_count": 160
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/MiniconsolePanel.vue": {
+        "size": 6252,
+        "mtime_ns": 1784909821541352791,
+        "word_count": 356
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Miscellaneous/MiscellaneousLight.vue": {
+        "size": 2374,
+        "mtime_ns": 1784909821541438208,
+        "word_count": 203
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Miscellaneous/MiscellaneousLightNeopixel.vue": {
+        "size": 5159,
+        "mtime_ns": 1784909821541497916,
+        "word_count": 436
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Miscellaneous/MiscellaneousLightNeopixelGroup.vue": {
+        "size": 3766,
+        "mtime_ns": 1784909821541555208,
+        "word_count": 342
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Miscellaneous/MiscellaneousLightNeopixelState.vue": {
+        "size": 1807,
+        "mtime_ns": 1784909821541609416,
+        "word_count": 206
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Miscellaneous/MiscellaneousSensor.vue": {
+        "size": 1343,
+        "mtime_ns": 1784909821541785166,
+        "word_count": 127
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Miscellaneous/MoonrakerSensor.vue": {
+        "size": 2001,
+        "mtime_ns": 1784909821541843249,
+        "word_count": 179
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Miscellaneous/MoonrakerSensorValue.vue": {
+        "size": 1823,
+        "mtime_ns": 1784909821541900083,
+        "word_count": 179
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/MiscellaneousPanel.vue": {
+        "size": 3846,
+        "mtime_ns": 1784909821541952249,
+        "word_count": 238
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuClogMeter.vue": {
+        "size": 6663,
+        "mtime_ns": 1784909821542040041,
+        "word_count": 524
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuControls.vue": {
+        "size": 4283,
+        "mtime_ns": 1784909821542580333,
+        "word_count": 252
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuControlsButton.vue": {
+        "size": 2338,
+        "mtime_ns": 1784909821542637458,
+        "word_count": 192
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuFilamentStatus.vue": {
+        "size": 21662,
+        "mtime_ns": 1784909821542715749,
+        "word_count": 1532
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuFilamentStatusEncoder.vue": {
+        "size": 2011,
+        "mtime_ns": 1784909821542780583,
+        "word_count": 175
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuFilamentStatusSensor.vue": {
+        "size": 2817,
+        "mtime_ns": 1784909821542834416,
+        "word_count": 238
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuFilamentStatusSyncFeedback.vue": {
+        "size": 2405,
+        "mtime_ns": 1784909821542893999,
+        "word_count": 175
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuFilamentStatusTemperature.vue": {
+        "size": 821,
+        "mtime_ns": 1784909821542946041,
+        "word_count": 72
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuFlowguardMeter.vue": {
+        "size": 8435,
+        "mtime_ns": 1784909821543015208,
+        "word_count": 644
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuGateSummary.vue": {
+        "size": 5027,
+        "mtime_ns": 1784909821543068333,
+        "word_count": 447
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuPanelSettings.vue": {
+        "size": 4735,
+        "mtime_ns": 1784909821543116541,
+        "word_count": 289
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuTtgMap.vue": {
+        "size": 4657,
+        "mtime_ns": 1784909821543173416,
+        "word_count": 388
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuTtgMapGate.vue": {
+        "size": 1070,
+        "mtime_ns": 1784909821543224833,
+        "word_count": 111
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuTtgMapGroup.vue": {
+        "size": 2341,
+        "mtime_ns": 1784909821543280666,
+        "word_count": 246
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuTtgMapLine.vue": {
+        "size": 2001,
+        "mtime_ns": 1784909821543338541,
+        "word_count": 201
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuTtgMapTool.vue": {
+        "size": 1133,
+        "mtime_ns": 1784909821543394333,
+        "word_count": 113
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuUnit.vue": {
+        "size": 3296,
+        "mtime_ns": 1784909821543452874,
+        "word_count": 264
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuUnitFooter.vue": {
+        "size": 3922,
+        "mtime_ns": 1784909821543510333,
+        "word_count": 328
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuUnitFooterClimate.vue": {
+        "size": 8989,
+        "mtime_ns": 1784909821543572916,
+        "word_count": 767
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuUnitGate.vue": {
+        "size": 5863,
+        "mtime_ns": 1784909821543628749,
+        "word_count": 531
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuUnitGateMenu.vue": {
+        "size": 4612,
+        "mtime_ns": 1784909821543689666,
+        "word_count": 353
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuUnitGateMenuItem.vue": {
+        "size": 1561,
+        "mtime_ns": 1784909821543741416,
+        "word_count": 129
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Mmu/MmuUnitGateSpool.vue": {
+        "size": 11294,
+        "mtime_ns": 1784909821543804583,
+        "word_count": 948
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/MmuPanel.vue": {
+        "size": 11323,
+        "mtime_ns": 1784909821543866708,
+        "word_count": 681
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Spoolman/SpoolmanPanelActiveSpool.vue": {
+        "size": 3820,
+        "mtime_ns": 1784909821543953791,
+        "word_count": 332
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Spoolman/SpoolmanToolsDropdown.vue": {
+        "size": 1358,
+        "mtime_ns": 1784909821544009499,
+        "word_count": 104
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Spoolman/SpoolmanToolsDropdownItem.vue": {
+        "size": 1768,
+        "mtime_ns": 1784909821544062291,
+        "word_count": 164
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/SpoolmanPanel.vue": {
+        "size": 4801,
+        "mtime_ns": 1784909821544121041,
+        "word_count": 306
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/ExcludeObject.vue": {
+        "size": 3709,
+        "mtime_ns": 1784909821544206291,
+        "word_count": 225
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/ExcludeObjectDialog.vue": {
+        "size": 3403,
+        "mtime_ns": 1784909821544259416,
+        "word_count": 180
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/ExcludeObjectDialogList.vue": {
+        "size": 2344,
+        "mtime_ns": 1784909821544310749,
+        "word_count": 151
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/ExcludeObjectDialogMap.vue": {
+        "size": 8585,
+        "mtime_ns": 1784909821544369291,
+        "word_count": 650
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/Gcodefiles.vue": {
+        "size": 3528,
+        "mtime_ns": 1784909821544424999,
+        "word_count": 266
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/GcodefilesEntry.vue": {
+        "size": 9038,
+        "mtime_ns": 1784909821544480666,
+        "word_count": 625
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/History.vue": {
+        "size": 2449,
+        "mtime_ns": 1784909821544535083,
+        "word_count": 209
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/HistoryEntry.vue": {
+        "size": 10664,
+        "mtime_ns": 1784909821544592958,
+        "word_count": 768
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/Jobqueue.vue": {
+        "size": 1829,
+        "mtime_ns": 1784909821544651749,
+        "word_count": 146
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/JobqueueEntry.vue": {
+        "size": 6111,
+        "mtime_ns": 1784909821544715999,
+        "word_count": 509
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/JobqueueEntryRest.vue": {
+        "size": 3634,
+        "mtime_ns": 1784909821544782791,
+        "word_count": 361
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/JobqueueEntrySum.vue": {
+        "size": 4927,
+        "mtime_ns": 1784909821544841374,
+        "word_count": 560
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/PauseAtLayerDialog.vue": {
+        "size": 7987,
+        "mtime_ns": 1784909821544902999,
+        "word_count": 470
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/Printstatus.vue": {
+        "size": 992,
+        "mtime_ns": 1784909821544956166,
+        "word_count": 56
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/PrintstatusComplete.vue": {
+        "size": 2667,
+        "mtime_ns": 1784909821545010874,
+        "word_count": 209
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/PrintstatusPrinting.vue": {
+        "size": 11150,
+        "mtime_ns": 1784909821545075458,
+        "word_count": 738
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Status/PrintstatusThumbnail.vue": {
+        "size": 10596,
+        "mtime_ns": 1784909821545142333,
+        "word_count": 686
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/StatusPanel.vue": {
+        "size": 17237,
+        "mtime_ns": 1784909821545219583,
+        "word_count": 1025
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelList.vue": {
+        "size": 6734,
+        "mtime_ns": 1784909821545312041,
+        "word_count": 449
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItem.vue": {
+        "size": 11069,
+        "mtime_ns": 1784909821545377958,
+        "word_count": 887
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItemAdditionalSensor.vue": {
+        "size": 1243,
+        "mtime_ns": 1784909821545435749,
+        "word_count": 94
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItemAdditionalSensorValue.vue": {
+        "size": 2656,
+        "mtime_ns": 1784909821545489999,
+        "word_count": 255
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItemEdit.vue": {
+        "size": 3810,
+        "mtime_ns": 1784909821545552583,
+        "word_count": 262
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItemEditAdditionalSensor.vue": {
+        "size": 1179,
+        "mtime_ns": 1784909821545606041,
+        "word_count": 93
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItemEditChartSerie.vue": {
+        "size": 1209,
+        "mtime_ns": 1784909821546150124,
+        "word_count": 104
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItemNevermore.vue": {
+        "size": 3692,
+        "mtime_ns": 1784909821546321791,
+        "word_count": 322
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelListItemNevermoreValue.vue": {
+        "size": 4134,
+        "mtime_ns": 1784909821546382249,
+        "word_count": 394
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelPresets.vue": {
+        "size": 5395,
+        "mtime_ns": 1784909821546444416,
+        "word_count": 370
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Temperature/TemperaturePanelSettings.vue": {
+        "size": 2953,
+        "mtime_ns": 1784909821546495749,
+        "word_count": 180
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/TemperaturePanel.vue": {
+        "size": 1738,
+        "mtime_ns": 1784909821546547166,
+        "word_count": 124
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Timelapse/TimelapseFilesPanel.vue": {
+        "size": 35595,
+        "mtime_ns": 1784909821546715624,
+        "word_count": 2076
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/Timelapse/TimelapseStatusPanel.vue": {
+        "size": 7188,
+        "mtime_ns": 1784909821546782458,
+        "word_count": 422
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ToolheadControlPanel.vue": {
+        "size": 8395,
+        "mtime_ns": 1784909821546840624,
+        "word_count": 470
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ToolheadControls/BarsControl.vue": {
+        "size": 8908,
+        "mtime_ns": 1784909821546986083,
+        "word_count": 499
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ToolheadControls/CircleControl.vue": {
+        "size": 41160,
+        "mtime_ns": 1784909821547095083,
+        "word_count": 1967
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ToolheadControls/CrossControl.vue": {
+        "size": 22363,
+        "mtime_ns": 1784909821547200458,
+        "word_count": 847
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ToolheadControls/MoveToControl.vue": {
+        "size": 8103,
+        "mtime_ns": 1784909821547264083,
+        "word_count": 574
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ToolheadControls/ToolheadPanelSettings.vue": {
+        "size": 3432,
+        "mtime_ns": 1784909821547321958,
+        "word_count": 210
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/ToolheadControls/ZoffsetControl.vue": {
+        "size": 10077,
+        "mtime_ns": 1784909821547372166,
+        "word_count": 609
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/WebcamPanel.vue": {
+        "size": 4465,
+        "mtime_ns": 1784909821547446166,
+        "word_count": 317
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/forge/ForgeCameraPanel.vue": {
+        "size": 971,
+        "mtime_ns": 1784911908084729916,
+        "word_count": 80
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/forge/ForgeHealthPanel.vue": {
+        "size": 8094,
+        "mtime_ns": 1785001979230027249,
+        "word_count": 693
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/forge/ForgeJobPanel.vue": {
+        "size": 6739,
+        "mtime_ns": 1784911908093798291,
+        "word_count": 459
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/forge/ForgeMacrosPanel.vue": {
+        "size": 1758,
+        "mtime_ns": 1784911908097764541,
+        "word_count": 135
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/forge/ForgeMotionPanel.vue": {
+        "size": 10534,
+        "mtime_ns": 1785139231125776041,
+        "word_count": 745
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/forge/ForgeOutputsPanel.vue": {
+        "size": 2885,
+        "mtime_ns": 1785138784831917916,
+        "word_count": 234
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/panels/forge/ForgeThermalPanel.vue": {
+        "size": 5644,
+        "mtime_ns": 1785143835007402583,
+        "word_count": 484
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Dashboard/Desktop.vue": {
+        "size": 1298,
+        "mtime_ns": 1784909821547574249,
+        "word_count": 79
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Dashboard/Mobile.vue": {
+        "size": 1043,
+        "mtime_ns": 1784909821547623333,
+        "word_count": 67
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Dashboard/Sortable.vue": {
+        "size": 3470,
+        "mtime_ns": 1784909821547680749,
+        "word_count": 254
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Dashboard/SortableItem.vue": {
+        "size": 1779,
+        "mtime_ns": 1784909821547730249,
+        "word_count": 152
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Dashboard/Tablet.vue": {
+        "size": 1292,
+        "mtime_ns": 1784909821547776499,
+        "word_count": 79
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Dashboard/Widescreen.vue": {
+        "size": 1545,
+        "mtime_ns": 1784909821547826166,
+        "word_count": 89
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/General/GeneralBackup.vue": {
+        "size": 3279,
+        "mtime_ns": 1784909821547914749,
+        "word_count": 197
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/General/GeneralReset.vue": {
+        "size": 3705,
+        "mtime_ns": 1784909821547974916,
+        "word_count": 216
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/General/GeneralRestore.vue": {
+        "size": 4820,
+        "mtime_ns": 1784909821548037958,
+        "word_count": 308
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightGroups.vue": {
+        "size": 1078,
+        "mtime_ns": 1784909821548131708,
+        "word_count": 92
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightGroupsForm.vue": {
+        "size": 6878,
+        "mtime_ns": 1784909821548198708,
+        "word_count": 508
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightGroupsList.vue": {
+        "size": 2694,
+        "mtime_ns": 1784909821548263833,
+        "word_count": 204
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightGroupsListEntry.vue": {
+        "size": 1715,
+        "mtime_ns": 1784909821548326791,
+        "word_count": 144
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightPresets.vue": {
+        "size": 1090,
+        "mtime_ns": 1784909821548381624,
+        "word_count": 92
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightPresetsForm.vue": {
+        "size": 13729,
+        "mtime_ns": 1784909821548436416,
+        "word_count": 1005
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightPresetsList.vue": {
+        "size": 2622,
+        "mtime_ns": 1784909821548499499,
+        "word_count": 203
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabLightPresetsListEntry.vue": {
+        "size": 2756,
+        "mtime_ns": 1784909821548559583,
+        "word_count": 236
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabList.vue": {
+        "size": 2336,
+        "mtime_ns": 1784909821548617166,
+        "word_count": 188
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Miscellaneous/SettingsMiscellaneousTabListLight.vue": {
+        "size": 1854,
+        "mtime_ns": 1784909821548677749,
+        "word_count": 172
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Presets/PresetsEntry.vue": {
+        "size": 1748,
+        "mtime_ns": 1784909821548770708,
+        "word_count": 156
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Presets/PresetsEntryCooldown.vue": {
+        "size": 724,
+        "mtime_ns": 1784909821548827249,
+        "word_count": 64
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Presets/PresetsForm.vue": {
+        "size": 6443,
+        "mtime_ns": 1784909821548889416,
+        "word_count": 439
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Presets/PresetsFormCooldown.vue": {
+        "size": 1572,
+        "mtime_ns": 1784909821548948583,
+        "word_count": 117
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsConsoleTab.vue": {
+        "size": 11120,
+        "mtime_ns": 1784909821549017166,
+        "word_count": 656
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsControlTab.vue": {
+        "size": 23509,
+        "mtime_ns": 1784909821549293083,
+        "word_count": 1435
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsDashboardTab.vue": {
+        "size": 3647,
+        "mtime_ns": 1784909821549360333,
+        "word_count": 211
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsEditorTab.vue": {
+        "size": 4218,
+        "mtime_ns": 1784909821549420249,
+        "word_count": 239
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsGCodeViewerTab.vue": {
+        "size": 10371,
+        "mtime_ns": 1784909821549502374,
+        "word_count": 514
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsGeneralTab.vue": {
+        "size": 9185,
+        "mtime_ns": 1784909821549568083,
+        "word_count": 594
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsHeightmapTab.vue": {
+        "size": 3663,
+        "mtime_ns": 1784909821549629583,
+        "word_count": 216
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsMacrosTab.vue": {
+        "size": 2012,
+        "mtime_ns": 1784909821549697041,
+        "word_count": 132
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsMacrosTabExpert.vue": {
+        "size": 25443,
+        "mtime_ns": 1784909821549780874,
+        "word_count": 1217
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsMacrosTabSimple.vue": {
+        "size": 3002,
+        "mtime_ns": 1784909821549845541,
+        "word_count": 180
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsMiscellaneousTab.vue": {
+        "size": 1585,
+        "mtime_ns": 1784909821549910291,
+        "word_count": 109
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsNavigationTab.vue": {
+        "size": 1968,
+        "mtime_ns": 1784909821549969999,
+        "word_count": 131
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsNavigationTabItem.vue": {
+        "size": 1787,
+        "mtime_ns": 1784909821550025749,
+        "word_count": 147
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsPresetsTab.vue": {
+        "size": 2444,
+        "mtime_ns": 1784909821550085958,
+        "word_count": 185
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsRemotePrintersTab.vue": {
+        "size": 7780,
+        "mtime_ns": 1784909821550148583,
+        "word_count": 509
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsRow.vue": {
+        "size": 2650,
+        "mtime_ns": 1784909821550204124,
+        "word_count": 257
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsTimelapseTab.vue": {
+        "size": 38038,
+        "mtime_ns": 1784909821550292083,
+        "word_count": 1734
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsUiSettingsTab.vue": {
+        "size": 30543,
+        "mtime_ns": 1784909821550363291,
+        "word_count": 1502
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/SettingsWebcamsTab.vue": {
+        "size": 3638,
+        "mtime_ns": 1784909821550423041,
+        "word_count": 269
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Webcams/WebcamForm.vue": {
+        "size": 21265,
+        "mtime_ns": 1784909821550529624,
+        "word_count": 1190
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/settings/Webcams/WebcamListEntry.vue": {
+        "size": 2454,
+        "mtime_ns": 1784909821550588874,
+        "word_count": 193
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/ConnectionStatus.vue": {
+        "size": 9392,
+        "mtime_ns": 1784909821550682041,
+        "word_count": 494
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/MainsailLogo.vue": {
+        "size": 1511,
+        "mtime_ns": 1784909821550733499,
+        "word_count": 114
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/Panel.vue": {
+        "size": 3927,
+        "mtime_ns": 1784909821550788249,
+        "word_count": 361
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/PathNavigation.vue": {
+        "size": 3414,
+        "mtime_ns": 1784909821550841916,
+        "word_count": 299
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/PrinterSelector.vue": {
+        "size": 2256,
+        "mtime_ns": 1784909821550894499,
+        "word_count": 163
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/Responsive.vue": {
+        "size": 590,
+        "mtime_ns": 1784909821550948541,
+        "word_count": 59
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/SidebarItem.vue": {
+        "size": 2539,
+        "mtime_ns": 1784909821551000374,
+        "word_count": 204
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/SpoolIcon.vue": {
+        "size": 5566,
+        "mtime_ns": 1784909821551061833,
+        "word_count": 434
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/SubPanel.vue": {
+        "size": 1754,
+        "mtime_ns": 1784909821551121499,
+        "word_count": 159
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/ui/TopCornerMenuService.vue": {
+        "size": 4735,
+        "mtime_ns": 1784909821551176458,
+        "word_count": 327
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/WebcamNozzleCrosshair.vue": {
+        "size": 2303,
+        "mtime_ns": 1784909821551262458,
+        "word_count": 219
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/WebcamWrapper.vue": {
+        "size": 1623,
+        "mtime_ns": 1784909821551311083,
+        "word_count": 125
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/WebcamWrapperItem.vue": {
+        "size": 3720,
+        "mtime_ns": 1784909821551364583,
+        "word_count": 248
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/DynamicCamLoader.ts": {
+        "size": 1831,
+        "mtime_ns": 1784909821551441541,
+        "word_count": 122
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/Hlsstreamer.vue": {
+        "size": 2643,
+        "mtime_ns": 1784909821551495083,
+        "word_count": 197
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/HtmlIframe.vue": {
+        "size": 1691,
+        "mtime_ns": 1784909821551550708,
+        "word_count": 143
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/HtmlVideo.vue": {
+        "size": 1511,
+        "mtime_ns": 1784909821551605291,
+        "word_count": 118
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/JMuxerStream.vue": {
+        "size": 3512,
+        "mtime_ns": 1784909821551667333,
+        "word_count": 295
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/JanusStreamer.vue": {
+        "size": 4825,
+        "mtime_ns": 1784909821551722958,
+        "word_count": 402
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/Mjpegstreamer.vue": {
+        "size": 9003,
+        "mtime_ns": 1784909821551779416,
+        "word_count": 753
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/MjpegstreamerAdaptive.vue": {
+        "size": 6776,
+        "mtime_ns": 1784909821551837833,
+        "word_count": 564
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/Uv4lMjpeg.vue": {
+        "size": 2978,
+        "mtime_ns": 1784909821551889291,
+        "word_count": 225
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/WebrtcCameraStreamer.vue": {
+        "size": 9350,
+        "mtime_ns": 1784909821551966208,
+        "word_count": 779
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/WebrtcGo2rtc.vue": {
+        "size": 8080,
+        "mtime_ns": 1784909821552025166,
+        "word_count": 705
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/WebrtcMediaMTX.vue": {
+        "size": 12665,
+        "mtime_ns": 1784909821552075958,
+        "word_count": 1114
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/components/webcams/streamers/mjpegstreamer.worker.ts": {
+        "size": 5731,
+        "mtime_ns": 1784909821552135541,
+        "word_count": 643
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/directives/longpress.ts": {
+        "size": 4882,
+        "mtime_ns": 1784909821552221166,
+        "word_count": 473
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/directives/responsive-class.ts": {
+        "size": 502,
+        "mtime_ns": 1784909821552363166,
+        "word_count": 43
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/ca.json": {
+        "size": 27,
+        "mtime_ns": 1784909821552448249,
+        "word_count": 4
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/cz.json": {
+        "size": 73193,
+        "mtime_ns": 1784909821552605749,
+        "word_count": 5490
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/da.json": {
+        "size": 63881,
+        "mtime_ns": 1784909821552828291,
+        "word_count": 4938
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/de.json": {
+        "size": 86962,
+        "mtime_ns": 1784909821552993749,
+        "word_count": 6517
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/en.json": {
+        "size": 81282,
+        "mtime_ns": 1784909821553154874,
+        "word_count": 6878
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/es.json": {
+        "size": 70612,
+        "mtime_ns": 1784909821553371791,
+        "word_count": 6012
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/fr.json": {
+        "size": 66268,
+        "mtime_ns": 1784909821553506958,
+        "word_count": 5623
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/hu.json": {
+        "size": 72872,
+        "mtime_ns": 1784909821553657458,
+        "word_count": 5152
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/it.json": {
+        "size": 69120,
+        "mtime_ns": 1784909821553794583,
+        "word_count": 5615
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/ja.json": {
+        "size": 58197,
+        "mtime_ns": 1784909821553932166,
+        "word_count": 2228
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/ko.json": {
+        "size": 56815,
+        "mtime_ns": 1784909821554062374,
+        "word_count": 4090
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/nl.json": {
+        "size": 54981,
+        "mtime_ns": 1784909821554194749,
+        "word_count": 4402
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/pl.json": {
+        "size": 67434,
+        "mtime_ns": 1784909821554342041,
+        "word_count": 5078
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/pt.json": {
+        "size": 61478,
+        "mtime_ns": 1784909821554428708,
+        "word_count": 5106
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/ru.json": {
+        "size": 118566,
+        "mtime_ns": 1784909821554642458,
+        "word_count": 6629
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/se.json": {
+        "size": 61854,
+        "mtime_ns": 1784909821554736124,
+        "word_count": 4705
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/sk.json": {
+        "size": 1963,
+        "mtime_ns": 1784909821554796708,
+        "word_count": 157
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/sl.json": {
+        "size": 84783,
+        "mtime_ns": 1784909821555586999,
+        "word_count": 6753
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/tr.json": {
+        "size": 88246,
+        "mtime_ns": 1784909821555806708,
+        "word_count": 6428
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/uk.json": {
+        "size": 86861,
+        "mtime_ns": 1784909821556165749,
+        "word_count": 4943
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/zh.json": {
+        "size": 79426,
+        "mtime_ns": 1784909821556571416,
+        "word_count": 3254
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/locales/zh_TW.json": {
+        "size": 69180,
+        "mtime_ns": 1784909821556734458,
+        "word_count": 3211
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/main.ts": {
+        "size": 3228,
+        "mtime_ns": 1784909821556801208,
+        "word_count": 319
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Console.vue": {
+        "size": 5855,
+        "mtime_ns": 1784909821556899749,
+        "word_count": 320
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Dashboard.vue": {
+        "size": 1427,
+        "mtime_ns": 1785074414476992249,
+        "word_count": 89
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Farm.vue": {
+        "size": 660,
+        "mtime_ns": 1784909821557010958,
+        "word_count": 56
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Files.vue": {
+        "size": 1333,
+        "mtime_ns": 1784909821557063791,
+        "word_count": 106
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Heightmap.vue": {
+        "size": 1321,
+        "mtime_ns": 1784909821557115583,
+        "word_count": 83
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/History.vue": {
+        "size": 723,
+        "mtime_ns": 1784909821557173916,
+        "word_count": 53
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Machine.vue": {
+        "size": 1714,
+        "mtime_ns": 1784909821557226208,
+        "word_count": 106
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/PageNotFound.vue": {
+        "size": 108,
+        "mtime_ns": 1784909821557270916,
+        "word_count": 10
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Timelapse.vue": {
+        "size": 875,
+        "mtime_ns": 1784909821557322208,
+        "word_count": 64
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Viewer.vue": {
+        "size": 351,
+        "mtime_ns": 1784909821557377874,
+        "word_count": 34
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/pages/Webcam.vue": {
+        "size": 511,
+        "mtime_ns": 1784909821557434916,
+        "word_count": 45
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/KlipperDocsTooltip.ts": {
+        "size": 3544,
+        "mtime_ns": 1784909821557522833,
+        "word_count": 339
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/StreamParserGcode.ts": {
+        "size": 2471,
+        "mtime_ns": 1784909821557576374,
+        "word_count": 234
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/StreamParserKlipperConfig.ts": {
+        "size": 11843,
+        "mtime_ns": 1784909821557640624,
+        "word_count": 816
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/afcIcons.ts": {
+        "size": 44011,
+        "mtime_ns": 1784909821557856708,
+        "word_count": 3768
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/build-release_info.ts": {
+        "size": 1023,
+        "mtime_ns": 1784909821557921583,
+        "word_count": 85
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/build-version.ts": {
+        "size": 708,
+        "mtime_ns": 1784909821558075124,
+        "word_count": 74
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/eventBus.ts": {
+        "size": 112,
+        "mtime_ns": 1784909821558129458,
+        "word_count": 15
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/forgeDashboard.ts": {
+        "size": 686,
+        "mtime_ns": 1784910009452991166,
+        "word_count": 72
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/forgeFormat.ts": {
+        "size": 1887,
+        "mtime_ns": 1785138752821759166,
+        "word_count": 270
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/helpers.ts": {
+        "size": 19020,
+        "mtime_ns": 1784909821558218499,
+        "word_count": 2313
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/i18n.ts": {
+        "size": 550,
+        "mtime_ns": 1784909821558269208,
+        "word_count": 56
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/mmuIcons.ts": {
+        "size": 221797,
+        "mtime_ns": 1784909821558656583,
+        "word_count": 15968
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/router.ts": {
+        "size": 233,
+        "mtime_ns": 1784909821558710333,
+        "word_count": 27
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/vuetify.ts": {
+        "size": 387,
+        "mtime_ns": 1784909821558762041,
+        "word_count": 48
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/w3c.ts": {
+        "size": 6394,
+        "mtime_ns": 1784909821558820583,
+        "word_count": 895
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/plugins/webSocketClient.ts": {
+        "size": 8971,
+        "mtime_ns": 1784909821558882708,
+        "word_count": 778
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/routes/index.ts": {
+        "size": 3760,
+        "mtime_ns": 1784909821559020874,
+        "word_count": 315
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/actions.ts": {
+        "size": 1995,
+        "mtime_ns": 1784909821559105999,
+        "word_count": 161
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/editor/actions.ts": {
+        "size": 5806,
+        "mtime_ns": 1784909821559192333,
+        "word_count": 417
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/editor/getters.ts": {
+        "size": 341,
+        "mtime_ns": 1784909821559242916,
+        "word_count": 37
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/editor/index.ts": {
+        "size": 912,
+        "mtime_ns": 1784909821559290291,
+        "word_count": 100
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/editor/mutations.ts": {
+        "size": 2710,
+        "mtime_ns": 1784909821559342916,
+        "word_count": 302
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/editor/types.ts": {
+        "size": 456,
+        "mtime_ns": 1784909821559392374,
+        "word_count": 46
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/farm/index.ts": {
+        "size": 2285,
+        "mtime_ns": 1784909821559474624,
+        "word_count": 217
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/farm/printer/actions.ts": {
+        "size": 7628,
+        "mtime_ns": 1784909821559575499,
+        "word_count": 571
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/farm/printer/getters.ts": {
+        "size": 12420,
+        "mtime_ns": 1784909821559638583,
+        "word_count": 1012
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/farm/printer/index.ts": {
+        "size": 1506,
+        "mtime_ns": 1784909821559688624,
+        "word_count": 148
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/farm/printer/mutations.ts": {
+        "size": 2560,
+        "mtime_ns": 1784909821559746041,
+        "word_count": 207
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/farm/printer/types.ts": {
+        "size": 1160,
+        "mtime_ns": 1784909821559798708,
+        "word_count": 106
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/farm/types.ts": {
+        "size": 130,
+        "mtime_ns": 1784909821559844708,
+        "word_count": 14
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/files/actions.ts": {
+        "size": 15545,
+        "mtime_ns": 1784909821559938458,
+        "word_count": 1125
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/files/getters.ts": {
+        "size": 11573,
+        "mtime_ns": 1784909821559997958,
+        "word_count": 902
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/files/index.ts": {
+        "size": 761,
+        "mtime_ns": 1784909821560047791,
+        "word_count": 88
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/files/mutations.ts": {
+        "size": 11669,
+        "mtime_ns": 1784909821560102916,
+        "word_count": 966
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/files/types.ts": {
+        "size": 2957,
+        "mtime_ns": 1784909821560154291,
+        "word_count": 270
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gcodeviewer/actions.ts": {
+        "size": 545,
+        "mtime_ns": 1784909821560229958,
+        "word_count": 56
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gcodeviewer/getters.ts": {
+        "size": 205,
+        "mtime_ns": 1784909821560282416,
+        "word_count": 25
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gcodeviewer/index.ts": {
+        "size": 659,
+        "mtime_ns": 1784909821560330833,
+        "word_count": 75
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gcodeviewer/mutations.ts": {
+        "size": 656,
+        "mtime_ns": 1784909821560471416,
+        "word_count": 69
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gcodeviewer/types.ts": {
+        "size": 285,
+        "mtime_ns": 1784909821560520999,
+        "word_count": 28
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/getters.ts": {
+        "size": 4675,
+        "mtime_ns": 1784909821560575749,
+        "word_count": 355
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/actions.ts": {
+        "size": 19272,
+        "mtime_ns": 1784909821560779083,
+        "word_count": 1403
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/console/actions.ts": {
+        "size": 2002,
+        "mtime_ns": 1784909821560967083,
+        "word_count": 173
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/console/getters.ts": {
+        "size": 1440,
+        "mtime_ns": 1784909821561019874,
+        "word_count": 115
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/console/index.ts": {
+        "size": 790,
+        "mtime_ns": 1784909821561083874,
+        "word_count": 85
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/console/mutations.ts": {
+        "size": 921,
+        "mtime_ns": 1784909821561216499,
+        "word_count": 79
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/console/types.ts": {
+        "size": 456,
+        "mtime_ns": 1784909821561278083,
+        "word_count": 46
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/gcodehistory/actions.ts": {
+        "size": 868,
+        "mtime_ns": 1784909821561361958,
+        "word_count": 81
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/gcodehistory/getters.ts": {
+        "size": 218,
+        "mtime_ns": 1784909821561496749,
+        "word_count": 25
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/gcodehistory/index.ts": {
+        "size": 625,
+        "mtime_ns": 1784909821561546041,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/gcodehistory/mutations.ts": {
+        "size": 397,
+        "mtime_ns": 1784909821561595999,
+        "word_count": 41
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/gcodehistory/types.ts": {
+        "size": 64,
+        "mtime_ns": 1784909821561740374,
+        "word_count": 7
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/getters.ts": {
+        "size": 7891,
+        "mtime_ns": 1784909821561801541,
+        "word_count": 698
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/heightmap/actions.ts": {
+        "size": 548,
+        "mtime_ns": 1784909821561882958,
+        "word_count": 56
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/heightmap/getters.ts": {
+        "size": 1126,
+        "mtime_ns": 1784909821561934583,
+        "word_count": 84
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/heightmap/index.ts": {
+        "size": 500,
+        "mtime_ns": 1784909821562095791,
+        "word_count": 63
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/heightmap/types.ts": {
+        "size": 135,
+        "mtime_ns": 1784909821562146166,
+        "word_count": 15
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/index.ts": {
+        "size": 11821,
+        "mtime_ns": 1784909821562201208,
+        "word_count": 849
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/macros/actions.ts": {
+        "size": 2969,
+        "mtime_ns": 1784909821562282083,
+        "word_count": 246
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/macros/getters.ts": {
+        "size": 675,
+        "mtime_ns": 1784909821562332374,
+        "word_count": 65
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/macros/index.ts": {
+        "size": 631,
+        "mtime_ns": 1784909821562486958,
+        "word_count": 75
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/macros/mutations.ts": {
+        "size": 2801,
+        "mtime_ns": 1784909821562540708,
+        "word_count": 223
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/macros/types.ts": {
+        "size": 726,
+        "mtime_ns": 1784909821562589708,
+        "word_count": 77
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/maintenance/actions.ts": {
+        "size": 6452,
+        "mtime_ns": 1784909821562682291,
+        "word_count": 528
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/maintenance/getters.ts": {
+        "size": 1710,
+        "mtime_ns": 1784909821562732708,
+        "word_count": 162
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/maintenance/index.ts": {
+        "size": 617,
+        "mtime_ns": 1784909821562779458,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/maintenance/mutations.ts": {
+        "size": 857,
+        "mtime_ns": 1784909821562843666,
+        "word_count": 80
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/maintenance/types.ts": {
+        "size": 1378,
+        "mtime_ns": 1784909821562896708,
+        "word_count": 146
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/miscellaneous/actions.ts": {
+        "size": 4307,
+        "mtime_ns": 1784909821562981958,
+        "word_count": 411
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/miscellaneous/getters.ts": {
+        "size": 1102,
+        "mtime_ns": 1784909821563032374,
+        "word_count": 107
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/miscellaneous/index.ts": {
+        "size": 633,
+        "mtime_ns": 1784909821563226666,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/miscellaneous/mutations.ts": {
+        "size": 2670,
+        "mtime_ns": 1784909821563280999,
+        "word_count": 204
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/miscellaneous/types.ts": {
+        "size": 686,
+        "mtime_ns": 1784909821563330333,
+        "word_count": 72
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/mutations.ts": {
+        "size": 4997,
+        "mtime_ns": 1784909821563383958,
+        "word_count": 362
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/navigation/actions.ts": {
+        "size": 832,
+        "mtime_ns": 1784909821563600749,
+        "word_count": 77
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/navigation/getters.ts": {
+        "size": 191,
+        "mtime_ns": 1784909821563658416,
+        "word_count": 25
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/navigation/index.ts": {
+        "size": 609,
+        "mtime_ns": 1784909821563709041,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/navigation/mutations.ts": {
+        "size": 1984,
+        "mtime_ns": 1784909821563761666,
+        "word_count": 190
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/navigation/types.ts": {
+        "size": 212,
+        "mtime_ns": 1784909821563814249,
+        "word_count": 22
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/notifications/actions.ts": {
+        "size": 2615,
+        "mtime_ns": 1784909821563894666,
+        "word_count": 242
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/notifications/getters.ts": {
+        "size": 20510,
+        "mtime_ns": 1784909821563965624,
+        "word_count": 1364
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/notifications/index.ts": {
+        "size": 534,
+        "mtime_ns": 1784909821564011083,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/notifications/mutations.ts": {
+        "size": 816,
+        "mtime_ns": 1784909821564058791,
+        "word_count": 80
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/notifications/types.ts": {
+        "size": 420,
+        "mtime_ns": 1784909821564105124,
+        "word_count": 43
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/presets/actions.ts": {
+        "size": 1432,
+        "mtime_ns": 1784909821564187999,
+        "word_count": 140
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/presets/getters.ts": {
+        "size": 1869,
+        "mtime_ns": 1784909821564237458,
+        "word_count": 177
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/presets/index.ts": {
+        "size": 628,
+        "mtime_ns": 1784909821564285374,
+        "word_count": 73
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/presets/mutations.ts": {
+        "size": 1039,
+        "mtime_ns": 1784909821564336041,
+        "word_count": 90
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/presets/types.ts": {
+        "size": 385,
+        "mtime_ns": 1784909821564387291,
+        "word_count": 41
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/reminders/actions.ts": {
+        "size": 2050,
+        "mtime_ns": 1784909821564468958,
+        "word_count": 184
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/reminders/getters.ts": {
+        "size": 1099,
+        "mtime_ns": 1784909821564517124,
+        "word_count": 100
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/reminders/index.ts": {
+        "size": 601,
+        "mtime_ns": 1784909821564562249,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/reminders/mutations.ts": {
+        "size": 887,
+        "mtime_ns": 1784909821564608958,
+        "word_count": 81
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/reminders/types.ts": {
+        "size": 388,
+        "mtime_ns": 1784909821564655666,
+        "word_count": 32
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/remoteprinters/actions.ts": {
+        "size": 4235,
+        "mtime_ns": 1784909821564738041,
+        "word_count": 339
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/remoteprinters/getters.ts": {
+        "size": 727,
+        "mtime_ns": 1784909821564956458,
+        "word_count": 65
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/remoteprinters/index.ts": {
+        "size": 642,
+        "mtime_ns": 1784909821565006416,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/remoteprinters/mutations.ts": {
+        "size": 807,
+        "mtime_ns": 1784909821565058833,
+        "word_count": 74
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/remoteprinters/types.ts": {
+        "size": 441,
+        "mtime_ns": 1784909821565109374,
+        "word_count": 46
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/types.ts": {
+        "size": 8030,
+        "mtime_ns": 1784909821565168916,
+        "word_count": 572
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/webcams/actions.ts": {
+        "size": 1500,
+        "mtime_ns": 1784909821565248416,
+        "word_count": 132
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/webcams/getters.ts": {
+        "size": 542,
+        "mtime_ns": 1784909821565300499,
+        "word_count": 59
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/webcams/index.ts": {
+        "size": 582,
+        "mtime_ns": 1784909821565350208,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/webcams/mutations.ts": {
+        "size": 376,
+        "mtime_ns": 1784909821565398083,
+        "word_count": 41
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/gui/webcams/types.ts": {
+        "size": 911,
+        "mtime_ns": 1784909821565448458,
+        "word_count": 76
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/index.ts": {
+        "size": 1182,
+        "mtime_ns": 1784909821565499499,
+        "word_count": 141
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/mutations.ts": {
+        "size": 482,
+        "mtime_ns": 1784909821565549291,
+        "word_count": 46
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/actions.ts": {
+        "size": 5796,
+        "mtime_ns": 1784909821565642041,
+        "word_count": 464
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/getters.ts": {
+        "size": 27717,
+        "mtime_ns": 1784909821565729874,
+        "word_count": 2232
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/index.ts": {
+        "size": 654,
+        "mtime_ns": 1784909821565784166,
+        "word_count": 81
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/mutations.ts": {
+        "size": 1820,
+        "mtime_ns": 1784909821565841208,
+        "word_count": 169
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/tempHistory/actions.ts": {
+        "size": 11608,
+        "mtime_ns": 1784909821565938124,
+        "word_count": 885
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/tempHistory/getters.ts": {
+        "size": 6603,
+        "mtime_ns": 1784909821566000624,
+        "word_count": 590
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/tempHistory/index.ts": {
+        "size": 730,
+        "mtime_ns": 1784909821566048499,
+        "word_count": 77
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/tempHistory/mutations.ts": {
+        "size": 1844,
+        "mtime_ns": 1784909821566098291,
+        "word_count": 144
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/tempHistory/types.ts": {
+        "size": 995,
+        "mtime_ns": 1784909821566150541,
+        "word_count": 96
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/printer/types.ts": {
+        "size": 7121,
+        "mtime_ns": 1784909821566208374,
+        "word_count": 650
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/actions.ts": {
+        "size": 11491,
+        "mtime_ns": 1784909821566308958,
+        "word_count": 929
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/announcements/actions.ts": {
+        "size": 1762,
+        "mtime_ns": 1784909821566401374,
+        "word_count": 173
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/announcements/getters.ts": {
+        "size": 373,
+        "mtime_ns": 1784909821566477999,
+        "word_count": 37
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/announcements/index.ts": {
+        "size": 673,
+        "mtime_ns": 1784909821566550749,
+        "word_count": 73
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/announcements/mutations.ts": {
+        "size": 968,
+        "mtime_ns": 1784909821566712833,
+        "word_count": 91
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/announcements/types.ts": {
+        "size": 410,
+        "mtime_ns": 1784909821566773749,
+        "word_count": 42
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/getters.ts": {
+        "size": 7499,
+        "mtime_ns": 1784909821566845124,
+        "word_count": 678
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/history/actions.ts": {
+        "size": 3895,
+        "mtime_ns": 1784909821566946958,
+        "word_count": 341
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/history/getters.ts": {
+        "size": 3471,
+        "mtime_ns": 1784909821567006291,
+        "word_count": 325
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/history/index.ts": {
+        "size": 874,
+        "mtime_ns": 1784909821567060208,
+        "word_count": 90
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/history/mutations.ts": {
+        "size": 1303,
+        "mtime_ns": 1784909821567119749,
+        "word_count": 126
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/history/types.ts": {
+        "size": 2707,
+        "mtime_ns": 1784909821567177458,
+        "word_count": 225
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/index.ts": {
+        "size": 1901,
+        "mtime_ns": 1784909821567231333,
+        "word_count": 188
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/jobQueue/actions.ts": {
+        "size": 3537,
+        "mtime_ns": 1784909821567328541,
+        "word_count": 334
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/jobQueue/getters.ts": {
+        "size": 1102,
+        "mtime_ns": 1784909821567383374,
+        "word_count": 101
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/jobQueue/index.ts": {
+        "size": 643,
+        "mtime_ns": 1784909821567436333,
+        "word_count": 73
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/jobQueue/mutations.ts": {
+        "size": 547,
+        "mtime_ns": 1784909821567489083,
+        "word_count": 51
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/jobQueue/types.ts": {
+        "size": 379,
+        "mtime_ns": 1784909821567536499,
+        "word_count": 36
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/mutations.ts": {
+        "size": 5391,
+        "mtime_ns": 1784909821567594624,
+        "word_count": 412
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/power/actions.ts": {
+        "size": 985,
+        "mtime_ns": 1784909821567676374,
+        "word_count": 102
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/power/getters.ts": {
+        "size": 272,
+        "mtime_ns": 1784909821567734833,
+        "word_count": 33
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/power/index.ts": {
+        "size": 590,
+        "mtime_ns": 1784909821567788583,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/power/mutations.ts": {
+        "size": 597,
+        "mtime_ns": 1784909821567839624,
+        "word_count": 60
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/power/types.ts": {
+        "size": 227,
+        "mtime_ns": 1784909821567893041,
+        "word_count": 24
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/sensor/actions.ts": {
+        "size": 758,
+        "mtime_ns": 1784909821567977916,
+        "word_count": 76
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/sensor/getters.ts": {
+        "size": 288,
+        "mtime_ns": 1784909821568024874,
+        "word_count": 33
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/sensor/index.ts": {
+        "size": 598,
+        "mtime_ns": 1784909821568070874,
+        "word_count": 71
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/sensor/mutations.ts": {
+        "size": 550,
+        "mtime_ns": 1784909821568119999,
+        "word_count": 53
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/sensor/types.ts": {
+        "size": 261,
+        "mtime_ns": 1784909821568170708,
+        "word_count": 28
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/spoolman/actions.ts": {
+        "size": 5489,
+        "mtime_ns": 1784909821568256208,
+        "word_count": 461
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/spoolman/getters.ts": {
+        "size": 193,
+        "mtime_ns": 1784909821568304083,
+        "word_count": 25
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/spoolman/index.ts": {
+        "size": 888,
+        "mtime_ns": 1784909821568356541,
+        "word_count": 92
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/spoolman/mutations.ts": {
+        "size": 802,
+        "mtime_ns": 1784909821568405041,
+        "word_count": 76
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/spoolman/types.ts": {
+        "size": 1299,
+        "mtime_ns": 1784909821568458791,
+        "word_count": 113
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/timelapse/actions.ts": {
+        "size": 2212,
+        "mtime_ns": 1784909821568542416,
+        "word_count": 192
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/timelapse/getters.ts": {
+        "size": 218,
+        "mtime_ns": 1784909821568591333,
+        "word_count": 25
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/timelapse/index.ts": {
+        "size": 1959,
+        "mtime_ns": 1784909821568640624,
+        "word_count": 156
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/timelapse/mutations.ts": {
+        "size": 1085,
+        "mtime_ns": 1784909821568685291,
+        "word_count": 94
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/timelapse/types.ts": {
+        "size": 1348,
+        "mtime_ns": 1784909821568736374,
+        "word_count": 111
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/types.ts": {
+        "size": 3823,
+        "mtime_ns": 1784909821568792124,
+        "word_count": 334
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/updateManager/actions.ts": {
+        "size": 1318,
+        "mtime_ns": 1784909821568874458,
+        "word_count": 120
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/updateManager/getters.ts": {
+        "size": 897,
+        "mtime_ns": 1784909821568926333,
+        "word_count": 73
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/updateManager/index.ts": {
+        "size": 1022,
+        "mtime_ns": 1784909821568977499,
+        "word_count": 97
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/updateManager/mutations.ts": {
+        "size": 2029,
+        "mtime_ns": 1784909821569033083,
+        "word_count": 153
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/server/updateManager/types.ts": {
+        "size": 1798,
+        "mtime_ns": 1784909821569089416,
+        "word_count": 148
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/socket/actions.ts": {
+        "size": 6157,
+        "mtime_ns": 1784909821569182291,
+        "word_count": 454
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/socket/getters.ts": {
+        "size": 768,
+        "mtime_ns": 1784909821569234499,
+        "word_count": 95
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/socket/index.ts": {
+        "size": 1323,
+        "mtime_ns": 1784909821569918999,
+        "word_count": 134
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/socket/mutations.ts": {
+        "size": 2433,
+        "mtime_ns": 1784909821569975249,
+        "word_count": 214
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/socket/types.ts": {
+        "size": 352,
+        "mtime_ns": 1784909821570026958,
+        "word_count": 33
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/types.ts": {
+        "size": 1508,
+        "mtime_ns": 1784909821570080958,
+        "word_count": 163
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/store/variables.ts": {
+        "size": 6088,
+        "mtime_ns": 1784909821570137833,
+        "word_count": 621
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/echarts-gl.d.ts": {
+        "size": 1137,
+        "mtime_ns": 1784909821570222541,
+        "word_count": 88
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/echarts.ts": {
+        "size": 99,
+        "mtime_ns": 1784909821570279083,
+        "word_count": 11
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/moonraker/MachineRPC.ts": {
+        "size": 5851,
+        "mtime_ns": 1784909821570372666,
+        "word_count": 817
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/moonraker/PrinterRPC.ts": {
+        "size": 1698,
+        "mtime_ns": 1784909821570423541,
+        "word_count": 223
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/moonraker/ServerRPC.ts": {
+        "size": 1127,
+        "mtime_ns": 1784909821570477291,
+        "word_count": 140
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/moonraker/index.ts": {
+        "size": 2213,
+        "mtime_ns": 1784909821570527916,
+        "word_count": 287
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/postcss-nesting.d.ts": {
+        "size": 282,
+        "mtime_ns": 1784909821570580374,
+        "word_count": 27
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/shims-vue.d.ts": {
+        "size": 179,
+        "mtime_ns": 1784909821570630583,
+        "word_count": 22
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/sindarius-gcodeviewer.d.ts": {
+        "size": 2938,
+        "mtime_ns": 1784909821570686708,
+        "word_count": 219
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/vue-load-image.d.ts": {
+        "size": 299,
+        "mtime_ns": 1784909821570738999,
+        "word_count": 30
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/vuedraggable.ts": {
+        "size": 356,
+        "mtime_ns": 1784909821570790874,
+        "word_count": 39
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/vuetify.ts": {
+        "size": 764,
+        "mtime_ns": 1784909821570847333,
+        "word_count": 120
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/src/types/websocket.d.ts": {
+        "size": 226,
+        "mtime_ns": 1784909821570899666,
+        "word_count": 23
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/tests/components/mixins/zoffset.spec.ts": {
+        "size": 3337,
+        "mtime_ns": 1784909821571050333,
+        "word_count": 247
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/tests/forgeDashboard.spec.ts": {
+        "size": 1019,
+        "mtime_ns": 1784909890721584083,
+        "word_count": 112
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/tests/forgeDashboardLayout.spec.ts": {
+        "size": 611,
+        "mtime_ns": 1785074477700793291,
+        "word_count": 63
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/tests/forgeFormat.spec.ts": {
+        "size": 1822,
+        "mtime_ns": 1785138955347853916,
+        "word_count": 137
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/tests/helpers.spec.ts": {
+        "size": 1288,
+        "mtime_ns": 1784909821571099458,
+        "word_count": 111
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/tests/store/printer/getters.spec.ts": {
+        "size": 3238,
+        "mtime_ns": 1784909821571215958,
+        "word_count": 407
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/tsconfig.json": {
+        "size": 1315,
+        "mtime_ns": 1784909821571274666,
+        "word_count": 67
+    },
+    "/Users/macminim4/.hermes/work/ratrig3-mainsail-forge/vite.config.ts": {
+        "size": 4961,
+        "mtime_ns": 1784909821571333124,
+        "word_count": 393
+    }
+}

@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { buildBabystep, buildOutputCommand, clampTarget, formatDuration, formatFilament } from '@/plugins/forgeFormat'
+import {
+    buildBabystep,
+    buildOutputCommand,
+    clampOutput,
+    clampTarget,
+    formatDuration,
+    formatFilament,
+} from '@/plugins/forgeFormat'
 
 describe('FORGE panel formatters', () => {
     it('formats duration and filament telemetry', () => {
@@ -22,6 +29,14 @@ describe('FORGE panel formatters', () => {
         expect(buildOutputCommand('output_pin', 'case_light', 0.37, 1, true)).toBe('SET_PIN PIN=case_light VALUE=0.37')
         expect(buildOutputCommand('output_pin', 'relay', 0.37, 1, false)).toBe('SET_PIN PIN=relay VALUE=1.00')
         expect(buildOutputCommand('output_pin', 'relay', 0, 1, false)).toBe('SET_PIN PIN=relay VALUE=0.00')
+    })
+
+    it('applies max_power ceiling and off_below floor like Mainsail', () => {
+        expect(clampOutput(1, 0, 0.6)).toBeCloseTo(0.6)
+        expect(clampOutput(0.5, 0, 0.6)).toBeCloseTo(0.3)
+        expect(clampOutput(0.05, 0.2, 1)).toBe(0)
+        expect(clampOutput(0, 0.2, 1)).toBe(0)
+        expect(clampOutput(0.5, 0.2, 1)).toBeCloseTo(0.5)
     })
 
     it('builds babysteps with MOVE=1 only when fully homed', () => {

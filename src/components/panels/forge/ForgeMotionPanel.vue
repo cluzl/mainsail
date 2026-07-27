@@ -19,7 +19,7 @@
                     <small>Motion</small>
                     <b>HOME ALL</b>
                 </button>
-                <button class="forge-cmd" :disabled="locked" @click="home('Z')">
+                <button class="forge-cmd" :disabled="locked || isLoading('homeZ')" @click="home('Z')">
                     <small>Motion</small>
                     <b>HOME Z</b>
                 </button>
@@ -91,6 +91,7 @@
                     min="1"
                     max="200"
                     step="5"
+                    :disabled="tuningLocked"
                     :value="speedFactorPct"
                     aria-label="Speed factor"
                     @change="setSpeed($event)" />
@@ -104,11 +105,13 @@
                     min="50"
                     max="150"
                     step="1"
+                    :disabled="tuningLocked"
                     :value="extrudeFactorPct"
                     aria-label="Extrusion factor"
                     @change="setFlow($event)" />
                 <b>{{ extrudeFactorPct }}%</b>
             </div>
+            <button v-if="tuningLocked" class="forge-mini" @click="tuningUnlocked = true">UNLOCK TUNING</button>
 
             <div class="forge-slider-row">
                 <label>EXTRUDER</label>
@@ -143,6 +146,12 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
     stepChoices = [0.1, 1, 10, 50]
     extrudeLength = 10
     extrudeChoices = [1, 5, 10, 25]
+    tuningUnlocked = false
+
+    get tuningLocked(): boolean {
+        const lock = this.$store.state.gui.uiSettings.lockSlidersOnTouchDevices ?? false
+        return lock && this.isTouchDevice && !this.tuningUnlocked
+    }
 
     get locked(): boolean {
         return this.printerIsPrinting

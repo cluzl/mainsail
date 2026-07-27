@@ -1,5 +1,6 @@
 <template>
     <div class="forge-dashboard">
+        <klippy-state-panel />
         <section class="forge-hero">
             <forge-job-panel />
             <forge-camera-panel />
@@ -20,6 +21,7 @@
 import Component from 'vue-class-component'
 import { Mixins } from 'vue-property-decorator'
 import BaseMixin from '@/components/mixins/base'
+import KlippyStatePanel from '@/components/panels/KlippyStatePanel.vue'
 import ForgeJobPanel from '@/components/panels/forge/ForgeJobPanel.vue'
 import ForgeThermalPanel from '@/components/panels/forge/ForgeThermalPanel.vue'
 import ForgeCameraPanel from '@/components/panels/forge/ForgeCameraPanel.vue'
@@ -30,6 +32,7 @@ import ForgeHealthPanel from '@/components/panels/forge/ForgeHealthPanel.vue'
 
 @Component({
     components: {
+        KlippyStatePanel,
         ForgeJobPanel,
         ForgeThermalPanel,
         ForgeCameraPanel,
