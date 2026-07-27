@@ -181,11 +181,36 @@
 
 .forge-therm {
     display: grid;
-    grid-template-columns: 120px minmax(60px, 1fr) 125px 92px;
+    /* all tracks must be able to shrink — fixed px here overflowed the card
+       and slid under the OUTPUTS column at narrow widths */
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 0.9fr);
     align-items: center;
     gap: 12px;
     min-height: 62px;
     border-bottom: 1px solid #222a32;
+}
+
+/* below this the 4-up row cannot hold a readable input: stack label+temp / bar / set */
+@media (max-width: 1500px) {
+    .forge-therm {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 6px 12px;
+        padding: 10px 0;
+    }
+
+    .forge-therm .forge-bar,
+    .forge-therm .forge-therm-set {
+        grid-column: 1 / -1;
+    }
+
+    .forge-therm .forge-bar {
+        order: 2;
+    }
+
+    .forge-therm .forge-therm-set {
+        order: 3;
+        justify-content: flex-end;
+    }
 }
 
 .forge-therm:last-child {

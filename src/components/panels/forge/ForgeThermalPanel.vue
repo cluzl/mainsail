@@ -19,11 +19,13 @@
                 </div>
                 <div v-if="row.settable" class="forge-therm-set">
                     <input
-                        :value="row.target"
+                        :value="displayValue(row)"
                         type="number"
                         :min="row.min"
                         :max="row.max"
                         :aria-label="'Set ' + row.label + ' target'"
+                        @input="onInput(row, $event)"
+                        @blur="onBlur(row)"
                         @keyup.enter="setTarget(row, $event)" />
                     <button
                         v-if="row.target > 0"
@@ -62,6 +64,23 @@ type ThermRow = {
 
 @Component
 export default class ForgeThermalPanel extends Mixins(ForgePanelMixin) {
+    // Klipper polls ~1/s. Binding the input straight to row.target let every poll
+    // overwrite what the operator was typing, so the field snapped back to 0.
+    // Hold the in-progress text here and let the store win only when not editing.
+    drafts: Record<string, string> = {}
+
+    displayValue(row: ThermRow): number | string {
+        return this.drafts[row.name] ?? row.target
+    }
+
+    onInput(row: ThermRow, event: Event): void {
+        this.$set(this.drafts, row.name, (event.target as HTMLInputElement).value)
+    }
+
+    onBlur(row: ThermRow): void {
+        this.$delete(this.drafts, row.name)
+    }
+
     get rows(): ThermRow[] {
         const printer = this.$store.state.printer
         const heaters: string[] = printer.heaters?.available_heaters ?? []
@@ -115,6 +134,7 @@ export default class ForgeThermalPanel extends Mixins(ForgePanelMixin) {
     setTarget(row: ThermRow, event: KeyboardEvent): void {
         if (!row.command) return
         const raw = Number((event.target as HTMLInputElement).value)
+        this.$delete(this.drafts, row.name)
         if (isNaN(raw)) return
         const value = clampTarget(raw, row.min, row.max)
         if (value === null) {
