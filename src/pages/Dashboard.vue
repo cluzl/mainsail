@@ -7,11 +7,15 @@
         </section>
 
         <section class="forge-columns">
-            <forge-motion-panel />
-            <forge-thermal-panel />
-            <forge-outputs-panel />
-            <forge-afc-panel />
-            <forge-macros-panel />
+            <div class="forge-column">
+                <forge-motion-panel />
+                <forge-outputs-panel />
+            </div>
+            <div class="forge-column">
+                <forge-thermal-panel />
+                <forge-afc-panel />
+                <forge-macros-panel />
+            </div>
         </section>
 
         <forge-health-panel />

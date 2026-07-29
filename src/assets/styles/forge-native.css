@@ -35,11 +35,22 @@
     min-width: 0;
 }
 
+/* Grid rows stretch every column to the tallest card, so MOTION (~1179px)
+   left THERMAL and OUTPUTS with hundreds of px of dead space beneath them.
+   Explicit column stacks let each column pack its own cards independently.
+   ponytail: fixed 2-column split; switch to masonry when it lands in Safari. */
 .forge-columns {
     display: grid;
-    grid-template-columns: minmax(300px, 0.8fr) minmax(280px, 0.65fr) minmax(380px, 1fr);
+    grid-template-columns: minmax(320px, 0.85fr) minmax(380px, 1fr);
     gap: 18px;
     align-items: start;
+}
+
+.forge-column {
+    display: grid;
+    align-content: start;
+    gap: 18px;
+    min-width: 0;
 }
 
 .forge-kicker {
@@ -946,12 +957,6 @@
     text-overflow: ellipsis;
     text-transform: uppercase;
     white-space: nowrap;
-}
-
-@media (max-width: 1263px) {
-    .forge-columns {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
 @media (max-width: 959px) {
