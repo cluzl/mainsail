@@ -32,6 +32,16 @@ describe('motion panel safety', () => {
     it('keeps motors-off out of the routine action grid', () => {
         expect(motion.indexOf('forge-danger-zone')).toBeGreaterThan(motion.indexOf('forge-motion-actions'))
     })
+
+    // hand-feeding wants a slow rate, purging a fast one — the panel hardcoded one
+    it('sends the operator-selected extrude feed rate', () => {
+        expect(motion).toContain('`G1 E${length} F${this.selectedExtrudeFeedrate * 60}`')
+        expect(motion).toContain('extrudeFeedrateChoices = [2, 5, 10, 15]')
+    })
+
+    it('only accepts a feed rate from the offered choices', () => {
+        expect(motion).toContain('if (this.extrudeFeedrateChoices.includes(value)) this.feedrateOverride = value')
+    })
 })
 
 describe('capability honesty', () => {
@@ -87,17 +97,32 @@ describe('touch targets', () => {
     })
 })
 
-// AFC (RatRig 4 QuattroBox): status surface only. A stray lane command during a
-// print can strand filament mid-toolchange, so this panel must stay read-only.
+// AFC (RatRig 4 QuattroBox): use only the printer's tested BT_* wrappers.
 describe('AFC panel safety', () => {
     const afc = readFileSync(new URL('../src/components/panels/forge/ForgeAfcPanel.vue', import.meta.url), 'utf8')
 
-    it('never emits gcode or socket commands', () => {
-        expect(afc).not.toMatch(/forgeSend|gcode\.script|addEvent|\$socket\.emit/)
+    it('uses the installed QuattroBox wrapper macros', () => {
+        expect(afc).toContain('BT_CHANGE_TOOL LANE=${num}')
+        expect(afc).toContain("this.forgeSend('BT_TOOL_UNLOAD')")
+        expect(afc).toContain('BT_LANE_EJECT LANE=${num}')
     })
 
-    it('has no interactive controls', () => {
-        expect(afc).not.toMatch(/<button|@click|v-model/)
+    it('locks every lane command during prints, faults, and toolchanges', () => {
+        expect(afc).toContain(
+            'this.printerIsPrinting || Boolean(this.afc?.error_state) || Boolean(this.afc?.in_toolchange)'
+        )
+        expect(afc).toContain('if (this.laneLocked || !action) return')
+    })
+
+    it('requires a confirmation before any macro is sent', () => {
+        expect(afc).toContain('@click="ask(lane.name, \'load\')"')
+        expect(afc).toContain('@click="confirm(lane)"')
+        expect(afc).toContain('@click="cancel"')
+    })
+
+    it('never ejects the lane currently in the tool', () => {
+        expect(afc).toContain("action === 'eject' && !lane.toolLoaded")
+        expect(afc).toContain('laneLocked || lane.toolLoaded')
     })
 
     it('renders nothing when the printer has no AFC', () => {

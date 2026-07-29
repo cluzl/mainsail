@@ -51,10 +51,43 @@
                     <span>{{ lane.material }}</span>
                     <span>{{ lane.weight }}</span>
                 </div>
+
+                <!-- Confirm step is deliberate: these commands move filament and
+                     take minutes to undo if fired on the wrong lane. -->
+                <div v-if="pending === lane.name" class="forge-afc-confirm">
+                    <p>{{ pendingLabel }} {{ lane.name.toUpperCase() }}?</p>
+                    <div class="forge-afc-actions">
+                        <button class="forge-cmd forge-accent" @click="confirm(lane)">CONFIRM</button>
+                        <button class="forge-cmd" @click="cancel">CANCEL</button>
+                    </div>
+                </div>
+                <div v-else class="forge-afc-actions">
+                    <button
+                        class="forge-cmd"
+                        :disabled="laneLocked || lane.toolLoaded"
+                        :title="lane.toolLoaded ? 'This lane is already in the tool' : lockReason"
+                        @click="ask(lane.name, 'load')">
+                        LOAD TO TOOL
+                    </button>
+                    <button
+                        class="forge-cmd"
+                        :disabled="laneLocked || !lane.toolLoaded"
+                        :title="lockReason"
+                        @click="ask(lane.name, 'unload')">
+                        UNLOAD TOOL
+                    </button>
+                    <button
+                        class="forge-cmd"
+                        :disabled="laneLocked || lane.toolLoaded"
+                        :title="lane.toolLoaded ? 'Unload from the tool first' : lockReason"
+                        @click="ask(lane.name, 'eject')">
+                        EJECT SPOOL
+                    </button>
+                </div>
             </div>
         </div>
 
-        <p class="forge-afc-note">Read-only. Lane commands stay in MACROS.</p>
+        <p class="forge-afc-note">{{ laneLocked ? lockReason : 'Lane commands run the printer AFC macros.' }}</p>
     </div>
 </template>
 
@@ -62,6 +95,8 @@
 import Component from 'vue-class-component'
 import { Mixins } from 'vue-property-decorator'
 import ForgePanelMixin from '@/components/mixins/forgePanel'
+
+type Action = 'load' | 'unload' | 'eject'
 
 type Lane = {
     name: string
@@ -78,6 +113,9 @@ type Lane = {
 
 @Component
 export default class ForgeAfcPanel extends Mixins(ForgePanelMixin) {
+    pending = ''
+    pendingAction: Action | '' = ''
+
     get afc(): Record<string, unknown> | null {
         return this.$store.state.printer.AFC ?? null
     }
@@ -149,6 +187,52 @@ export default class ForgeAfcPanel extends Mixins(ForgePanelMixin) {
                     weight: weight > 0 ? `${Math.round(weight)} g` : '—',
                 }
             })
+    }
+
+    // A toolchange mid-print belongs to the running gcode, not to a person
+    // poking the dashboard. AFC's own error latch blocks lane moves too.
+    get laneLocked(): boolean {
+        return this.printerIsPrinting || Boolean(this.afc?.error_state) || Boolean(this.afc?.in_toolchange)
+    }
+
+    get lockReason(): string {
+        if (this.printerIsPrinting) return 'Lane commands are locked while a print is running.'
+        if (this.afc?.in_toolchange) return 'A toolchange is in progress.'
+        if (this.afc?.error_state) return 'Clear the AFC fault before moving filament.'
+        return ''
+    }
+
+    get pendingLabel(): string {
+        if (this.pendingAction === 'load') return 'Load'
+        if (this.pendingAction === 'unload') return 'Unload from tool:'
+        return 'Eject spool from'
+    }
+
+    ask(lane: string, action: Action): void {
+        if (this.laneLocked) return
+        this.pending = lane
+        this.pendingAction = action
+    }
+
+    cancel(): void {
+        this.pending = ''
+        this.pendingAction = ''
+    }
+
+    // BT_* are the printer's own AFC wrappers; lane number is the trailing digit
+    // of the AFC_stepper name (lane1..lane4), which is what BT_* expects.
+    confirm(lane: Lane): void {
+        const action = this.pendingAction
+        this.pending = ''
+        this.pendingAction = ''
+        if (this.laneLocked || !action) return
+
+        const num = Number(lane.name.replace(/\D/g, ''))
+        if (!Number.isFinite(num) || num <= 0) return
+
+        if (action === 'load') this.forgeSend(`BT_CHANGE_TOOL LANE=${num}`)
+        else if (action === 'unload' && lane.toolLoaded) this.forgeSend('BT_TOOL_UNLOAD')
+        else if (action === 'eject' && !lane.toolLoaded) this.forgeSend(`BT_LANE_EJECT LANE=${num}`)
     }
 }
 </script>

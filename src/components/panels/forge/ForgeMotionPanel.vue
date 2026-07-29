@@ -146,6 +146,17 @@
                         {{ l }}
                     </button>
                 </div>
+                <span class="forge-step-label">FEED RATE · MM/S</span>
+                <div class="forge-step-select wide">
+                    <button
+                        v-for="rate in extrudeFeedrateChoices"
+                        :key="'ef' + rate"
+                        class="forge-mini"
+                        :class="{ active: rate === selectedExtrudeFeedrate }"
+                        @click="selectedExtrudeFeedrate = rate">
+                        {{ rate }}
+                    </button>
+                </div>
                 <div class="forge-extruder-actions">
                     <button class="forge-cmd" :disabled="!canExtrude" @click="extrude(-extrudeLength)">
                         ← RETRACT {{ extrudeLength }} MM
@@ -155,7 +166,9 @@
                     </button>
                 </div>
                 <p class="forge-extruder-hint">
-                    <template v-if="canExtrude">Ready to move filament. Feed rate {{ extrudeFeedrate }} mm/s.</template>
+                    <template v-if="canExtrude">
+                        Ready to move filament. Feed rate {{ selectedExtrudeFeedrate }} mm/s.
+                    </template>
                     <template v-else>
                         Nozzle too cold. Heat to at least {{ minExtrudeTemp }} °C to enable movement.
                     </template>
@@ -185,6 +198,9 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
     stepChoices = [0.1, 1, 10, 50]
     extrudeLength = 10
     extrudeChoices = [1, 5, 10, 25]
+    // hand-feeding a cold-ish nozzle needs a slow rate; purging wants a fast one
+    extrudeFeedrateChoices = [2, 5, 10, 15]
+    feedrateOverride = 0
     tuningUnlocked = false
 
     get tuningLocked(): boolean {
@@ -282,6 +298,14 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
         return this.$store.state.gui.control?.extruder?.feedrate ?? 5
     }
 
+    get selectedExtrudeFeedrate(): number {
+        return this.feedrateOverride || this.extrudeFeedrate
+    }
+
+    set selectedExtrudeFeedrate(value: number) {
+        if (this.extrudeFeedrateChoices.includes(value)) this.feedrateOverride = value
+    }
+
     home(axis: string): void {
         if (this.locked) return
         const gcode = axis ? `G28 ${axis}` : 'G28'
@@ -337,7 +361,7 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
         const gcode = [
             'SAVE_GCODE_STATE NAME=_ui_extrude',
             'M83',
-            `G1 E${length} F${this.extrudeFeedrate * 60}`,
+            `G1 E${length} F${this.selectedExtrudeFeedrate * 60}`,
             'RESTORE_GCODE_STATE NAME=_ui_extrude',
         ].join('\n')
         this.forgeSend(gcode)

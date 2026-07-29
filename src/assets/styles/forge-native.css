@@ -203,13 +203,13 @@
 
 .forge-cmd:disabled,
 .forge-macro-btn:disabled {
-    color: #4a4f57;
+    color: #3f444b;
     opacity: 1;
 }
 
 /* a disabled control still has to be read — the child <small> must not stay muted */
 .forge-cmd:disabled small {
-    color: #4a4f57;
+    color: #3f444b;
 }
 
 .forge-cmd.pause {
@@ -1198,6 +1198,43 @@
         9px 'Forge Mono',
         monospace;
     letter-spacing: 0.04em;
+}
+
+.forge-afc-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.forge-afc-actions .forge-cmd {
+    min-height: 44px;
+    padding: 7px 4px;
+    text-align: center;
+    font:
+        700 8px 'Forge Mono',
+        monospace;
+}
+
+/* a filament move is slow to undo — make the confirm step visually distinct */
+.forge-afc-confirm {
+    margin-top: 10px;
+    padding: 9px;
+    border: 1px solid rgba(154, 97, 0, 0.35);
+    border-radius: var(--forge-radius-sm);
+    background: var(--forge-warn-bg);
+}
+
+.forge-afc-confirm p {
+    margin: 0;
+    color: var(--forge-warn);
+    font:
+        700 10px 'Forge Mono',
+        monospace;
+}
+
+.forge-afc-confirm .forge-afc-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 @media (max-width: 600px) {
