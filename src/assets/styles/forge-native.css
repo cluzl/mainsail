@@ -249,6 +249,151 @@
     margin-top: 6px;
 }
 
+/* MAINTENANCE: mesh, PA, sensors. Grouped so no single control needs a card. */
+.forge-maint-row {
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--forge-line);
+}
+
+.forge-maint-row:last-child {
+    border-bottom: 0;
+}
+
+.forge-maint-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.forge-maint-head label {
+    color: var(--forge-text);
+    font:
+        700 10px 'Forge Mono',
+        monospace;
+    letter-spacing: 0.1em;
+}
+
+.forge-maint-head b,
+.forge-maint-note {
+    color: var(--forge-muted);
+    font:
+        9px 'Forge Mono',
+        monospace;
+}
+
+.forge-maint-note {
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+.forge-maint-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.forge-maint-actions .forge-cmd {
+    min-height: 44px;
+    text-align: center;
+    font:
+        700 9px 'Forge Mono',
+        monospace;
+}
+
+/* probing moves the toolhead across the bed — confirm like the AFC lane moves */
+.forge-maint-confirm {
+    padding: 9px;
+    border: 1px solid rgba(154, 97, 0, 0.35);
+    border-radius: var(--forge-radius-sm);
+    background: var(--forge-warn-bg);
+}
+
+.forge-maint-confirm p {
+    margin: 0 0 8px;
+    color: var(--forge-warn);
+    font:
+        700 9px 'Forge Mono',
+        monospace;
+    line-height: 1.4;
+}
+
+/* stock Vuetify components drop into a FORGE card: strip their outer padding */
+.forge-maint-stock .container {
+    padding: 0;
+}
+
+/* stock controls keep Mainsail behavior, but FORGE still enforces touch targets */
+.forge-maint-stock .v-input input {
+    min-height: 44px;
+}
+
+.forge-maint-stock ._spin_button_group .v-btn,
+.forge-section-title .v-btn {
+    min-width: 44px !important;
+    min-height: 44px !important;
+}
+
+.forge-sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+}
+
+.forge-sensor-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+    padding: 8px 10px;
+    border: 1px solid var(--forge-line);
+    border-radius: var(--forge-radius-sm);
+    background: var(--forge-raised);
+}
+
+.forge-sensor-label {
+    min-width: 0;
+}
+
+.forge-sensor-label span {
+    display: block;
+    overflow: hidden;
+    color: var(--forge-text);
+    font:
+        700 9px 'Forge Mono',
+        monospace;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.forge-sensor-label em {
+    font:
+        8px 'Forge Mono',
+        monospace;
+    font-style: normal;
+}
+
+.forge-sensor-label em.ready {
+    color: var(--forge-ok);
+}
+
+.forge-sensor-label em.cold {
+    color: var(--forge-muted);
+}
+
+.forge-sensor-toggle .forge-mini.active {
+    border-color: rgba(0, 96, 192, 0.4);
+    background: var(--forge-accent-bg);
+    color: #004f9e;
+}
+
+/* the title bar is space-between; a third child needs its own anchor */
+.forge-afc-menu {
+    margin-left: auto;
+}
+
 .forge-command-deck,
 .forge-motion-actions {
     display: grid;

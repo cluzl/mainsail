@@ -3,6 +3,8 @@
         <div class="forge-section-title">
             <span>FILAMENT</span>
             <small>{{ unitLabel }}</small>
+            <!-- stock AFC functions: calibrate, LED, settings, debug export -->
+            <afc-panel-buttons class="forge-afc-menu" />
         </div>
 
         <!-- AFC latches faults. A stalled print with no visible reason is the
@@ -105,6 +107,7 @@
 import Component from 'vue-class-component'
 import { Mixins } from 'vue-property-decorator'
 import ForgePanelMixin from '@/components/mixins/forgePanel'
+import AfcPanelButtons from '@/components/panels/Afc/AfcPanelButtons.vue'
 import { afcLaneSensorError } from '@/plugins/forgeFormat'
 
 type Action = 'load' | 'unload' | 'eject'
@@ -123,7 +126,7 @@ type Lane = {
     sensorError: string
 }
 
-@Component
+@Component({ components: { AfcPanelButtons } })
 export default class ForgeAfcPanel extends Mixins(ForgePanelMixin) {
     pending = ''
     pendingAction: Action | '' = ''

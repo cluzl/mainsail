@@ -15,6 +15,9 @@
                 <forge-thermal-panel />
                 <forge-afc-panel />
                 <forge-macros-panel />
+                <forge-maintenance-panel />
+                <jobqueue-panel v-if="moonrakerComponents.includes('job_queue')" />
+                <miniconsole-panel />
             </div>
         </section>
 
@@ -34,7 +37,11 @@ import ForgeMotionPanel from '@/components/panels/forge/ForgeMotionPanel.vue'
 import ForgeOutputsPanel from '@/components/panels/forge/ForgeOutputsPanel.vue'
 import ForgeAfcPanel from '@/components/panels/forge/ForgeAfcPanel.vue'
 import ForgeMacrosPanel from '@/components/panels/forge/ForgeMacrosPanel.vue'
+import ForgeMaintenancePanel from '@/components/panels/forge/ForgeMaintenancePanel.vue'
 import ForgeHealthPanel from '@/components/panels/forge/ForgeHealthPanel.vue'
+// stock Mainsail panels: reused as-is rather than reimplemented
+import JobqueuePanel from '@/components/panels/JobqueuePanel.vue'
+import MiniconsolePanel from '@/components/panels/MiniconsolePanel.vue'
 
 @Component({
     components: {
@@ -46,7 +53,10 @@ import ForgeHealthPanel from '@/components/panels/forge/ForgeHealthPanel.vue'
         ForgeOutputsPanel,
         ForgeAfcPanel,
         ForgeMacrosPanel,
+        ForgeMaintenancePanel,
         ForgeHealthPanel,
+        JobqueuePanel,
+        MiniconsolePanel,
     },
 })
 export default class PageDashboard extends Mixins(BaseMixin) {}

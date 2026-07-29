@@ -160,6 +160,43 @@ describe('AFC panel safety', () => {
     })
 })
 
+describe('maintenance parity', () => {
+    const maintenance = readFileSync(
+        new URL('../src/components/panels/forge/ForgeMaintenancePanel.vue', import.meta.url),
+        'utf8'
+    )
+    const dashboard = readFileSync(new URL('../src/pages/Dashboard.vue', import.meta.url), 'utf8')
+    const afc = readFileSync(new URL('../src/components/panels/forge/ForgeAfcPanel.vue', import.meta.url), 'utf8')
+
+    it('requires idle, homed, and confirmed state before bed mesh calibration', () => {
+        expect(maintenance).toContain('return this.locked || !this.allHomed')
+        expect(maintenance).toContain('if (this.meshLocked) return')
+        expect(maintenance).toContain('BED_MESH_CALIBRATE')
+        expect(maintenance).toContain('v-if="meshPending"')
+    })
+
+    it('uses stock Mainsail pressure advance controls', () => {
+        expect(maintenance).toContain('ExtruderPressureAdvanceSettings')
+        expect(maintenance).toContain('<extruder-pressure-advance-settings />')
+    })
+
+    it('uses stock filament sensor semantics', () => {
+        expect(maintenance).toContain('SET_FILAMENT_SENSOR SENSOR=${sensor.name} ENABLE=${sensor.enabled ? 0 : 1}')
+        expect(maintenance).toContain("sensor.type === 'hall_filament_width_sensor'")
+    })
+
+    it('mounts stock miniconsole and job queue instead of duplicating them', () => {
+        expect(dashboard).toContain("import JobqueuePanel from '@/components/panels/JobqueuePanel.vue'")
+        expect(dashboard).toContain("import MiniconsolePanel from '@/components/panels/MiniconsolePanel.vue'")
+        expect(dashboard).toContain("moonrakerComponents.includes('job_queue')")
+    })
+
+    it('reuses stock AFC functions menu', () => {
+        expect(afc).toContain("import AfcPanelButtons from '@/components/panels/Afc/AfcPanelButtons.vue'")
+        expect(afc).toContain('<afc-panel-buttons class="forge-afc-menu" />')
+    })
+})
+
 describe('legibility', () => {
     const jobVue = readFileSync(new URL('../src/components/panels/forge/ForgeJobPanel.vue', import.meta.url), 'utf8')
 
