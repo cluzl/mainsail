@@ -6,6 +6,7 @@ import {
     clampTarget,
     formatDuration,
     formatFilament,
+    formatRpm,
 } from '@/plugins/forgeFormat'
 
 describe('FORGE panel formatters', () => {
@@ -14,6 +15,9 @@ describe('FORGE panel formatters', () => {
         expect(formatDuration(-1)).toBe('--')
         expect(formatFilament(1536)).toBe('1.54 m')
         expect(formatFilament(450)).toBe('450 mm')
+        expect(formatRpm(13197.360527901084)).toBe('13,197')
+        expect(formatRpm(null)).toBeNull()
+        expect(formatRpm(-1)).toBeNull()
     })
 
     it('accepts safe heater targets and always permits cooldown', () => {

@@ -8,8 +8,18 @@ Vue.use(Vuetify, {
 
 export default new Vuetify({
     theme: {
-        dark: true,
+        // FORGE ships a light glass theme; Vuetify must agree or its own
+        // components keep painting white-on-white icons and text.
+        dark: false,
         options: { customProperties: true },
+        themes: {
+            // Vuetify's stock #1976d2 measured 4.47:1 on the FORGE panel surface,
+            // just under WCAG AA. Match the corrected --forge-signal token so stock
+            // controls inherit an accessible blue instead of being patched one by one.
+            light: {
+                primary: '#0060c0',
+            },
+        },
     },
     icons: {
         iconfont: 'mdiSvg',

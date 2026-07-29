@@ -66,13 +66,17 @@
                 <small>Job</small>
                 <b>CANCEL</b>
             </button>
+            <button v-if="availableObjects.length" class="forge-cmd" @click="showExcludeMap = true">
+                <small>Object</small>
+                <b>EXCLUDE ({{ availableObjects.length }})</b>
+            </button>
             <button v-if="canClear" class="forge-cmd" :disabled="isLoading('statusPrintClear')" @click="clear">
                 <small>Job</small>
                 <b>CLEAR</b>
             </button>
             <button
                 v-if="canReprint"
-                class="forge-cmd primary"
+                class="forge-cmd forge-accent"
                 :disabled="isLoading('statusPrintReprint')"
                 @click="reprint">
                 <small>Job</small>
@@ -88,6 +92,19 @@
             :action-button-text="$t('Buttons.Yes')"
             :cancel-button-text="$t('Buttons.No')"
             @action="cancel" />
+        <confirmation-dialog
+            v-model="showExcludeConfirm"
+            :title="$t('Panels.StatusPanel.ExcludeObject.ExcludeObjectHeadline')"
+            :text="$t('Panels.StatusPanel.ExcludeObject.ExcludeObjectText', { name: selectedObject })"
+            :action-button-text="$t('Panels.StatusPanel.ExcludeObject.ExcludeObject')"
+            action-button-color="primary"
+            @action="excludeSelectedObject" />
+        <status-panel-exclude-object-dialog
+            :show-dialog.sync="showExcludeMap"
+            :exclude-object-dialog-name="selectedObject"
+            :exclude-object-dialog-bool="showExcludeConfirm"
+            @update:name="selectObject"
+            @update:bool="showExcludeConfirm = $event" />
     </div>
 </template>
 
@@ -96,13 +113,24 @@ import Component from 'vue-class-component'
 import { Mixins } from 'vue-property-decorator'
 import ForgePanelMixin from '@/components/mixins/forgePanel'
 import ConfirmationDialog from '@/components/dialogs/ConfirmationDialog.vue'
+import StatusPanelExcludeObjectDialog from '@/components/panels/Status/ExcludeObjectDialog.vue'
 import { mdiStopCircleOutline } from '@mdi/js'
 import { formatDuration, formatFilament } from '@/plugins/forgeFormat'
 
-@Component({ components: { ConfirmationDialog } })
+@Component({ components: { ConfirmationDialog, StatusPanelExcludeObjectDialog } })
 export default class ForgeJobPanel extends Mixins(ForgePanelMixin) {
     mdiStopCircleOutline = mdiStopCircleOutline
     showCancelDialog = false
+    showExcludeMap = false
+    showExcludeConfirm = false
+    selectedObject = ''
+
+    get availableObjects(): Array<{ name: string }> {
+        if (!['printing', 'paused'].includes(this.printer_state)) return []
+        const state = this.$store.state.printer.exclude_object
+        const excluded = new Set<string>(state?.excluded_objects ?? [])
+        return (state?.objects ?? []).filter((object: { name: string }) => !excluded.has(object.name))
+    }
 
     get filename(): string {
         return this.$store.state.printer.print_stats?.filename ?? ''
@@ -186,6 +214,16 @@ export default class ForgeJobPanel extends Mixins(ForgePanelMixin) {
     cancel(): void {
         this.showCancelDialog = false
         this.forgeEmit('printer.print.cancel', {}, 'statusPrintCancel')
+    }
+
+    selectObject(name: string): void {
+        this.selectedObject = name
+    }
+
+    excludeSelectedObject(): void {
+        const name = this.selectedObject
+        this.showExcludeConfirm = false
+        if (name) this.$socket.emit('printer.gcode.script', { script: `EXCLUDE_OBJECT NAME=${name}` })
     }
 
     clear(): void {

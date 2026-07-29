@@ -5,19 +5,17 @@
             <small>LIVE LOOP</small>
         </div>
         <div class="forge-thermal">
-            <div v-for="row in rows" :key="row.name" class="forge-therm">
+            <div v-for="row in heaters" :key="row.name" class="forge-therm">
                 <label>
                     {{ row.label }}
-                    <small v-if="row.settable">{{ Math.round(row.power * 100) }}% OUTPUT</small>
-                    <small v-else>SENSOR</small>
+                    <small>{{ Math.round(row.power * 100) }}% OUTPUT</small>
                 </label>
                 <div class="forge-bar"><i :style="{ width: row.barPct + '%' }"></i></div>
                 <div class="forge-temp">
                     <em>{{ row.temperature.toFixed(1) }}</em>
-                    <small v-if="row.settable">/ {{ Math.round(row.target) }}°C</small>
-                    <small v-else>°C</small>
+                    <small>/ {{ Math.round(row.target) }}°C</small>
                 </div>
-                <div v-if="row.settable" class="forge-therm-set">
+                <div class="forge-therm-set">
                     <input
                         :value="displayValue(row)"
                         type="number"
@@ -32,8 +30,19 @@
                         class="forge-mini"
                         :aria-label="'Cooldown ' + row.label"
                         @click="cooldown(row)">
-                        OFF
+                        COOL
                     </button>
+                </div>
+            </div>
+
+            <!-- sensors cannot be controlled: one compact readout each, no bar, no target, no fake input -->
+            <div v-if="sensors.length" class="forge-sensor-strip">
+                <span class="forge-step-label">READ-ONLY SENSORS</span>
+                <div class="forge-sensor-chips">
+                    <span v-for="row in sensors" :key="row.name" class="forge-sensor-chip">
+                        {{ row.label }}
+                        <b>{{ Math.round(row.temperature) }} °C</b>
+                    </span>
                 </div>
             </div>
         </div>
@@ -91,6 +100,15 @@ export default class ForgeThermalPanel extends Mixins(ForgePanelMixin) {
             .map((name) => this.buildRow(name, heaters))
             .filter((r): r is ThermRow => r !== null)
             .sort((a, b) => Number(b.settable) - Number(a.settable))
+    }
+
+    // controllable heat gets the full control row; everything else is a readout only
+    get heaters(): ThermRow[] {
+        return this.rows.filter((row) => row.settable)
+    }
+
+    get sensors(): ThermRow[] {
+        return this.rows.filter((row) => !row.settable)
     }
 
     buildRow(name: string, heaters: string[]): ThermRow | null {

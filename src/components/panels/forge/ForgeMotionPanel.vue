@@ -6,56 +6,72 @@
         </div>
         <div class="forge-motion">
             <div class="forge-pos">
-                <div v-for="ax in axes" :key="ax.name" class="forge-pos-cell">
-                    <small>{{ ax.name }}</small>
-                    <b>{{ ax.value }}</b>
+                <div v-for="ax in axes" :key="ax.name" class="forge-pos-cell" :class="{ unhomed: !ax.homed }">
+                    <small>{{ ax.name }} · {{ ax.homed ? 'HOMED' : 'NOT HOMED' }}</small>
+                    <b>{{ ax.homed ? ax.value : '—' }}</b>
                 </div>
             </div>
 
             <p v-if="locked" class="forge-motion-lock">MOTION LOCKED — PRINT IN PROGRESS</p>
+            <p v-else-if="!allHomed" class="forge-motion-lock">
+                HOME BEFORE JOGGING — POSITION IS UNKNOWN UNTIL AXES ARE HOMED
+            </p>
 
             <div class="forge-motion-actions">
                 <button class="forge-cmd" :disabled="locked || isLoading('homeAll')" @click="home('')">
-                    <small>Motion</small>
-                    <b>HOME ALL</b>
+                    <small>Home</small>
+                    <b>ALL AXES</b>
                 </button>
                 <button class="forge-cmd" :disabled="locked || isLoading('homeZ')" @click="home('Z')">
-                    <small>Motion</small>
-                    <b>HOME Z</b>
+                    <small>Home</small>
+                    <b>Z AXIS</b>
                 </button>
-                <button v-if="existsQGL" class="forge-cmd" :disabled="locked || isLoading('qgl')" @click="qgl">
-                    <small>Level</small>
+                <button
+                    v-if="existsQGL"
+                    class="forge-cmd"
+                    :disabled="locked || !allHomed || isLoading('qgl')"
+                    @click="qgl">
+                    <small>Level gantry</small>
                     <b>QGL</b>
                 </button>
-                <button v-if="existsZtilt" class="forge-cmd" :disabled="locked || isLoading('zTilt')" @click="zTilt">
-                    <small>Level</small>
+                <button
+                    v-if="existsZtilt"
+                    class="forge-cmd"
+                    :disabled="locked || !allHomed || isLoading('zTilt')"
+                    @click="zTilt">
+                    <small>Level gantry</small>
                     <b>Z-TILT</b>
-                </button>
-                <button class="forge-cmd" :disabled="locked" @click="motorsOff">
-                    <small>Steppers</small>
-                    <b>OFF</b>
                 </button>
             </div>
 
-            <div v-if="!locked" class="forge-jog">
-                <div class="forge-jog-grid">
-                    <button class="forge-jog-btn" @click="jog('Y', step)">Y+</button>
-                    <button class="forge-jog-btn" @click="jog('X', -step)">X−</button>
-                    <button class="forge-jog-btn" @click="jog('X', step)">X+</button>
-                    <button class="forge-jog-btn" @click="jog('Y', -step)">Y−</button>
-                    <button class="forge-jog-btn" @click="jog('Z', step)">Z+</button>
-                    <button class="forge-jog-btn" @click="jog('Z', -step)">Z−</button>
+            <div class="forge-jog">
+                <div class="forge-jog-grid" aria-label="XY jog pad">
+                    <button class="forge-jog-btn up" :disabled="jogLocked" @click="jog('Y', step)">Y+</button>
+                    <button class="forge-jog-btn left" :disabled="jogLocked" @click="jog('X', -step)">X−</button>
+                    <span class="forge-jog-hub">XY</span>
+                    <button class="forge-jog-btn right" :disabled="jogLocked" @click="jog('X', step)">X+</button>
+                    <button class="forge-jog-btn down" :disabled="jogLocked" @click="jog('Y', -step)">Y−</button>
                 </div>
-                <div class="forge-step-select">
-                    <button
-                        v-for="s in stepChoices"
-                        :key="s"
-                        class="forge-mini"
-                        :class="{ active: s === step }"
-                        @click="step = s">
-                        {{ s }}
+                <div class="forge-jog-z" aria-label="Z jog controls">
+                    <button class="forge-jog-btn" :disabled="jogLocked" @click="jog('Z', zStep)">
+                        Z+ · {{ zStep }} mm
                     </button>
-                    <span class="forge-step-unit">mm</span>
+                    <button class="forge-jog-btn" :disabled="jogLocked" @click="jog('Z', -zStep)">
+                        Z− · {{ zStep }} mm
+                    </button>
+                </div>
+                <div class="forge-step-box">
+                    <span class="forge-step-label">XY JOG STEP · MM</span>
+                    <div class="forge-step-select">
+                        <button
+                            v-for="s in stepChoices"
+                            :key="s"
+                            class="forge-mini"
+                            :class="{ active: s === step }"
+                            @click="step = s">
+                            {{ s }}
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -83,7 +99,6 @@
                 </div>
                 <b>{{ zOffset.toFixed(3) }}</b>
             </div>
-
             <div class="forge-slider-row">
                 <label>SPEED FACTOR</label>
                 <input
@@ -113,11 +128,15 @@
             </div>
             <button v-if="tuningLocked" class="forge-mini" @click="tuningUnlocked = true">UNLOCK TUNING</button>
 
-            <div class="forge-slider-row">
-                <label>EXTRUDER</label>
-                <div class="forge-btn-row">
-                    <button class="forge-mini" :disabled="!canExtrude" @click="extrude(-extrudeLength)">RETRACT</button>
-                    <button class="forge-mini" :disabled="!canExtrude" @click="extrude(extrudeLength)">EXTRUDE</button>
+            <div class="forge-extruder">
+                <div class="forge-extruder-head">
+                    <label>EXTRUDER</label>
+                    <b :class="canExtrude ? 'ready' : 'cold'">
+                        {{ canExtrude ? 'READY' : 'COLD' }} · {{ extruderTemp }} °C
+                    </b>
+                </div>
+                <span class="forge-step-label">MOVE DISTANCE · MM</span>
+                <div class="forge-step-select wide">
                     <button
                         v-for="l in extrudeChoices"
                         :key="'el' + l"
@@ -126,9 +145,29 @@
                         @click="extrudeLength = l">
                         {{ l }}
                     </button>
-                    <span class="forge-step-unit">mm</span>
                 </div>
-                <b>{{ canExtrude ? 'READY' : 'COLD' }}</b>
+                <div class="forge-extruder-actions">
+                    <button class="forge-cmd" :disabled="!canExtrude" @click="extrude(-extrudeLength)">
+                        ← RETRACT {{ extrudeLength }} MM
+                    </button>
+                    <button class="forge-cmd forge-accent" :disabled="!canExtrude" @click="extrude(extrudeLength)">
+                        EXTRUDE {{ extrudeLength }} MM →
+                    </button>
+                </div>
+                <p class="forge-extruder-hint">
+                    <template v-if="canExtrude">Ready to move filament. Feed rate {{ extrudeFeedrate }} mm/s.</template>
+                    <template v-else>
+                        Nozzle too cold. Heat to at least {{ minExtrudeTemp }} °C to enable movement.
+                    </template>
+                </p>
+            </div>
+
+            <div class="forge-danger-zone">
+                <p>
+                    <strong>Disable steppers</strong>
+                    Position becomes untrusted. Re-home before printing.
+                </p>
+                <button class="forge-cmd stop" :disabled="locked" @click="motorsOff">MOTORS OFF</button>
             </div>
         </div>
     </div>
@@ -165,12 +204,28 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
         return this.homedAxes ? `HOMED ${this.homedAxes.toUpperCase()}` : 'NOT HOMED'
     }
 
+    get allHomed(): boolean {
+        const homed = this.homedAxes.toLowerCase()
+        return ['x', 'y', 'z'].every((axis) => homed.includes(axis))
+    }
+
+    // jogging an unhomed axis moves from an unknown origin — Klipper allows it, the operator should not.
+    get jogLocked(): boolean {
+        return this.locked || !this.allHomed
+    }
+
+    // Z steps are collision-relevant: never inherit a 50 mm XY step.
+    get zStep(): number {
+        return Math.min(this.step, 10)
+    }
+
     get axes() {
         const pos = this.$store.state.printer.gcode_move?.gcode_position ?? [0, 0, 0]
+        const homed = this.homedAxes.toLowerCase()
         return [
-            { name: 'X', value: (pos[0] ?? 0).toFixed(2) },
-            { name: 'Y', value: (pos[1] ?? 0).toFixed(2) },
-            { name: 'Z', value: (pos[2] ?? 0).toFixed(2) },
+            { name: 'X', value: (pos[0] ?? 0).toFixed(2), homed: homed.includes('x') },
+            { name: 'Y', value: (pos[1] ?? 0).toFixed(2), homed: homed.includes('y') },
+            { name: 'Z', value: (pos[2] ?? 0).toFixed(2), homed: homed.includes('z') },
         ]
     }
 
@@ -203,6 +258,14 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
         return this.$store.state.printer.extruder?.can_extrude ?? false
     }
 
+    get extruderTemp(): string {
+        return (this.$store.state.printer.extruder?.temperature ?? 0).toFixed(1)
+    }
+
+    get minExtrudeTemp(): number {
+        return this.$store.state.printer.configfile?.settings?.extruder?.min_extrude_temp ?? 170
+    }
+
     get maxExtrudeOnly(): number {
         return this.$store.state.printer.configfile?.settings?.extruder?.max_extrude_only_distance ?? 50
     }
@@ -228,13 +291,13 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
     }
 
     qgl(): void {
-        if (this.locked) return
+        if (this.locked || !this.allHomed) return
         this.$store.dispatch('server/addEvent', { message: 'QUAD_GANTRY_LEVEL', type: 'command' })
         this.$socket.emit('printer.gcode.script', { script: 'QUAD_GANTRY_LEVEL' }, { loading: 'qgl' })
     }
 
     zTilt(): void {
-        if (this.locked) return
+        if (this.locked || !this.allHomed) return
         this.$store.dispatch('server/addEvent', { message: 'Z_TILT_ADJUST', type: 'command' })
         this.$socket.emit('printer.gcode.script', { script: 'Z_TILT_ADJUST' }, { loading: 'zTilt' })
     }
@@ -246,7 +309,7 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
 
     // same safety wrapper Mainsail uses (control.ts doSendMove)
     jog(axis: string, distance: number): void {
-        if (this.locked) return
+        if (this.jogLocked) return
         const feedrate = (axis === 'Z' ? this.feedrateZ : this.feedrateXY) * 60
         const gcode = [
             'SAVE_GCODE_STATE NAME=_ui_movement',

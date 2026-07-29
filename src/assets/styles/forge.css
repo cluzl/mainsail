@@ -15,29 +15,77 @@
     src: url('/fonts/robotoMono-regular.woff') format('woff');
 }
 
+/* FORGE light glass theme.
+   Canvas is a calm neutral so translucent chrome has something to refract.
+   Glass is reserved for the navigation/control layer; data surfaces stay near-opaque
+   so telemetry never competes with a blur. */
 :root {
-    --forge-bg: #090c10;
-    --forge-panel: #11161d;
-    --forge-raised: #171d25;
-    --forge-line: #28303a;
-    --forge-text: #e9edf2;
-    --forge-muted: #77818d;
-    --forge-signal: #00c2ff;
-    --forge-ok: #58df9a;
-    --forge-danger: #ff4e5f;
+    --forge-bg: #f2f3f7;
+    --forge-bg-tint-a: rgba(0, 122, 255, 0.14);
+    --forge-bg-tint-b: rgba(175, 82, 222, 0.1);
+
+    --forge-panel: rgba(255, 255, 255, 0.7);
+    --forge-panel-solid: #ffffff;
+    --forge-raised: rgba(255, 255, 255, 0.5);
+    --forge-hover: rgba(255, 255, 255, 0.95);
+    --forge-input-bg: rgba(255, 255, 255, 0.88);
+    --forge-camera-bg: #16171a;
+
+    --forge-line: rgba(0, 0, 0, 0.09);
+    --forge-line-strong: rgba(0, 0, 0, 0.16);
+    --forge-track: rgba(0, 0, 0, 0.1);
+
+    --forge-text: #1d1d1f;
+    /* measured on the live UI: the old #6b6b70 / #0071e3 / #1c8c56 fell under
+       WCAG AA (4.5:1) at the 8-9px sizes this UI uses for labels and chips. */
+    --forge-muted: #5a5a60;
+    --forge-signal: #0060c0;
+    --forge-ok: #16704a;
+    --forge-warn: #9a6100;
+    --forge-danger: #c8102e;
+
+    --forge-warn-bg: rgba(255, 176, 46, 0.16);
+    --forge-accent-bg: rgba(0, 113, 227, 0.12);
+    --forge-danger-bg: rgba(200, 16, 46, 0.1);
+
+    /* Liquid glass primitives. Effect is CSS-native: blur + saturation for the
+       refraction feel, a bright inset rim for the specular edge, one soft drop
+       shadow for lift. No JS, no per-frame work. */
+    --forge-glass-blur: 22px;
+    --forge-glass-saturate: 165%;
+    --forge-glass-bg: rgba(255, 255, 255, 0.6);
+    --forge-glass-bg-strong: rgba(255, 255, 255, 0.72);
+    --forge-glass-rim:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85), inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+    --forge-glass-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 12px 34px rgba(15, 20, 30, 0.08);
+    --forge-radius: 14px;
+    --forge-radius-sm: 10px;
+}
+
+.forge-glass {
+    background: var(--forge-glass-bg);
+    -webkit-backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
+    backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
+    box-shadow: var(--forge-glass-rim), var(--forge-glass-shadow);
 }
 
 html,
 body,
 .v-application {
     background: var(--forge-bg) !important;
+    background-image:
+        radial-gradient(1100px 620px at 12% -6%, var(--forge-bg-tint-a), transparent 60%),
+        radial-gradient(900px 560px at 100% 0%, var(--forge-bg-tint-b), transparent 62%),
+        radial-gradient(760px 520px at 46% 62%, rgba(48, 209, 158, 0.1), transparent 60%) !important;
+    background-attachment: fixed !important;
     color: var(--forge-text) !important;
     font-family: 'Forge Sans', system-ui, sans-serif !important;
 }
 
 #content,
 .v-main__wrap {
-    background: var(--forge-bg) !important;
+    background: transparent !important;
 }
 
 #page-container {
@@ -46,13 +94,22 @@ body,
 }
 
 .topbar.v-app-bar {
-    background: #090c10 !important;
+    background: var(--forge-glass-bg-strong) !important;
+    -webkit-backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
+    backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
     border-bottom: 1px solid var(--forge-line) !important;
-    box-shadow: none !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
 }
 
 .topbar .v-toolbar__content {
     padding: 0 18px 0 0 !important;
+}
+
+/* Vuetify keeps theme--dark on the app root, so toolbar icons inherit white and
+   disappear on the light bar. Fix at the toolbar, not per-button. */
+.topbar .v-btn--icon .v-icon,
+.topbar .v-toolbar__items .v-btn:not(.emergency-button) .v-icon {
+    color: #45454a !important;
 }
 
 .forge-wordmark {
@@ -65,7 +122,7 @@ body,
 }
 
 .forge-wordmark strong {
-    color: var(--forge-text);
+    color: var(--forge-text) !important;
     font-size: 20px;
     font-weight: 900;
     letter-spacing: -2px;
@@ -73,6 +130,12 @@ body,
 
 .forge-wordmark span {
     color: var(--forge-signal);
+}
+
+.topbar .v-toolbar__content,
+.topbar .v-toolbar__title,
+.forge-printer-name span {
+    color: var(--forge-text) !important;
 }
 
 .forge-printer-name {
@@ -97,16 +160,22 @@ body,
     margin-top: 3px;
 }
 
+/* Emergency stop is the one control that must never read as translucent chrome:
+   solid fill, full contrast, no blur. */
 .topbar .emergency-button.v-btn {
-    background: #2b1117 !important;
-    border: 1px solid #602b35;
-    color: #ff7d89 !important;
+    background: var(--forge-danger) !important;
+    border: 1px solid #a20d25;
+    border-radius: 999px !important;
+    color: #ffffff !important;
     margin: 5px 8px !important;
-    height: 38px !important;
+    height: 44px !important;
+    box-shadow: 0 2px 10px rgba(200, 16, 46, 0.28) !important;
 }
 
 .v-navigation-drawer {
-    background: #07090c !important;
+    background: var(--forge-glass-bg-strong) !important;
+    -webkit-backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
+    backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
     border-right: 1px solid var(--forge-line) !important;
 }
 
@@ -119,28 +188,28 @@ body,
 }
 
 .v-navigation-drawer .v-list-item {
-    border-left: 2px solid transparent;
-    border-radius: 0 !important;
-    min-height: 54px;
+    border-radius: var(--forge-radius-sm) !important;
+    margin: 2px 8px;
+    min-height: 50px;
 }
 
 .v-navigation-drawer .v-list-item--active {
-    background: #121820 !important;
-    border-left-color: var(--forge-signal);
+    background: var(--forge-accent-bg) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .v-navigation-drawer .v-list-item__icon,
 .v-navigation-drawer .v-icon {
-    color: #77818d !important;
+    color: var(--forge-muted) !important;
 }
 
 .v-navigation-drawer .v-list-item--active .v-icon,
 .v-navigation-drawer .v-list-item--active .v-list-item__title {
-    color: var(--forge-text) !important;
+    color: var(--forge-signal) !important;
 }
 
 .v-navigation-drawer .v-list-item__title {
-    color: #9da7b1;
+    color: #4b4b50;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -169,13 +238,16 @@ body,
 
 .forge-section-title {
     height: 42px;
-    border: 1px solid var(--forge-line);
-    border-bottom: 0;
+    border-bottom: 1px solid var(--forge-line);
+    border-radius: var(--forge-radius) var(--forge-radius) 0 0;
     padding: 0 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #0d1117;
+    background: var(--forge-raised);
+    -webkit-backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
+    backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .forge-section-title span {
@@ -207,16 +279,94 @@ body,
 }
 
 .v-card.panel {
-    background: var(--forge-panel) !important;
+    /* Stock Machine/Files/History panels carry dense text. Keep those nearly
+       opaque; dashboard chrome supplies the stronger glass treatment. */
+    background: rgba(255, 255, 255, 0.94) !important;
+    -webkit-backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
+    backdrop-filter: blur(var(--forge-glass-blur)) saturate(var(--forge-glass-saturate));
     border: 1px solid var(--forge-line) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
+    border-radius: var(--forge-radius) !important;
+    box-shadow: var(--forge-glass-rim), var(--forge-glass-shadow) !important;
+    color: var(--forge-text) !important;
     overflow: hidden;
 }
 
 .v-card.panel .panel-toolbar.v-toolbar {
-    background: #0d1117 !important;
+    background: rgba(247, 247, 249, 0.96) !important;
     border-bottom: 1px solid var(--forge-line) !important;
+    color: var(--forge-text) !important;
+}
+
+/* Vuetify's stock light theme uses several 54–60% black text tokens. They are
+   legal on plain white but become faint over translucent cards. Dense operator
+   pages need crisp labels, rows and icons, so raise only foreground contrast. */
+.theme--light.v-application .v-card.panel .panel-toolbar .subheading,
+.theme--light.v-application .v-card.panel .v-card__title,
+.theme--light.v-application .v-card.panel .v-card__text,
+.theme--light.v-application .v-card.panel .v-list-item__title,
+.theme--light.v-application .v-card.panel .v-list-item__subtitle,
+.theme--light.v-application .v-card.panel .v-data-table,
+.theme--light.v-application .v-card.panel .v-data-table td {
+    color: var(--forge-text) !important;
+    opacity: 1 !important;
+}
+
+.theme--light.v-application .v-card.panel .v-data-table th,
+.theme--light.v-application .v-card.panel .text--secondary,
+.theme--light.v-application .v-card.panel .v-label,
+.theme--light.v-application .v-card.panel .v-input__slot,
+.theme--light.v-application .v-card.panel small {
+    color: var(--forge-muted) !important;
+    opacity: 1 !important;
+}
+
+.theme--light.v-application .v-card.panel .v-icon {
+    color: #50545a !important;
+    opacity: 1 !important;
+}
+
+.theme--light.v-application .v-card.panel .v-chip--disabled {
+    opacity: 1 !important;
+}
+
+.theme--light.v-application .v-card.panel .v-chip--disabled.green--text {
+    background: rgba(28, 140, 86, 0.07) !important;
+    color: #176f46 !important;
+}
+
+/* Stock Mainsail leaves a few surfaces under WCAG AA on this light theme.
+   Measured on the live UI: printed-count green 2.76:1, chip label 3.00:1,
+   console timestamps 2.68:1. Fix the tokens rather than each call site. */
+.theme--light.v-application .file-list__count_printed {
+    color: #2d7a31 !important;
+}
+
+.theme--light.v-application .v-chip .v-chip__content {
+    color: #1d1d1f !important;
+}
+
+.theme--light.v-application .v-chip.primary .v-chip__content,
+.theme--light.v-application .v-chip.error .v-chip__content,
+.theme--light.v-application .v-chip.success .v-chip__content {
+    color: #ffffff !important;
+}
+
+.theme--light.v-application .text--disabled {
+    color: #5a5a60 !important;
+}
+
+.theme--light.v-application .v-card.panel .v-chip--disabled.primary--text {
+    background: rgba(0, 113, 227, 0.07) !important;
+    color: #005bb8 !important;
+}
+
+.theme--light.v-application .v-card.panel .v-btn.grey.lighten-1 {
+    background: #4c5056 !important;
+    color: #ffffff !important;
+}
+
+.theme--light.v-application .v-card.panel .v-btn.grey.lighten-1 .v-icon {
+    color: #ffffff !important;
 }
 
 .v-card.panel .panel-toolbar .subheading {
@@ -270,43 +420,70 @@ body,
 
 .v-input__slot,
 .v-text-field--solo > .v-input__control > .v-input__slot {
-    border-radius: 0 !important;
+    border-radius: var(--forge-radius-sm) !important;
 }
 
 .v-btn {
-    border-radius: 0 !important;
+    border-radius: var(--forge-radius-sm) !important;
     letter-spacing: 0.04em;
 }
 
 .v-btn:not(.v-btn--icon):not(.v-size--x-small):not(.v-size--small) {
-    min-height: 40px;
+    min-height: 44px;
 }
 
 .v-dialog,
 .v-menu__content,
 .v-snack__wrapper {
-    background: var(--forge-raised) !important;
+    background: var(--forge-glass-bg-strong) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(var(--forge-glass-saturate));
+    backdrop-filter: blur(28px) saturate(var(--forge-glass-saturate));
     border: 1px solid var(--forge-line);
-    border-radius: 0 !important;
+    border-radius: var(--forge-radius) !important;
+    box-shadow:
+        var(--forge-glass-rim),
+        0 24px 60px rgba(15, 20, 30, 0.18) !important;
 }
 
-.theme--light.v-application,
-html.theme--light body,
-.theme--light #content,
-.theme--light .v-main__wrap {
-    background: #eef1f4 !important;
-    color: #14191f !important;
+/* Accessibility: transparency is decoration, never information.
+   Anyone who asked the OS for less of it gets flat opaque surfaces. */
+@media (prefers-reduced-transparency: reduce) {
+    :root {
+        --forge-panel: #ffffff;
+        --forge-raised: #f2f2f4;
+        --forge-glass-bg: #ffffff;
+        --forge-glass-bg-strong: #ffffff;
+        --forge-glass-blur: 0px;
+        --forge-glass-saturate: 100%;
+    }
+
+    .forge-glass,
+    .topbar.v-app-bar,
+    .v-navigation-drawer,
+    .forge-section-title,
+    .v-card.panel,
+    .v-dialog,
+    .v-menu__content,
+    .v-snack__wrapper {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+    }
+
+    html,
+    body,
+    .v-application {
+        background-image: none !important;
+    }
 }
 
-.theme--light .v-card.panel,
-.theme--light .forge-section-title {
-    background: #ffffff !important;
-    border-color: #c9d0d8 !important;
-}
-
-.theme--light .v-card.panel .panel-toolbar.v-toolbar {
-    background: #f5f7f9 !important;
-    border-color: #c9d0d8 !important;
+@media (prefers-contrast: more) {
+    :root {
+        --forge-panel: #ffffff;
+        --forge-glass-bg: #ffffff;
+        --forge-glass-bg-strong: #ffffff;
+        --forge-line: rgba(0, 0, 0, 0.32);
+        --forge-muted: #45454a;
+    }
 }
 
 @media (min-width: 1500px) {
@@ -349,6 +526,14 @@ html.theme--light body,
 }
 
 @media (max-width: 600px) {
+    /* ponytail: blur is the first thing to drop on phones/Pi touchscreens —
+       raise the opacity instead of paying for a full-width backdrop filter. */
+    :root {
+        --forge-glass-blur: 12px;
+        --forge-glass-bg: rgba(255, 255, 255, 0.86);
+        --forge-glass-bg-strong: rgba(255, 255, 255, 0.92);
+    }
+
     #page-container {
         padding: 8px !important;
     }

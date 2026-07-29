@@ -7,10 +7,13 @@
         <div class="forge-outputs">
             <div v-for="item in items" :key="item.name" class="forge-output">
                 <div class="forge-output-head">
-                    <label>{{ formatName(item.name) }}</label>
+                    <label>
+                        {{ formatName(item.name) }}
+                        <span class="forge-cap" :class="capabilityClass(item)">{{ capabilityLabel(item) }}</span>
+                    </label>
                     <b>
                         {{ Math.round(item.value * 100) }}%
-                        <em v-if="item.rpm">· {{ item.rpm }} RPM</em>
+                        <em v-if="item.rpm !== null">· {{ rpmText(item.rpm) }}</em>
                     </b>
                 </div>
                 <input
@@ -40,6 +43,7 @@
                 </div>
                 <div v-if="!item.controllable" class="forge-output-static">
                     <div class="forge-bar"><i :style="{ width: item.value * 100 + '%' }"></i></div>
+                    <span>FIRMWARE CONTROLLED</span>
                 </div>
             </div>
         </div>
@@ -50,7 +54,7 @@
 import Component from 'vue-class-component'
 import { Mixins } from 'vue-property-decorator'
 import ForgePanelMixin from '@/components/mixins/forgePanel'
-import { buildOutputCommand, clampOutput } from '@/plugins/forgeFormat'
+import { buildOutputCommand, clampOutput, formatRpm } from '@/plugins/forgeFormat'
 
 type MiscItem = {
     name: string
@@ -93,6 +97,24 @@ export default class ForgeOutputsPanel extends Mixins(ForgePanelMixin) {
     formatName(name: string): string {
         return name.replace(/_/g, ' ')
     }
+
+    // the operator must be able to tell "I can set this" from "the firmware owns this"
+    capabilityLabel(item: MiscItem): string {
+        if (!item.controllable) return 'AUTO'
+        return item.pwm ? 'PWM' : 'BINARY'
+    }
+
+    capabilityClass(item: MiscItem): string {
+        return item.controllable ? '' : 'auto'
+    }
+
+    // a tach that reports nothing is not 0 RPM — say so instead of printing a bare number
+    rpmText(rpm: number | null): string {
+        const value = formatRpm(rpm)
+        return value === null ? 'RPM unavailable' : `${value} RPM`
+    }
+
+    formatRpm = formatRpm
 
     // value is 0..1 of the slider; Mainsail scales it by max_power and snaps below off_below.
     setValue(item: MiscItem, value: number): void {

@@ -39,6 +39,13 @@ export function buildOutputCommand(type: string, name: string, value: number, sc
     return `SET_PIN PIN=${name} VALUE=${pinValue.toFixed(2)}`
 }
 
+// Klipper reports tachometer RPM as a raw float (13197.360527901084).
+// Nobody reads six decimals on a fan: round and group.
+export function formatRpm(rpm: number | null): string | null {
+    if (rpm === null || !isFinite(rpm) || rpm < 0) return null
+    return Math.round(rpm).toLocaleString('en-US')
+}
+
 // SET_GCODE_OFFSET babystep. MOVE=1 only when all axes are homed (Klipper rejects it otherwise).
 export function buildBabystep(delta: number, homedAxes: string): string {
     const sign = delta < 0 ? '-' : '+'
