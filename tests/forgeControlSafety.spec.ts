@@ -33,6 +33,15 @@ describe('motion panel safety', () => {
         expect(motion.indexOf('forge-danger-zone')).toBeGreaterThan(motion.indexOf('forge-motion-actions'))
     })
 
+    // a per-second buffer that never trims is a memory leak on a 14-hour print
+    it('bounds the flow history buffer to the visible window', () => {
+        const job = readFileSync(new URL('../src/components/panels/forge/ForgeJobPanel.vue', import.meta.url), 'utf8')
+        expect(job).toContain('if (this.flowHistory.length > this.flowWindowSeconds)')
+        expect(job).toContain('this.flowHistory.splice(0, this.flowHistory.length - this.flowWindowSeconds)')
+        // an interval that outlives the component keeps sampling a dead panel
+        expect(job).toContain('if (this.flowTimer !== null) window.clearInterval(this.flowTimer)')
+    })
+
     // hand-feeding wants a slow rate, purging a fast one — the panel hardcoded one
     it('sends the operator-selected extrude feed rate', () => {
         expect(motion).toContain('`G1 E${length} F${this.selectedExtrudeFeedrate * 60}`')
@@ -125,6 +134,20 @@ describe('AFC panel safety', () => {
         expect(afc).toContain('laneLocked || lane.toolLoaded')
     })
 
+    // one hub and one tool sensor are shared by all lanes: only PREP/LOAD/HUB
+    // are per-lane facts, and TOOL occupancy belongs in the summary row
+    it('shows only per-lane stages on the lane card', () => {
+        expect(afc).toContain('>PREP<')
+        expect(afc).toContain('>LOAD<')
+        expect(afc).toContain('>HUB<')
+        expect(afc).not.toMatch(/<span :class="\{ on: lane\.toolLoaded \}">TOOL<\/span>/)
+    })
+
+    it('refuses to load a lane whose sensors contradict each other', () => {
+        expect(afc).toContain("if (action === 'load' && lane.sensorError) return")
+        expect(afc).toContain('laneLocked || lane.toolLoaded || !!lane.sensorError')
+    })
+
     it('renders nothing when the printer has no AFC', () => {
         expect(afc).toContain('v-if="klipperReadyForGui && hasAfc"')
     })
@@ -155,6 +178,16 @@ describe('legibility', () => {
         const block = nativeCss.match(/\.forge-cmd:disabled,\s*\.forge-macro-btn:disabled \{[^}]*\}/)?.[0] ?? ''
         expect(block).toContain('opacity: 1')
         expect(block).not.toMatch(/opacity: 0\./)
+    })
+
+    // a later duplicate rule silently overrode this and measured 4.06:1 at 8px
+    it('declares one disabled command colour across every rule', () => {
+        const colours = new Set(
+            (nativeCss.match(/\.forge-(?:cmd|jog-btn|macro-btn)[^{]*:disabled[^{]*\{[^}]*\}/g) ?? [])
+                .map((block) => block.match(/(?:^|\s)color:\s*(#[0-9a-f]{6})/i)?.[1]?.toLowerCase())
+                .filter((colour): colour is string => Boolean(colour))
+        )
+        expect([...colours]).toEqual(['#3f444b'])
     })
 
     // these were measured failing WCAG AA on the live page at 8-9px

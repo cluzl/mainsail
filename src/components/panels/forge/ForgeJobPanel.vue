@@ -84,6 +84,24 @@
             </button>
         </div>
 
+        <div class="forge-flow-chart">
+            <div class="forge-flow-chart-head">
+                <div>
+                    <span>FLOW HISTORY</span>
+                    <small>LAST {{ flowWindowSeconds }}S · MM³/S</small>
+                </div>
+                <b>{{ flow }} mm³/s</b>
+            </div>
+            <svg viewBox="0 0 300 72" preserveAspectRatio="none" role="img" aria-label="Recent filament flow rate">
+                <line x1="0" :y1="flowZeroY" x2="300" :y2="flowZeroY" class="forge-flow-zero" />
+                <polyline :points="flowPoints" />
+            </svg>
+            <div class="forge-flow-scale">
+                <span>{{ flowMax }} MAX</span>
+                <span>{{ flowMin }} MIN</span>
+            </div>
+        </div>
+
         <confirmation-dialog
             v-model="showCancelDialog"
             :icon="mdiStopCircleOutline"
@@ -124,6 +142,61 @@ export default class ForgeJobPanel extends Mixins(ForgePanelMixin) {
     showExcludeMap = false
     showExcludeConfirm = false
     selectedObject = ''
+    flowHistory: number[] = []
+    flowTimer: number | null = null
+    flowWindowSeconds = 120
+
+    mounted(): void {
+        this.sampleFlow()
+        this.flowTimer = window.setInterval(() => this.sampleFlow(), 1000)
+    }
+
+    beforeDestroy(): void {
+        if (this.flowTimer !== null) window.clearInterval(this.flowTimer)
+    }
+
+    // Klipper exposes only an instantaneous velocity; a graph needs history, so
+    // buffer it here. Bounded to the visible window — never grows unbounded.
+    sampleFlow(): void {
+        this.flowHistory.push(this.flow)
+        if (this.flowHistory.length > this.flowWindowSeconds) {
+            this.flowHistory.splice(0, this.flowHistory.length - this.flowWindowSeconds)
+        }
+    }
+
+    get flowBounds(): { min: number; max: number } {
+        const values = this.flowHistory.length ? this.flowHistory : [0]
+        // always include 0 so an idle trace sits on the baseline instead of filling the box
+        return { min: Math.min(0, ...values), max: Math.max(0, ...values) }
+    }
+
+    get flowMax(): number {
+        return Math.round(this.flowBounds.max * 10) / 10
+    }
+
+    get flowMin(): number {
+        return Math.round(this.flowBounds.min * 10) / 10
+    }
+
+    flowY(value: number): number {
+        const { min, max } = this.flowBounds
+        const span = max - min
+        if (span <= 0) return 36
+        return 68 - ((value - min) / span) * 64
+    }
+
+    get flowZeroY(): number {
+        return this.flowY(0)
+    }
+
+    get flowPoints(): string {
+        const history = this.flowHistory
+        if (history.length < 2) return ''
+        const step = 300 / (this.flowWindowSeconds - 1)
+        // right-align: the newest sample always sits at the right edge
+        const offset = 300 - (history.length - 1) * step
+        return history.map((v, i) => `${(offset + i * step).toFixed(1)},${this.flowY(v).toFixed(1)}`).join(' ')
+    }
 
     get availableObjects(): Array<{ name: string }> {
         if (!['printing', 'paused'].includes(this.printer_state)) return []

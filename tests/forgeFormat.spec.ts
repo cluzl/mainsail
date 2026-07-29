@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import {
+    afcLaneSensorError,
     buildBabystep,
     buildOutputCommand,
     clampOutput,
@@ -48,5 +49,20 @@ describe('FORGE panel formatters', () => {
         expect(buildBabystep(-0.05, 'xyz')).toBe('SET_GCODE_OFFSET Z_ADJUST=-0.05 MOVE=1')
         expect(buildBabystep(0.01, 'xy')).toBe('SET_GCODE_OFFSET Z_ADJUST=+0.01')
         expect(buildBabystep(0.01, '')).toBe('SET_GCODE_OFFSET Z_ADJUST=+0.01')
+    })
+
+    it('accepts only physically ordered AFC lane sensor states', () => {
+        // empty, prep only, prep+load, and all three are physically possible
+        expect(afcLaneSensorError(false, false, false)).toBe('')
+        expect(afcLaneSensorError(true, false, false)).toBe('')
+        expect(afcLaneSensorError(true, true, false)).toBe('')
+        expect(afcLaneSensorError(true, true, true)).toBe('')
+    })
+
+    it('explains impossible AFC lane sensor states', () => {
+        expect(afcLaneSensorError(false, false, true)).toBe('SENSOR MISMATCH: HUB active; PREP and LOAD clear.')
+        expect(afcLaneSensorError(true, false, true)).toBe('SENSOR MISMATCH: HUB active; LOAD clear.')
+        expect(afcLaneSensorError(false, true, true)).toBe('SENSOR MISMATCH: HUB active; PREP clear.')
+        expect(afcLaneSensorError(false, true, false)).toBe('SENSOR MISMATCH: LOAD active; PREP clear.')
     })
 })

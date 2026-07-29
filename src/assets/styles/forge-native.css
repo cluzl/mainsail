@@ -176,6 +176,79 @@
     white-space: nowrap;
 }
 
+/* Flow history: Klipper exposes no flow history object, so this renders the
+   client-side buffer in ForgeJobPanel. Plain SVG — no chart lib, no canvas. */
+.forge-flow-chart {
+    margin-top: 14px;
+    padding: 12px;
+    border: 1px solid var(--forge-line);
+    border-radius: var(--forge-radius-sm);
+    background: var(--forge-raised);
+}
+
+.forge-flow-chart-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.forge-flow-chart-head span,
+.forge-flow-scale span {
+    color: var(--forge-muted);
+    font:
+        9px 'Forge Mono',
+        monospace;
+    letter-spacing: 0.08em;
+}
+
+.forge-flow-chart-head small {
+    display: block;
+    margin-top: 3px;
+    color: var(--forge-muted);
+    font:
+        8px 'Forge Mono',
+        monospace;
+}
+
+.forge-flow-chart-head b {
+    color: var(--forge-text);
+    font:
+        700 12px 'Forge Mono',
+        monospace;
+}
+
+.forge-flow-chart svg {
+    display: block;
+    width: 100%;
+    height: 72px;
+    margin-top: 8px;
+    overflow: visible;
+}
+
+.forge-flow-chart polyline {
+    fill: none;
+    stroke: var(--forge-signal);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    /* the viewBox scales non-uniformly; keep the stroke an even weight */
+    vector-effect: non-scaling-stroke;
+}
+
+.forge-flow-zero {
+    stroke: var(--forge-line-strong);
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+    vector-effect: non-scaling-stroke;
+}
+
+.forge-flow-scale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
 .forge-command-deck,
 .forge-motion-actions {
     display: grid;
@@ -527,7 +600,7 @@
 .forge-cmd:disabled {
     border-color: var(--forge-line);
     background: var(--forge-track);
-    color: #5d6269;
+    color: #3f444b;
     cursor: not-allowed;
     opacity: 1;
 }
@@ -1145,6 +1218,21 @@
     background: var(--forge-accent-bg);
 }
 
+/* an impossible sensor pattern outranks the in-tool highlight */
+.forge-afc-lane.faulted {
+    border-color: rgba(200, 16, 46, 0.45);
+    background: var(--forge-danger-bg);
+}
+
+.forge-afc-lane-error {
+    margin: 0 0 8px;
+    color: var(--forge-danger);
+    font:
+        700 9px 'Forge Mono',
+        monospace;
+    line-height: 1.4;
+}
+
 .forge-afc-lane-head,
 .forge-afc-meta {
     display: flex;
@@ -1162,7 +1250,7 @@
 
 .forge-afc-path {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 5px;
     margin: 10px 0;
 }

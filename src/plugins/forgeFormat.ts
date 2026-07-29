@@ -46,6 +46,20 @@ export function formatRpm(rpm: number | null): string | null {
     return Math.round(rpm).toLocaleString('en-US')
 }
 
+// The lane path is strictly ordered PREP -> LOAD -> HUB: filament physically
+// passes every earlier sensor before reaching a later one. So a sensor that
+// reads active while an upstream one reads clear is not a state, it is a fault
+// (stuck/failed switch, filament snapped between sensors, or a stale flag).
+// ponytail: reports the first mismatch only; enumerate all of them when a lane
+// is ever wired with more than these three sensors.
+export function afcLaneSensorError(prep: boolean, load: boolean, hub: boolean): string {
+    if (hub && !load && !prep) return 'SENSOR MISMATCH: HUB active; PREP and LOAD clear.'
+    if (hub && !load) return 'SENSOR MISMATCH: HUB active; LOAD clear.'
+    if (hub && !prep) return 'SENSOR MISMATCH: HUB active; PREP clear.'
+    if (load && !prep) return 'SENSOR MISMATCH: LOAD active; PREP clear.'
+    return ''
+}
+
 // SET_GCODE_OFFSET babystep. MOVE=1 only when all axes are homed (Klipper rejects it otherwise).
 export function buildBabystep(delta: number, homedAxes: string): string {
     const sign = delta < 0 ? '-' : '+'
