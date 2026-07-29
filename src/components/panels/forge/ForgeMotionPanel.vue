@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <p v-if="locked" class="forge-motion-lock">MOTION LOCKED — PRINT IN PROGRESS</p>
+            <p v-if="printer_state === 'printing'" class="forge-motion-lock">MOTION LOCKED — PRINT IN PROGRESS</p>
             <p v-else-if="!allHomed" class="forge-motion-lock">
                 HOME BEFORE JOGGING — POSITION IS UNKNOWN UNTIL AXES ARE HOMED
             </p>
@@ -225,9 +225,10 @@ export default class ForgeMotionPanel extends Mixins(ForgePanelMixin) {
         return ['x', 'y', 'z'].every((axis) => homed.includes(axis))
     }
 
-    // jogging an unhomed axis moves from an unknown origin — Klipper allows it, the operator should not.
+    // Normal Mainsail allows manual recovery moves while paused. Only a running
+    // toolpath owns XY; a paused, fully-homed machine may be jogged safely.
     get jogLocked(): boolean {
-        return this.locked || !this.allHomed
+        return this.printer_state === 'printing' || !this.allHomed
     }
 
     // Z steps are collision-relevant: never inherit a 50 mm XY step.

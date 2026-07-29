@@ -8,10 +8,12 @@ const nativeCss = readFileSync(new URL('../src/assets/styles/forge-native.css', 
 const forgeCss = readFileSync(new URL('../src/assets/styles/forge.css', import.meta.url), 'utf8')
 
 describe('motion panel safety', () => {
-    // an unhomed axis has no trustworthy origin: jogging it is a crash, not a move
-    it('gates jogging on homing in the handler, not only the template', () => {
+    // an unhomed axis has no trustworthy origin: jogging it is a crash, not a move.
+    // Paused is intentionally allowed, matching stock Mainsail recovery controls.
+    it('gates jogging on active printing and homing, not paused state', () => {
         expect(motion).toContain('jog(axis: string, distance: number): void {\n        if (this.jogLocked) return')
-        expect(motion).toContain('return this.locked || !this.allHomed')
+        expect(motion).toContain("return this.printer_state === 'printing' || !this.allHomed")
+        expect(motion).not.toContain('return this.locked || !this.allHomed')
     })
 
     it('gates gantry levelling on homing in both handlers', () => {
