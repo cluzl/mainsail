@@ -87,14 +87,36 @@ describe('touch targets', () => {
     })
 })
 
+// AFC (RatRig 4 QuattroBox): status surface only. A stray lane command during a
+// print can strand filament mid-toolchange, so this panel must stay read-only.
+describe('AFC panel safety', () => {
+    const afc = readFileSync(new URL('../src/components/panels/forge/ForgeAfcPanel.vue', import.meta.url), 'utf8')
+
+    it('never emits gcode or socket commands', () => {
+        expect(afc).not.toMatch(/forgeSend|gcode\.script|addEvent|\$socket\.emit/)
+    })
+
+    it('has no interactive controls', () => {
+        expect(afc).not.toMatch(/<button|@click|v-model/)
+    })
+
+    it('renders nothing when the printer has no AFC', () => {
+        expect(afc).toContain('v-if="klipperReadyForGui && hasAfc"')
+    })
+
+    it('surfaces the latched fault reason rather than a bare state', () => {
+        expect(afc).toContain('last_error_message')
+        expect(afc).toContain('last_error_resolution')
+    })
+})
+
 describe('legibility', () => {
-    const motionVue = motion
     const jobVue = readFileSync(new URL('../src/components/panels/forge/ForgeJobPanel.vue', import.meta.url), 'utf8')
 
     // Vuetify's .primary/.accent utilities paint a solid same-hue fill with
     // !important, which rendered blue text on a blue button — invisible.
     it('never styles a FORGE button with a Vuetify colour utility class', () => {
-        for (const src of [motionVue, jobVue]) {
+        for (const src of [motion, jobVue]) {
             // (?<!forge-) so the namespaced forge-accent is not mistaken for Vuetify's accent
             expect(src).not.toMatch(
                 /class="forge-cmd[^"]*(?<!forge-)\b(primary|accent|secondary|info|success|error|warning)\b/

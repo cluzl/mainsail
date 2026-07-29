@@ -10,6 +10,7 @@
             <forge-motion-panel />
             <forge-thermal-panel />
             <forge-outputs-panel />
+            <forge-afc-panel />
             <forge-macros-panel />
         </section>
 
@@ -27,6 +28,7 @@ import ForgeThermalPanel from '@/components/panels/forge/ForgeThermalPanel.vue'
 import ForgeCameraPanel from '@/components/panels/forge/ForgeCameraPanel.vue'
 import ForgeMotionPanel from '@/components/panels/forge/ForgeMotionPanel.vue'
 import ForgeOutputsPanel from '@/components/panels/forge/ForgeOutputsPanel.vue'
+import ForgeAfcPanel from '@/components/panels/forge/ForgeAfcPanel.vue'
 import ForgeMacrosPanel from '@/components/panels/forge/ForgeMacrosPanel.vue'
 import ForgeHealthPanel from '@/components/panels/forge/ForgeHealthPanel.vue'
 
@@ -38,6 +40,7 @@ import ForgeHealthPanel from '@/components/panels/forge/ForgeHealthPanel.vue'
         ForgeCameraPanel,
         ForgeMotionPanel,
         ForgeOutputsPanel,
+        ForgeAfcPanel,
         ForgeMacrosPanel,
         ForgeHealthPanel,
     },

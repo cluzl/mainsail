@@ -18,6 +18,8 @@ export default new Vuetify({
             // controls inherit an accessible blue instead of being patched one by one.
             light: {
                 primary: '#0060c0',
+                success: '#16704a',
+                error: '#a20d25',
             },
         },
     },

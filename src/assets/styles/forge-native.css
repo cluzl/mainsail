@@ -1053,3 +1053,151 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* AFC / QuattroBox: status-first. No lane command controls here because a
+   mistaken load/unload while printing is worse than opening the Macro panel. */
+.forge-afc-alert {
+    margin-bottom: 14px;
+    padding: 12px;
+    border: 1px solid rgba(200, 16, 46, 0.35);
+    border-radius: var(--forge-radius-sm);
+    background: var(--forge-danger-bg);
+    color: var(--forge-text);
+}
+
+.forge-afc-alert b {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--forge-danger);
+    font:
+        700 11px 'Forge Mono',
+        monospace;
+    letter-spacing: 0.08em;
+}
+
+.forge-afc-alert p {
+    margin: 0;
+    line-height: 1.45;
+}
+
+.forge-afc-alert .forge-afc-fix {
+    margin-top: 7px;
+    color: #4a4f57;
+}
+
+.forge-afc-head {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.forge-afc-stat,
+.forge-afc-lane {
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid var(--forge-line);
+    border-radius: var(--forge-radius-sm);
+    background: var(--forge-raised);
+}
+
+.forge-afc-stat small {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--forge-muted);
+    font:
+        9px 'Forge Mono',
+        monospace;
+    letter-spacing: 0.08em;
+}
+
+.forge-afc-stat b,
+.forge-afc-lane-head b {
+    color: var(--forge-text);
+    font:
+        700 11px 'Forge Mono',
+        monospace;
+}
+
+.forge-afc-stat b.ready,
+.forge-afc-lane-head b.ready {
+    color: var(--forge-ok);
+}
+
+.forge-afc-stat b.cold,
+.forge-afc-lane-head b.cold {
+    color: var(--forge-danger);
+}
+
+.forge-afc-lanes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.forge-afc-lane.tooled {
+    border-color: rgba(0, 96, 192, 0.4);
+    background: var(--forge-accent-bg);
+}
+
+.forge-afc-lane-head,
+.forge-afc-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.forge-afc-lane-head label {
+    color: var(--forge-text);
+    font:
+        700 11px 'Forge Mono',
+        monospace;
+}
+
+.forge-afc-path {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.forge-afc-path span {
+    padding: 5px 3px;
+    border-radius: 6px;
+    background: var(--forge-track);
+    color: var(--forge-muted);
+    text-align: center;
+    font:
+        8px 'Forge Mono',
+        monospace;
+}
+
+.forge-afc-path span.on {
+    background: rgba(0, 96, 192, 0.15);
+    color: #004f9e;
+    font-weight: 700;
+}
+
+.forge-afc-meta {
+    color: var(--forge-muted);
+    font:
+        9px 'Forge Mono',
+        monospace;
+}
+
+.forge-afc-note {
+    margin: 10px 0 0;
+    color: var(--forge-muted);
+    font:
+        9px 'Forge Mono',
+        monospace;
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 600px) {
+    .forge-afc-head,
+    .forge-afc-lanes {
+        grid-template-columns: 1fr;
+    }
+}
