@@ -158,6 +158,21 @@ describe('AFC panel safety', () => {
         expect(afc).toContain('last_error_message')
         expect(afc).toContain('last_error_resolution')
     })
+
+    it('edits each lane runout fallback through AFC SET_RUNOUT', () => {
+        expect(afc).toContain("runoutLane: String(lane.runout_lane ?? '')")
+        expect(afc).toContain('SET_RUNOUT LANE=${lane.name} RUNOUT=${value}')
+        expect(afc).toContain('<option value="NONE">NONE — PAUSE</option>')
+        expect(afc).toContain('target.name !== lane.name')
+    })
+
+    it('locks and revalidates runout mapping during active operations', () => {
+        expect(afc).toContain(':disabled="runoutLocked || !runoutDirty(lane)"')
+        expect(afc).toContain('if (this.runoutLocked || !this.runoutDirty(lane)) return')
+        expect(afc).toContain("value !== 'NONE' && !this.runoutChoices(lane).some")
+        expect(afc).toContain("return this.printer_state === 'printing' || Boolean(this.afc?.error_state)")
+        expect(afc).not.toContain('get runoutLocked(): boolean {\n        return this.printerIsPrinting')
+    })
 })
 
 describe('maintenance parity', () => {

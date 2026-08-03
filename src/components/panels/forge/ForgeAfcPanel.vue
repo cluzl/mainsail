@@ -64,6 +64,35 @@
                     <span>{{ lane.weight }}</span>
                 </div>
 
+                <div class="forge-afc-runout">
+                    <label :for="`forge-runout-${lane.name}`">WHEN EMPTY, LOAD</label>
+                    <div class="forge-afc-runout-control">
+                        <select
+                            :id="`forge-runout-${lane.name}`"
+                            :value="runoutValue(lane)"
+                            :disabled="runoutLocked"
+                            :title="
+                                runoutLocked
+                                    ? runoutLockReason
+                                    : 'Choose the fallback lane used when this lane runs out'
+                            "
+                            @change="setRunoutDraft(lane, $event)">
+                            <option value="NONE">NONE — PAUSE</option>
+                            <option v-for="target in runoutChoices(lane)" :key="target.name" :value="target.name">
+                                {{ target.name.toUpperCase() }} — {{ target.filamentStatus }}
+                            </option>
+                        </select>
+                        <button
+                            class="forge-cmd forge-accent"
+                            :disabled="runoutLocked || !runoutDirty(lane)"
+                            :title="runoutLocked ? runoutLockReason : 'Save runout fallback without moving filament'"
+                            @click="saveRunout(lane)">
+                            {{ savedRunout === lane.name ? 'SAVED' : 'SAVE' }}
+                        </button>
+                    </div>
+                    <small>Current: {{ lane.runoutLane ? lane.runoutLane.toUpperCase() : 'NONE — PAUSE' }}</small>
+                </div>
+
                 <!-- Confirm step is deliberate: these commands move filament and
                      take minutes to undo if fired on the wrong lane. -->
                 <div v-if="pending === lane.name" class="forge-afc-confirm">
@@ -124,12 +153,15 @@ type Lane = {
     material: string
     weight: string
     sensorError: string
+    runoutLane: string
 }
 
 @Component({ components: { AfcPanelButtons } })
 export default class ForgeAfcPanel extends Mixins(ForgePanelMixin) {
     pending = ''
     pendingAction: Action | '' = ''
+    runoutDrafts: Record<string, string> = {}
+    savedRunout = ''
 
     get afc(): Record<string, unknown> | null {
         return this.$store.state.printer.AFC ?? null
@@ -204,6 +236,7 @@ export default class ForgeAfcPanel extends Mixins(ForgePanelMixin) {
                     material: lane.material ? String(lane.material) : 'NO MATERIAL',
                     weight: weight > 0 ? `${Math.round(weight)} g` : '—',
                     sensorError: afcLaneSensorError(prep, load, loadedToHub),
+                    runoutLane: String(lane.runout_lane ?? ''),
                 }
             })
     }
@@ -221,6 +254,19 @@ export default class ForgeAfcPanel extends Mixins(ForgePanelMixin) {
         return ''
     }
 
+    // SET_RUNOUT only changes AFC routing metadata; it does not move filament.
+    // Permit it while paused for recovery, but not while gcode is actively running.
+    get runoutLocked(): boolean {
+        return this.printer_state === 'printing' || Boolean(this.afc?.error_state) || Boolean(this.afc?.in_toolchange)
+    }
+
+    get runoutLockReason(): string {
+        if (this.printer_state === 'printing') return 'Runout mapping is locked while gcode is actively printing.'
+        if (this.afc?.in_toolchange) return 'A toolchange is in progress.'
+        if (this.afc?.error_state) return 'Clear the AFC fault before changing runout mapping.'
+        return ''
+    }
+
     get pendingLabel(): string {
         if (this.pendingAction === 'load') return 'Load'
         if (this.pendingAction === 'unload') return 'Unload from tool:'
@@ -231,6 +277,35 @@ export default class ForgeAfcPanel extends Mixins(ForgePanelMixin) {
         if (lane.sensorError) return lane.sensorError
         if (lane.toolLoaded) return 'This lane is already in the tool'
         return this.lockReason
+    }
+
+    runoutChoices(lane: Lane): Lane[] {
+        return this.lanes.filter((target) => target.name !== lane.name)
+    }
+
+    runoutValue(lane: Lane): string {
+        return this.runoutDrafts[lane.name] ?? lane.runoutLane ?? 'NONE'
+    }
+
+    runoutDirty(lane: Lane): boolean {
+        if (!(lane.name in this.runoutDrafts)) return false
+        return this.runoutValue(lane) !== (lane.runoutLane || 'NONE')
+    }
+
+    setRunoutDraft(lane: Lane, event: Event): void {
+        if (this.runoutLocked) return
+        const value = (event.target as HTMLSelectElement).value
+        if (value !== 'NONE' && !this.runoutChoices(lane).some((target) => target.name === value)) return
+        this.$set(this.runoutDrafts, lane.name, value)
+        this.savedRunout = ''
+    }
+
+    saveRunout(lane: Lane): void {
+        if (this.runoutLocked || !this.runoutDirty(lane)) return
+        const value = this.runoutValue(lane)
+        if (value !== 'NONE' && !this.runoutChoices(lane).some((target) => target.name === value)) return
+        this.forgeSend(`SET_RUNOUT LANE=${lane.name} RUNOUT=${value}`)
+        this.savedRunout = lane.name
     }
 
     ask(lane: string, action: Action): void {

@@ -1424,6 +1424,54 @@
         monospace;
 }
 
+.forge-afc-runout {
+    margin-top: 10px;
+    padding-top: 9px;
+    border-top: 1px solid var(--forge-line);
+}
+
+.forge-afc-runout > label,
+.forge-afc-runout > small {
+    display: block;
+    color: var(--forge-muted);
+    font:
+        700 8px 'Forge Mono',
+        monospace;
+    letter-spacing: 0.06em;
+}
+
+.forge-afc-runout-control {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 64px;
+    gap: 6px;
+    margin: 5px 0;
+}
+
+.forge-afc-runout select {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 8px;
+    border: 1px solid var(--forge-line-strong);
+    border-radius: var(--forge-radius-sm);
+    background: var(--forge-surface);
+    color: var(--forge-text);
+    font:
+        700 10px 'Forge Mono',
+        monospace;
+}
+
+.forge-afc-runout .forge-cmd {
+    min-width: 64px;
+    min-height: 44px;
+}
+
+.forge-afc-runout select:disabled {
+    opacity: 1;
+    color: #3f444b;
+    background: var(--forge-raised);
+}
+
 .forge-afc-note {
     margin: 10px 0 0;
     color: var(--forge-muted);
